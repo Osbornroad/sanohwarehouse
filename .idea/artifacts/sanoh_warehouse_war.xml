@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="sanoh-warehouse:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="sanoh-warehouse.war">
+      <element id="artifact" artifact-name="sanoh-warehouse:war exploded" />
+    </root>
+  </artifact>
+</component>
