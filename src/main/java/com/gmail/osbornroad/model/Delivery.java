@@ -6,9 +6,7 @@ import javax.persistence.Entity;
 public class Delivery {
 
     private Integer field_key;
-
     private String aPoint;
-
     private String number;
 
     public Delivery(Integer field_key, String aPoint, String number) {
