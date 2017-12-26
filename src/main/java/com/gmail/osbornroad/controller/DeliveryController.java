@@ -1,10 +1,7 @@
 package com.gmail.osbornroad.controller;
 
-import com.gmail.osbornroad.model.Delivery;
-import com.gmail.osbornroad.service.DeliveryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +12,7 @@ import java.util.List;
 public class DeliveryController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DeliveryController.class);
-
+/*
     @Autowired
     private DeliveryService deliveryService;
 
@@ -40,7 +37,7 @@ public class DeliveryController {
         LOGGER.info("DeliveryController.getTestDeliveryInfo() working...");
         model.addAttribute("testAllDelivery", testAllDelivery);
         return "delivery";
-    }
+    }*/
 
 /*    @RequestMapping(value = "/", method = RequestMethod.GET)
     public String printWelcome(ModelMap model) {

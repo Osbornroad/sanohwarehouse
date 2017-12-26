@@ -1,7 +1,7 @@
 package com.gmail.osbornroad.service;
 
-import com.gmail.osbornroad.model.Delivery;
 import com.gmail.osbornroad.model.Shipping;
+import com.gmail.osbornroad.repository.ShippingPostgreeRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,10 +17,10 @@ import java.util.Date;
 public class Scheduler {
 
     @Autowired
-    DeliveryService deliveryService;
+    ShippingService shippingService;
 
     @Autowired
-    ShippingService shippingService;
+    ShippingPostgreeRepository shippingPostgreeRepository;
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Scheduler.class);
 
@@ -30,15 +30,18 @@ public class Scheduler {
 
     @Scheduled(fixedDelay = 3000)
     public void reportNextDelivery(){
+        Shipping nextShipping = null;
         try {
-            Shipping nextShipping = shippingService.get(lastFieldKey);
+            nextShipping = shippingService.get(lastFieldKey);
             LOGGER.info(nextShipping.toString());
         } catch (org.springframework.dao.EmptyResultDataAccessException e) {
             LOGGER.info("No field Key = " + lastFieldKey);
         }
         lastFieldKey++;
 
-    }
+        shippingPostgreeRepository.save(nextShipping);
+
+        }
 
     @Scheduled(fixedDelay = 3000)
     public void reportCurrentTime(){

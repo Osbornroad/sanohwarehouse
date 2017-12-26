@@ -2,11 +2,10 @@ package com.gmail.osbornroad.repository.jdbc;
 
 import com.gmail.osbornroad.model.Shipping;
 import com.gmail.osbornroad.repository.ShippingRepository;
+import com.gmail.osbornroad.repository.jdbc.jdbctemplate.FireBirdJdbcTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
@@ -15,11 +14,11 @@ import java.util.List;
 public class ShippingRepositoryImpl implements ShippingRepository {
 
     @Autowired
-    private JdbcTemplate jdbcTemplate;
+    private FireBirdJdbcTemplate fireBirdJdbcTemplate;
 
     @Override
     public Shipping get(int id) {
-        return jdbcTemplate.queryForObject(
+        return fireBirdJdbcTemplate.queryForObject(
                 "    SELECT BD_SHIPPING.FIELD_KEY, \n" +
                 "    bd_shipping.date_time,\n" +
                 "    bd_shipping.barcode,\n" +

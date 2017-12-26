@@ -20,32 +20,66 @@
 
     <tx:annotation-driven/>
 
-    <beans profile="firebird">
+    <!--Firebird-->
+    <beans>
         <context:property-placeholder location="classpath:db/firebird.properties" system-properties-mode="OVERRIDE"/>
 
-        <bean id="dataSource"
-              class="org.apache.tomcat.jdbc.pool.DataSource"
+        <bean id="firebirdDataSource"
+              class="com.gmail.osbornroad.repository.jdbc.datasources.FirebirdDataSource"
               p:driverClassName="org.firebirdsql.jdbc.FBDriver"
               p:url="${database.url}"
               p:username="${database.username}"
               p:password="${database.password}"/>
     </beans>
-
     <beans>
         <context:component-scan base-package="com.gmail.osbornroad.repository.jdbc"/>
-        <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+
+        <!--<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
             <constructor-arg ref="dataSource"/>
         </bean>
+-->
 
-        <bean id="namedJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
-            <constructor-arg ref="dataSource"/>
+        <bean id="fireBirdJdbcTemplate" class="com.gmail.osbornroad.repository.jdbc.jdbctemplate.FireBirdJdbcTemplate">
+            <property name="dataSource" ref="firebirdDataSource"/>
+            <constructor-arg ref="firebirdDataSource"/>
         </bean>
 
-        <bean id="transactionManager"
-              class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-            <property name="dataSource" ref="dataSource" />
+        <bean id="firebirdTransactionManager"
+              class="com.gmail.osbornroad.repository.jdbc.transactionmanager.FireBirdTransactionManager">
+            <property name="dataSource" ref="firebirdDataSource" />
         </bean>
     </beans>
 
+    <!--Postgree-->
+    <beans>
+        <context:property-placeholder location="classpath:db/postgree.properties" system-properties-mode="OVERRIDE"/>
+
+        <bean id="postgreeDataSource"
+              class="com.gmail.osbornroad.repository.jdbc.datasources.PostgreeDataSource"
+              p:driverClassName="org.postgresql.Driver"
+              p:url="jdbc:postgresql://localhost:5432/warehouse"
+              p:username="user"
+              p:password="password"/>
+    </beans>
+
+    <beans>
+        <context:component-scan base-package="com.gmail.osbornroad.repository.jdbc"/>
+
+        <!--<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+            <constructor-arg ref="dataSource"/>
+        </bean>
+-->
+
+        <bean id="postgreeJdbcTemplate" class="com.gmail.osbornroad.repository.jdbc.jdbctemplate.PostgreeJdbcTemplate">
+            <!--<property name="dataSource" ref="postgreeDataSource"/>-->
+            <constructor-arg ref="postgreeDataSource"/>
+        </bean>
+
+
+        <bean id="postgreeTransactionManager"
+              class="com.gmail.osbornroad.repository.jdbc.transactionmanager.PostgreeTransactionManager">
+            <property name="dataSource" ref="postgreeDataSource" />
+        </bean>
+    </beans>
 
 </beans>

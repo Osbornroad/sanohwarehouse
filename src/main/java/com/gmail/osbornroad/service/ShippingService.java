@@ -6,6 +6,4 @@ import java.util.List;
 
 public interface ShippingService {
     Shipping get(int id);
-
-    List<Shipping> getAll();
 }

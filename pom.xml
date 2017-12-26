@@ -23,7 +23,9 @@
     <slf4j.version>1.7.25</slf4j.version>
 
     <!--DB-->
+<!--
     <postgresql.version>9.4.1212</postgresql.version>
+-->
 
     <!--    Tests  -->
     <junit.version>4.12</junit.version>
@@ -72,6 +74,14 @@
         </exclusion>
       </exclusions>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/postgresql/postgresql -->
+    <dependency>
+      <groupId>postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>9.1-901-1.jdbc4</version>
+    </dependency>
+
 
 
     <!-- Logging with SLF4J & LogBack -->
@@ -331,6 +341,11 @@
       <groupId>javax.persistence</groupId>
       <artifactId>persistence-api</artifactId>
       <version>1.0.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>4.0.3.RELEASE</version>
     </dependency>
 
   </dependencies>

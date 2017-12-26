@@ -18,8 +18,4 @@ public class ShippingServiceImpl implements ShippingService {
         return shippingRepository.get(id);
     }
 
-    @Override
-    public List<Shipping> getAll() {
-        return shippingRepository.getAll();
-    }
 }
