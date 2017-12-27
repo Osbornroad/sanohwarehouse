@@ -8,6 +8,8 @@ public interface ShippingPostgreeService {
 
     Shipping get(int id);
 
+    int getMaxShippingId();
+
     List<Shipping> getAll();
 
     boolean delete(int id);

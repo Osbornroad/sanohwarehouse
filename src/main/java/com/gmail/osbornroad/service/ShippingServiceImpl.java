@@ -18,4 +18,8 @@ public class ShippingServiceImpl implements ShippingService {
         return shippingRepository.get(id);
     }
 
+    @Override
+    public List<Shipping> getUnsavedShipping(int lastSavedShippingId) {
+        return shippingRepository.getUnsavedShippingId(lastSavedShippingId);
+    }
 }

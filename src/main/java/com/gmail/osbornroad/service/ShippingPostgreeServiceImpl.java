@@ -19,6 +19,11 @@ public class ShippingPostgreeServiceImpl implements ShippingPostgreeService {
     }
 
     @Override
+    public int getMaxShippingId() {
+        return shippingPostgreeRepository.getMaxShippingId();
+    }
+
+    @Override
     public List<Shipping> getAll() {
         return null;
     }

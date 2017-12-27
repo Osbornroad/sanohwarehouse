@@ -70,11 +70,15 @@
         </bean>
 -->
 
-        <bean id="postgreeJdbcTemplate" class="com.gmail.osbornroad.repository.jdbc.jdbctemplate.PostgreeJdbcTemplate">
+        <bean id="postgreeNamedParameterJdbcTemplate" class="com.gmail.osbornroad.repository.jdbc.jdbctemplate.PostgreeNamedParameterJdbcTemplate">
             <!--<property name="dataSource" ref="postgreeDataSource"/>-->
             <constructor-arg ref="postgreeDataSource"/>
         </bean>
 
+        <bean id="postgreeJdbcTemplate" class="com.gmail.osbornroad.repository.jdbc.jdbctemplate.PostgreeJdbcTemplate">
+            <property name="dataSource" ref="postgreeDataSource"/>
+            <constructor-arg ref="postgreeDataSource"/>
+        </bean>
 
         <bean id="postgreeTransactionManager"
               class="com.gmail.osbornroad.repository.jdbc.transactionmanager.PostgreeTransactionManager">

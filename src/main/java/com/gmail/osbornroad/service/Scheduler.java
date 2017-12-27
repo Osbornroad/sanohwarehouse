@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 @Service
 @EnableScheduling
@@ -20,15 +21,34 @@ public class Scheduler {
     ShippingService shippingService;
 
     @Autowired
-    ShippingPostgreeRepository shippingPostgreeRepository;
+    ShippingPostgreeService shippingPostgreeService;
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Scheduler.class);
 
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
-    private int lastFieldKey = 48;
+//    private int lastFieldKey = 48;
 
-    @Scheduled(fixedDelay = 3000)
+/*    @Scheduled(fixedDelay = 5000)
+    public void reportMaxShippingId() {
+        int maxShippingId = shippingPostgreeService.getMaxShippingId();
+        LOGGER.info("Current MaxShippingId = " + maxShippingId);
+    }*/
+
+    @Scheduled(fixedDelay = 20000)
+    public void updateShipping() {
+        int lastSavedShippingId = shippingPostgreeService.getMaxShippingId();
+        List<Shipping> unsavedShipping = shippingService.getUnsavedShipping(lastSavedShippingId);
+        if (unsavedShipping.size() == 0) {
+            LOGGER.info("There are no new shipping in Firebird database.");
+        } else {
+            for (Shipping shipping : unsavedShipping) {
+                shippingPostgreeService.save(shipping);
+            }
+        }
+    }
+
+/*    @Scheduled(fixedDelay = 3000)
     public void reportNextDelivery(){
         Shipping nextShipping = null;
         try {
@@ -39,12 +59,14 @@ public class Scheduler {
         }
         lastFieldKey++;
 
-        shippingPostgreeRepository.save(nextShipping);
+        shippingPostgreeService.save(nextShipping);
+        }*/
 
-        }
 
-    @Scheduled(fixedDelay = 3000)
+
+
+/*    @Scheduled(fixedDelay = 3000)
     public void reportCurrentTime(){
         LOGGER.info("Current time is {}", dateFormat.format(new Date()));
-    }
+    }*/
 }

@@ -9,9 +9,7 @@ public interface ShippingPostgreeRepository {
 
     List<Shipping> getAll();
 
-    boolean delete(int id);
-
     boolean save(Shipping shipping);
 
-    boolean update(Shipping shipping);
+    int getMaxShippingId();
 }
