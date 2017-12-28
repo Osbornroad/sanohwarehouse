@@ -1,7 +1,7 @@
 package com.gmail.osbornroad.service;
 
+import com.gmail.osbornroad.model.Recieving;
 import com.gmail.osbornroad.model.Shipping;
-import com.gmail.osbornroad.repository.ShippingPostgreeRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +10,6 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -18,55 +17,40 @@ import java.util.List;
 public class Scheduler {
 
     @Autowired
-    ShippingService shippingService;
+    FirebirdService firebirdService;
 
     @Autowired
-    ShippingPostgreeService shippingPostgreeService;
+    PostgreeService postgreeService;
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Scheduler.class);
 
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
-//    private int lastFieldKey = 48;
-
-/*    @Scheduled(fixedDelay = 5000)
-    public void reportMaxShippingId() {
-        int maxShippingId = shippingPostgreeService.getMaxShippingId();
-        LOGGER.info("Current MaxShippingId = " + maxShippingId);
-    }*/
-
-    @Scheduled(fixedDelay = 20000)
+    //@Scheduled(fixedDelay = 20000)
     public void updateShipping() {
-        int lastSavedShippingId = shippingPostgreeService.getMaxShippingId();
-        List<Shipping> unsavedShipping = shippingService.getUnsavedShipping(lastSavedShippingId);
-        if (unsavedShipping.size() == 0) {
+        int lastSavedShippingId = postgreeService.getMaxSavedShippingId();
+        List<Shipping> unsavedShippingList = firebirdService.getUnsavedShippingList(lastSavedShippingId);
+        if (unsavedShippingList.size() == 0) {
             LOGGER.info("There are no new shipping in Firebird database.");
         } else {
-            for (Shipping shipping : unsavedShipping) {
-                shippingPostgreeService.save(shipping);
+            for (Shipping shipping : unsavedShippingList) {
+                postgreeService.saveShipping(shipping);
             }
         }
     }
 
-/*    @Scheduled(fixedDelay = 3000)
-    public void reportNextDelivery(){
-        Shipping nextShipping = null;
-        try {
-            nextShipping = shippingService.get(lastFieldKey);
-            LOGGER.info(nextShipping.toString());
-        } catch (org.springframework.dao.EmptyResultDataAccessException e) {
-            LOGGER.info("No field Key = " + lastFieldKey);
+    @Scheduled(fixedDelay = 20000)
+    public void updateRecieving() {
+        int lastSavedRecievingId = 0;
+        List<Recieving> unsavedRecievingList = firebirdService.getUnsavedRecievingList(lastSavedRecievingId);
+        if (unsavedRecievingList.size() == 0) {
+            LOGGER.info("There are no new recieving in Firebird database.");
         }
-        lastFieldKey++;
+        else {
+            for (Recieving recieving : unsavedRecievingList) {
+                postgreeService.saveRecieving(recieving);
+            }
+        }
+    }
 
-        shippingPostgreeService.save(nextShipping);
-        }*/
-
-
-
-
-/*    @Scheduled(fixedDelay = 3000)
-    public void reportCurrentTime(){
-        LOGGER.info("Current time is {}", dateFormat.format(new Date()));
-    }*/
 }

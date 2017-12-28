@@ -25,7 +25,7 @@ public class DeliveryController {
 
     @RequestMapping({"delivery/getinfo"})
     public String getTestDeliveryInfo(Model model) {
-        Delivery testDelivery = deliveryService.get(3465);
+        Delivery testDelivery = deliveryService.getShipping(3465);
         LOGGER.info("DeliveryController.getTestDeliveryInfo() working...");
         model.addAttribute("testDelivery", testDelivery);
         return "delivery";
@@ -33,7 +33,7 @@ public class DeliveryController {
 
     @RequestMapping({"delivery/getallinfo"})
     public String getTestAllDeliveryInfo(Model model) {
-        List<Delivery> testAllDelivery = deliveryService.getAll();
+        List<Delivery> testAllDelivery = deliveryService.getAllShipping();
         LOGGER.info("DeliveryController.getTestDeliveryInfo() working...");
         model.addAttribute("testAllDelivery", testAllDelivery);
         return "delivery";

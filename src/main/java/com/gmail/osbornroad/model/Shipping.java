@@ -28,47 +28,24 @@ public class Shipping {
         this.shippingDateTime = shippingDateTime;
     }
 
-    public Shipping() {
-    }
-
     public Integer getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public Integer getShippingId() {
         return shippingId;
     }
 
-    public void setShippingId(int shippingId) {
-        this.shippingId = shippingId;
-    }
-
     public String getClusterCode() {
         return clusterCode;
-    }
-
-    public void setClusterCode(String clusterCode) {
-        this.clusterCode = clusterCode;
     }
 
     public String getBarcode() {
         return barcode;
     }
 
-    public void setBarcode(String barcode) {
-        this.barcode = barcode;
-    }
-
     public LocalDateTime getShippingDateTime() {
         return shippingDateTime;
-    }
-
-    public void setShippingDateTime(LocalDateTime shippingDateTime) {
-        this.shippingDateTime = shippingDateTime;
     }
 
     @Override
