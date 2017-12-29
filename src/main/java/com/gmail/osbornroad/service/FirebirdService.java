@@ -1,7 +1,6 @@
 package com.gmail.osbornroad.service;
 
-import com.gmail.osbornroad.model.Recieving;
-import com.gmail.osbornroad.model.Shipping;
+import com.gmail.osbornroad.model.FinishPart;
 
 import java.util.List;
 
@@ -13,10 +12,10 @@ public interface FirebirdService {
     Shipping get(int id);
 */
 
-    List<Shipping> getUnsavedShippingList(int lastSavedShippingId);
+    List<FinishPart> getUnsavedShippingList(int lastSavedShippingId);
 
     //Receiving service
 
-    List<Recieving> getUnsavedRecievingList(int lastSavedRecievingId);
+    List<FinishPart> getUnsavedRecievingList(int lastSavedRecievingId);
 
 }

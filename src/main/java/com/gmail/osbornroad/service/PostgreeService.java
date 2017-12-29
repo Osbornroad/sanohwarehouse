@@ -1,6 +1,5 @@
 package com.gmail.osbornroad.service;
 
-import com.gmail.osbornroad.model.Recieving;
 import com.gmail.osbornroad.model.Shipping;
 
 public interface PostgreeService {
@@ -11,10 +10,10 @@ public interface PostgreeService {
 
     int saveShipping(Shipping shipping);
 
-    //Recieving repository
+    //FinishPart repository
 
-    int getMaxSavedRecievingId();
+/*    int getMaxSavedRecievingId();
 
-    int saveRecieving(Recieving recieving);
+    int saveRecieving(FinishPart recieving);*/
 
 }

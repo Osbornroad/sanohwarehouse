@@ -1,6 +1,5 @@
 package com.gmail.osbornroad.service;
 
-import com.gmail.osbornroad.model.Recieving;
 import com.gmail.osbornroad.model.Shipping;
 import com.gmail.osbornroad.repository.PostgreeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,16 +23,16 @@ public class PostgreeServiceImpl implements PostgreeService {
         return postgreeRepository.saveShipping(shipping);
     }
 
-    //Recieving service
+    //FinishPart service
 
 
-    @Override
+/*    @Override
     public int getMaxSavedRecievingId() {
         return postgreeRepository.getMaxSavedRecievingId();
     }
 
     @Override
-    public int saveRecieving(Recieving recieving) {
+    public int saveRecieving(FinishPart recieving) {
         return postgreeRepository.saveRecieving(recieving);
-    }
+    }*/
 }

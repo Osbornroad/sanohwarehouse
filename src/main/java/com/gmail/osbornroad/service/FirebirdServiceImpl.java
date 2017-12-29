@@ -1,7 +1,6 @@
 package com.gmail.osbornroad.service;
 
-import com.gmail.osbornroad.model.Recieving;
-import com.gmail.osbornroad.model.Shipping;
+import com.gmail.osbornroad.model.FinishPart;
 import com.gmail.osbornroad.repository.FirebirdRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,14 +23,14 @@ public class FirebirdServiceImpl implements FirebirdService {
 */
 
     @Override
-    public List<Shipping> getUnsavedShippingList(int lastSavedShippingId) {
+    public List<FinishPart> getUnsavedShippingList(int lastSavedShippingId) {
         return firebirdRepository.getUnsavedShippingList(lastSavedShippingId);
     }
 
-    //Recieving service
+    //FinishPart service
 
     @Override
-    public List<Recieving> getUnsavedRecievingList(int lastSavedRecievingId) {
+    public List<FinishPart> getUnsavedRecievingList(int lastSavedRecievingId) {
         return firebirdRepository.getUnsavedRecievingList(lastSavedRecievingId);
     }
 }

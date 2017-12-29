@@ -1,7 +1,6 @@
 package com.gmail.osbornroad.repository;
 
-import com.gmail.osbornroad.model.Recieving;
-import com.gmail.osbornroad.model.Shipping;
+import com.gmail.osbornroad.model.FinishPart;
 
 import java.util.List;
 
@@ -13,10 +12,10 @@ public interface FirebirdRepository {
     Shipping getShipping(int id);
 */
 
-    List<Shipping> getUnsavedShippingList(int maxSavedId);
+    List<FinishPart> getUnsavedShippingList(int maxSavedId);
 
-    //Recieving repository
+    //FinishPart repository
 
-    List<Recieving> getUnsavedRecievingList(int maxSavedId);
+    List<FinishPart> getUnsavedRecievingList(int maxSavedId);
 
 }

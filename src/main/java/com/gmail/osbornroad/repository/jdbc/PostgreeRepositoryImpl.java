@@ -1,6 +1,5 @@
 package com.gmail.osbornroad.repository.jdbc;
 
-import com.gmail.osbornroad.model.Recieving;
 import com.gmail.osbornroad.model.Shipping;
 import com.gmail.osbornroad.repository.PostgreeRepository;
 import com.gmail.osbornroad.repository.jdbc.jdbctemplate.PostgreeJdbcTemplate;
@@ -55,10 +54,10 @@ public class PostgreeRepositoryImpl implements PostgreeRepository {
         return listMaxShippingId.size() == 0 ? 0 : listMaxShippingId.get(0);
     }
 
-    //Recieving repository
-
+    //FinishPart repository
+/*
     @Override
-    public int saveRecieving(Recieving recieving) {
+    public int saveRecieving(FinishPart recieving) {
 
         Map<String, Object> params = new HashMap<>();
         params.put("recieving_id", recieving.getRecievingId());
@@ -66,7 +65,7 @@ public class PostgreeRepositoryImpl implements PostgreeRepository {
         params.put("comment", recieving.getComment());
 
         return postgreeNamedParameterJdbcTemplate.update("INSERT INTO recieving_fg (recieving_id, recieving_date_time, comment) VALUES (:recieving_id, :recieving_date_time, :comment)", params);
-    }
+    }*/
 
     @Override
     public int getMaxSavedRecievingId() {

@@ -1,14 +1,12 @@
 package com.gmail.osbornroad.repository.jdbc;
 
-import com.gmail.osbornroad.model.Recieving;
+import com.gmail.osbornroad.model.FinishPart;
 import com.gmail.osbornroad.model.Shipping;
 import com.gmail.osbornroad.repository.FirebirdRepository;
 import com.gmail.osbornroad.repository.jdbc.jdbctemplate.FireBirdJdbcTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+
 import java.util.List;
 
 @Repository
@@ -42,8 +40,8 @@ public class FirebirdRepositoryImpl implements FirebirdRepository {
         });
     }*/
 
-    @Override
-    public List<Shipping> getUnsavedShippingList(int maxSavedId) {
+/*    @Override
+    public List<FinishPart> getUnsavedShippingList(int maxSavedId) {
         return fireBirdJdbcTemplate.query(
                 "    SELECT BD_SHIPPING.FIELD_KEY, \n" +
                         "    bd_shipping.date_time,\n" +
@@ -63,25 +61,68 @@ public class FirebirdRepositoryImpl implements FirebirdRepository {
                             return shipping;
                         }
         );
-    }
+    }*/
 
-    //Recieving repository
+    //FinishPart repository
+
+
+/*    @Override
+    public List<FinishPart> getUnsavedShippingList(int maxSavedId) {
+        return fireBirdJdbcTemplate.query(
+                "",
+                (rs, rowNum) -> {
+                    FinishPart finishPart = new FinishPart(
+                            rs.getInt("field_key"),
+                            rs.getString("name"),
+                            rs.getInt("cnt"),
+                            rs.getTimestamp("date_time").toLocalDateTime()
+                    );
+                    return finishPart;
+                }
+        );    }*/
 
     @Override
-    public List<Recieving> getUnsavedRecievingList(int maxSavedId) {
+    public List<FinishPart> getUnsavedShippingList(int maxSavedId) {
         return fireBirdJdbcTemplate.query(
-                "SELECT field_key, date_time, comment " +
-                        "FROM bd_prihod " +
-                        "WHERE field_key > " + maxSavedId +
-                        "ORDER BY field_key",
+                "select \n" +
+                        "    bd_tovar.name,\n" +
+                        "    sum( bd_shipping_table.cnt ) sum_of_cnt\n" +
+                        "from bd_shipping_table\n" +
+                        "   inner join bd_tovar on (bd_shipping_table.fk_tovar = bd_tovar.field_key)\n" +
+                "group by bd_tovar.name",
+
                 (rs, rowNum) -> {
-                    Recieving recieving = new Recieving(
-                            rs.getInt("field_key"),
-                            rs.getTimestamp("date_time").toLocalDateTime(),
-                            rs.getString("comment")
+                    FinishPart finishPart = new FinishPart(
+//                            rs.getInt("field_key"),
+                            rs.getString("name"),
+                            rs.getInt("sum_of_cnt")
+//                            rs.getTimestamp("date_time").toLocalDateTime()
                     );
-                    return recieving;
+                    return finishPart;
+                }
+        );    }
+
+
+
+    public List<FinishPart> getUnsavedRecievingList(int maxSavedId) {
+        int counter = 0;
+        return fireBirdJdbcTemplate.query(
+                "select \n" +
+                        "    bd_tovar.name,\n" +
+                        "    sum( bd_prihod_table.cnt ) sum_of_cnt\n" +
+                        "from bd_prihod_table\n" +
+                        "   inner join bd_tovar on (bd_prihod_table.fk_tovar = bd_tovar.field_key)\n" +
+                        "group by bd_tovar.name",
+                (rs, rowNum) -> {
+                    FinishPart finishPart = new FinishPart(
+//                            rs.getInt("field_key"),
+                            rs.getString("name"),
+                            rs.getInt("sum_of_cnt")
+//                            rs.getTimestamp("date_time").toLocalDateTime()
+                    );
+                    return finishPart;
                 }
         );
     }
+
 }
