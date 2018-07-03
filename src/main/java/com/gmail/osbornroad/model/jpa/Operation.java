@@ -13,6 +13,7 @@ public class Operation implements Serializable {
     private Integer id;
     private String operationName;
     private Integer operationSequence;
+    private Set<Part> partSet = new HashSet<>();
 
     public Operation() {
     }
@@ -49,6 +50,18 @@ public class Operation implements Serializable {
 
     public void setOperationSequence(Integer operationSequence) {
         this.operationSequence = operationSequence;
+    }
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "part_operation_detail",
+            joinColumns = @JoinColumn(name = "operation_id"),
+            inverseJoinColumns = @JoinColumn(name = "part_id"))
+    public Set<Part> getPartSet() {
+        return partSet;
+    }
+
+    public void setPartSet(Set<Part> partSet) {
+        this.partSet = partSet;
     }
 
     @Override

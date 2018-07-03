@@ -41,4 +41,8 @@ public class OperationService {
     public Operation saveOperation(Operation operation) {
         return operationRepository.save(operation);
     }
+
+    public void deleteOperation(Operation operation) {
+        operationRepository.delete(operation);
+    }
 }

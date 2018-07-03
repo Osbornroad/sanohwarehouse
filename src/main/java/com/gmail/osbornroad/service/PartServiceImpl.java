@@ -42,4 +42,9 @@ public class PartServiceImpl implements PartService {
     public Part savePart(Part part) {
         return partRepository.save(part);
     }
+
+    @Override
+    public void deletePart(Part part) {
+        partRepository.delete(part);
+    }
 }

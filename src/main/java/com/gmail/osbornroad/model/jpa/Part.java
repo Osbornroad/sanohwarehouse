@@ -17,6 +17,7 @@ public class Part implements Serializable {
     private Integer id;
     private String partName;
     private Integer partTypeId;
+    private Set<Operation> operationSet = new HashSet<>();
 
     public Part() {
     }
@@ -53,6 +54,18 @@ public class Part implements Serializable {
 
     public void setPartTypeId(Integer partTypeId) {
         this.partTypeId = partTypeId;
+    }
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "part_operation_detail",
+        joinColumns = @JoinColumn(name = "part_id"),
+        inverseJoinColumns = @JoinColumn(name = "operation_id"))
+    public Set<Operation> getOperationSet() {
+        return operationSet;
+    }
+
+    public void setOperationSet(Set<Operation> operationSet) {
+        this.operationSet = operationSet;
     }
 
     @Override
