@@ -1,6 +1,6 @@
 package com.gmail.osbornroad.repository;
 
-import com.gmail.osbornroad.model.Shipping;
+import com.gmail.osbornroad.model.jdbc.Shipping;
 
 public interface PostgreeRepository {
 

@@ -5,20 +5,20 @@
        xmlns:jdbc="http://www.springframework.org/schema/jdbc"
        xmlns:tx="http://www.springframework.org/schema/tx"
        xmlns:jpa="http://www.springframework.org/schema/data/jpa"
-       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:jee="http://www.springframework.org/schema/jee" xmlns:util="http://www.springframework.org/schema/util"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
        http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
        http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
-       http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd">
+       http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
-<!--    <jdbc:initialize-database data-source="dataSource" enabled="${database.init}">
-        <jdbc:script location="classpath:db/${jdbc.initLocation}"/>
-&lt;!&ndash;        <jdbc:script encoding="utf-8" location="classpath:db/populateDB.sql"/>&ndash;&gt;
-    </jdbc:initialize-database>-->
+    <jdbc:initialize-database data-source="postgreeDataSource" enabled="true">
+        <jdbc:script location="classpath:db/initDB.sql"/>
+<!--        <jdbc:script encoding="utf-8" location="classpath:db/populateDB.sql"/>-->
+    </jdbc:initialize-database>
 
-    <tx:annotation-driven/>
+
 
     <!--Firebird-->
     <beans>
@@ -85,5 +85,46 @@
             <property name="dataSource" ref="postgreeDataSource" />
         </bean>
     </beans>
+
+    <beans>
+        <bean id="jpaTransactionManager"
+              class="org.springframework.orm.jpa.JpaTransactionManager">
+            <property name="entityManagerFactory" ref="eManagerFactory"/>
+        </bean>
+        <bean id="eManagerFactory"
+              class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+            <property name="dataSource" ref="postgreeDataSource"/>
+            <property name="jpaVendorAdapter">
+                <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/>
+            </property>
+            <property name="packagesToScan" value="com.gmail.osbornroad.model.jpa"/>
+            <property name="jpaProperties">
+                <props>
+                    <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQL95Dialect</prop>
+                    <prop key="hibernate.show_sql">true</prop>
+                </props>
+            </property>
+        </bean>
+        <jpa:repositories base-package="com.gmail.osbornroad.repository.jpa"
+                          entity-manager-factory-ref="eManagerFactory"
+                          transaction-manager-ref="jpaTransactionManager"/>
+    </beans>
+
+    
+   <!-- <beans>
+        <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean"
+              p:dataSource-ref="postgreeDataSource"
+              p:packagesToScan="com.gmail.osbornroad.model.hibernate">
+            <property name="hibernateProperties">
+                <props>
+                    <prop key="dialect">org.hibernate.dialect.PostgreSQL95Dialect</prop>
+                    <prop key="hibernate.show_sql">true</prop>
+                </props>
+            </property>
+        </bean>
+        <bean id="hibernateTransactionManager" 
+              class="org.springframework.orm.hibernate5.HibernateTransactionManager"
+              p:sessionFactory-ref="sessionFactory"/>
+    </beans>-->
 
 </beans>

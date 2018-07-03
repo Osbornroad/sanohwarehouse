@@ -184,7 +184,7 @@
       <version>2.1.1</version>
     </dependency>
 
-    <!--hibernate
+    <!--hibernate-->
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
@@ -201,7 +201,7 @@
       <artifactId>hibernate-validator</artifactId>
       <version>${hibernate-validator.version}</version>
     </dependency>
-    -->
+
     <!--http://hibernate.org/validator/documentation/getting-started/#unified-expression-language-el
     <dependency>
       <groupId>javax.el</groupId>

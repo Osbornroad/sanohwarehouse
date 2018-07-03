@@ -1,0 +1,6 @@
+HPC;10
+Laser;20
+Chamfering;30
+Brushing;40
+Reduction;50
+Endforming;60

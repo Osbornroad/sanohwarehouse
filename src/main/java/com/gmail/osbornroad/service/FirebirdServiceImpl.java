@@ -1,6 +1,6 @@
 package com.gmail.osbornroad.service;
 
-import com.gmail.osbornroad.model.FinishPart;
+import com.gmail.osbornroad.model.jdbc.FinishPart;
 import com.gmail.osbornroad.repository.FirebirdRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

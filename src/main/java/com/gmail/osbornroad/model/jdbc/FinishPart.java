@@ -1,4 +1,4 @@
-package com.gmail.osbornroad.model;
+package com.gmail.osbornroad.model.jdbc;
 
 import java.time.LocalDateTime;
 

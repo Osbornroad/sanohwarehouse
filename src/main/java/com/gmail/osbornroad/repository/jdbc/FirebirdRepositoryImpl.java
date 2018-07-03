@@ -1,7 +1,6 @@
 package com.gmail.osbornroad.repository.jdbc;
 
-import com.gmail.osbornroad.model.FinishPart;
-import com.gmail.osbornroad.model.Shipping;
+import com.gmail.osbornroad.model.jdbc.FinishPart;
 import com.gmail.osbornroad.repository.FirebirdRepository;
 import com.gmail.osbornroad.repository.jdbc.jdbctemplate.FireBirdJdbcTemplate;
 import org.springframework.beans.factory.annotation.Autowired;

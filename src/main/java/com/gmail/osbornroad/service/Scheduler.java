@@ -1,14 +1,15 @@
 package com.gmail.osbornroad.service;
 
-import com.gmail.osbornroad.model.FinishPart;
-import com.gmail.osbornroad.model.Shipping;
+import com.gmail.osbornroad.model.jdbc.FinishPart;
+import com.gmail.osbornroad.model.jdbc.Shipping;
+import com.gmail.osbornroad.model.jpa.Part;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.EnableScheduling;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -16,6 +17,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 @Service
 @EnableScheduling
 public class Scheduler {
+
+    //com.gmail.osbornroad.service.Scheduler
 
     @Autowired
     FirebirdService firebirdService;
@@ -30,6 +33,27 @@ public class Scheduler {
     private static final Logger LOGGER = LoggerFactory.getLogger(Scheduler.class);
 
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
+
+    @Autowired
+    PartService partService;
+
+    @PostConstruct
+    public void testPartTable () {
+        List<Part> partList = partService.findAllParts();
+        for (Part part : partList) {
+            LOGGER.info(part.toString());
+        }
+        Part part = partService.findPartById(2);
+        LOGGER.info("Get Part #2: " + part.toString());
+        part.setPartName("Modified Part Name #2.1");
+        partService.savePart(part);
+        partService.savePart(new Part("Created Part",50));
+        partList = partService.findAllParts();
+        LOGGER.info("Modified database");
+        for (Part part1 : partList) {
+            LOGGER.info(part1.toString());
+        }
+    }
 
     int counterShipping = 0;
 
@@ -62,7 +86,7 @@ public class Scheduler {
 
     }
 
-    @Scheduled(fixedDelay = 5000)
+//    @Scheduled(fixedDelay = 5000)
     public void getRemainingFinishParts() {
 
         long start = System.currentTimeMillis();

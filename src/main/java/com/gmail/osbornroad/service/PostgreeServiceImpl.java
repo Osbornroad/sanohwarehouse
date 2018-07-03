@@ -1,6 +1,6 @@
 package com.gmail.osbornroad.service;
 
-import com.gmail.osbornroad.model.Shipping;
+import com.gmail.osbornroad.model.jdbc.Shipping;
 import com.gmail.osbornroad.repository.PostgreeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

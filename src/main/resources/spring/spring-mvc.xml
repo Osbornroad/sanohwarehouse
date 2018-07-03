@@ -8,6 +8,8 @@
 
 
     <!--  all resources inside folder src/main/webapp/resources are mapped so they can be referred to inside JSP files -->
+    <mvc:annotation-driven />
+
     <mvc:resources mapping="/resources/**" location="/resources/"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
@@ -19,8 +21,9 @@
     <context:component-scan base-package="com.gmail.osbornroad.service"/>
     <context:component-scan base-package="com.gmail.osbornroad.model"/>
     <context:component-scan base-package="com.gmail.osbornroad.controller"/>
+    <context:component-scan base-package="com.gmail.osbornroad.repository"/>
 
-    <mvc:annotation-driven />
+
 
 
 </beans>

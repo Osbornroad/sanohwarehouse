@@ -1,6 +1,6 @@
 package com.gmail.osbornroad.repository;
 
-import com.gmail.osbornroad.model.FinishPart;
+import com.gmail.osbornroad.model.jdbc.FinishPart;
 
 import java.util.List;
 

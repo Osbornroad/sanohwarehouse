@@ -1,6 +1,6 @@
 package com.gmail.osbornroad.repository.jdbc;
 
-import com.gmail.osbornroad.model.Shipping;
+import com.gmail.osbornroad.model.jdbc.Shipping;
 import com.gmail.osbornroad.repository.PostgreeRepository;
 import com.gmail.osbornroad.repository.jdbc.jdbctemplate.PostgreeJdbcTemplate;
 import com.gmail.osbornroad.repository.jdbc.jdbctemplate.PostgreeNamedParameterJdbcTemplate;
