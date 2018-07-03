@@ -2,6 +2,7 @@ package com.gmail.osbornroad.service;
 
 import com.gmail.osbornroad.model.jdbc.FinishPart;
 import com.gmail.osbornroad.model.jdbc.Shipping;
+import com.gmail.osbornroad.model.jpa.Operation;
 import com.gmail.osbornroad.model.jpa.Part;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,7 +38,15 @@ public class Scheduler {
     @Autowired
     PartService partService;
 
+    @Autowired
+    OperationService operationService;
+
     @PostConstruct
+    public void testSpringJPA() {
+        testPartTable();
+        testOperatonTable();
+
+    }
     public void testPartTable () {
         List<Part> partList = partService.findAllParts();
         for (Part part : partList) {
@@ -49,10 +58,29 @@ public class Scheduler {
         partService.savePart(part);
         partService.savePart(new Part("Created Part",50));
         partList = partService.findAllParts();
-        LOGGER.info("Modified database");
+        LOGGER.info("Modified part table");
         for (Part part1 : partList) {
             LOGGER.info(part1.toString());
         }
+    }
+
+    public void testOperatonTable() {
+        List<Operation> operationList = operationService.findAllOperations();
+        for (Operation operation : operationList) {
+            LOGGER.info(operation.toString());
+        }
+        Operation operation = operationService.findOperationById(3);
+        LOGGER.info("Get Operation #3: " + operation.toString());
+        operation.setOperationName("Modified Op Name #3.1");
+        operation.setOperationSequence(1001);
+        operationService.saveOperation(operation);
+        operationService.saveOperation(new Operation("Created Operation", 222));
+        operationList = operationService.findAllOperations();
+        LOGGER.info("Modified operation table");
+        for (Operation operation1 : operationList) {
+            LOGGER.info(operation1.toString());
+        }
+
     }
 
     int counterShipping = 0;

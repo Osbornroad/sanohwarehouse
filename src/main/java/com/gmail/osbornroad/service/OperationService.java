@@ -1,6 +1,8 @@
 package com.gmail.osbornroad.service;
 
+import com.gmail.osbornroad.model.jpa.Operation;
 import com.gmail.osbornroad.model.jpa.Part;
+import com.gmail.osbornroad.repository.jpa.OperationRepository;
 import com.gmail.osbornroad.repository.jpa.PartRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -14,32 +16,29 @@ import java.util.Optional;
 @Service
 //@Repository
 @Transactional
-public class PartServiceImpl implements PartService {
+public class OperationService {
 
     @Autowired
-    PartRepository partRepository;
+    OperationRepository operationRepository;
 
     @Transactional(readOnly = true)
-    @Override
-    public List<Part> findAllParts() {
-        List<Part> partList = new ArrayList<>();
-        Iterable<Part> iterable = partRepository.findAll();
-        iterable.forEach(partList::add);
-        return partList;
+    public List<Operation> findAllOperations() {
+        List<Operation> operationList = new ArrayList<>();
+        Iterable<Operation> iterable = operationRepository.findAll();
+        iterable.forEach(operationList::add);
+        return operationList;
     }
 
     @Transactional(readOnly = true)
-    @Override
-    public Part findPartById(Integer id) {
-        Optional<Part> optional = partRepository.findById(id);
+    public Operation findOperationById(Integer id) {
+        Optional<Operation> optional = operationRepository.findById(id);
         if (optional.isPresent()) {
             return optional.get();
         }
         return null;
     }
 
-    @Override
-    public Part savePart(Part part) {
-        return partRepository.save(part);
+    public Operation saveOperation(Operation operation) {
+        return operationRepository.save(operation);
     }
 }

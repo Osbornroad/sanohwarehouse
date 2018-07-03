@@ -9,9 +9,9 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="parts")
-@NamedQueries({
+/*@NamedQueries({
         @NamedQuery(name="Part.findAll", query = "select c from Part c")
-})
+})*/
 public class Part implements Serializable {
 
     private Integer id;

@@ -46,3 +46,13 @@ VALUES
   ( 'FakePartName #2', 2 ),
   ( 'FakePartName #3', 3 ),
   ( 'FakePartName #4', 4 );
+
+DROP TABLE IF EXISTS part_operations_detail CASCADE;
+CREATE TABLE part_operations_detail
+(
+  operation_id        INTEGER NOT NULL,
+  part_id             INTEGER NOT NULL,
+  PRIMARY KEY (operation_id, part_id),
+  CONSTRAINT fk_part_operations_detail_2 FOREIGN KEY (operation_id) REFERENCES operations (id),
+  CONSTRAINT fk_part_operations_detail_1 FOREIGN KEY (part_id) REFERENCES parts (id) ON DELETE CASCADE
+)
