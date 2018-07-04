@@ -26,12 +26,6 @@ CREATE TABLE operations
   operation_name     VARCHAR,
   operation_sequence INTEGER
 );
-INSERT INTO operations (operation_name, operation_sequence)
-VALUES
-  ( 'FakeOperationName #1', 10 ),
-  ( 'FakeOperationName #2', 20 ),
-  ( 'FakeOperationName #3', 30 ),
-  ( 'FakeOperationName #4', 40 );
 
 DROP TABLE IF EXISTS parts CASCADE;
 CREATE TABLE parts
@@ -40,12 +34,6 @@ CREATE TABLE parts
   part_name          VARCHAR,
   part_type_id       INTEGER
 );
-INSERT INTO parts (part_name, part_type_id)
-VALUES
-  ( 'FakePartName #1', 1 ),
-  ( 'FakePartName #2', 2 ),
-  ( 'FakePartName #3', 3 ),
-  ( 'FakePartName #4', 4 );
 
 DROP TABLE IF EXISTS part_operation_detail CASCADE;
 CREATE TABLE part_operation_detail
@@ -55,4 +43,21 @@ CREATE TABLE part_operation_detail
   PRIMARY KEY (operation_id, part_id),
   CONSTRAINT fk_part_operation_detail_2 FOREIGN KEY (operation_id) REFERENCES operations (id),
   CONSTRAINT fk_part_operation_detail_1 FOREIGN KEY (part_id) REFERENCES parts (id) ON DELETE CASCADE
-)
+);
+
+DROP TABLE IF EXISTS persons CASCADE;
+CREATE TABLE persons
+(
+  id                  SERIAL PRIMARY KEY,
+  person_name         VARCHAR
+);
+
+DROP TABLE IF EXISTS person_operation_detail CASCADE;
+CREATE TABLE person_operation_detail
+(
+  operation_id       INTEGER NOT NULL,
+  person_id          INTEGER NOT NULL,
+  PRIMARY KEY (operation_id, person_id),
+  CONSTRAINT fk_person_operation_detail_1 FOREIGN KEY (operation_id) REFERENCES operations (id),
+  CONSTRAINT fk_person_operation_detail_2 FOREIGN KEY (person_id) REFERENCES persons (id) ON DELETE CASCADE
+);

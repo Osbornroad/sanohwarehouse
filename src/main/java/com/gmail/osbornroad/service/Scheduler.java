@@ -11,6 +11,9 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -28,12 +31,13 @@ public class Scheduler {
     PostgreeService postgreeService;
 
     private static final List<Shipping> currentShippingList = new CopyOnWriteArrayList<>();
-
     private static final List<FinishPart> CURRENT_FINISH_PART_LIST = new CopyOnWriteArrayList<>();
-
     private static final Logger LOGGER = LoggerFactory.getLogger(Scheduler.class);
-
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
+    private static final String PATH_TO_OPERATION_FAKE_DATA =
+            "C:\\Users\\User\\IdeaProjects\\sanohwarehouse\\src\\main\\resources\\fakedata\\operationsFakeData.txt";
+    private static final String PATH_TO_PART_FAKE_DATA =
+            "C:\\Users\\User\\IdeaProjects\\sanohwarehouse\\src\\main\\resources\\fakedata\\partsFakeData.txt";
 
     @Autowired
     PartService partService;
@@ -43,9 +47,34 @@ public class Scheduler {
 
     @PostConstruct
     public void testSpringJPA() {
+        populateOperationTable();
+        populatePartsTable();
 //        testPartTable();
 //        testOperatonTable();
 //        testPartOperationJoinTable();
+    }
+
+    public void populateOperationTable() {
+        try (BufferedReader br = new BufferedReader(new FileReader(PATH_TO_OPERATION_FAKE_DATA))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String [] splitted = line.split(";");
+                operationService.saveOperation(new Operation(splitted[0], Integer.parseInt(splitted[1])));
+            }
+        } catch (IOException e) {
+        }
+    }
+
+    public void populatePartsTable() {
+        Set<Operation> operationSet = new HashSet<>(operationService.findAllOperations());
+        try (BufferedReader br = new BufferedReader(new FileReader(PATH_TO_PART_FAKE_DATA))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String [] splitted = line.split(";");
+                partService.savePart(new Part(splitted[0], Integer.parseInt(splitted[1]), operationSet));
+            }
+        } catch (IOException e) {
+        }
     }
 
     public void testPartOperationJoinTable() {

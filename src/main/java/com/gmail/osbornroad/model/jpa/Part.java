@@ -27,6 +27,12 @@ public class Part implements Serializable {
         this.partTypeId = partTypeId;
     }
 
+    public Part(String partName, Integer partTypeId, Set<Operation> operationSet) {
+        this.partName = partName;
+        this.partTypeId = partTypeId;
+        this.operationSet = operationSet;
+    }
+
     @Id
     @GeneratedValue(strategy = IDENTITY)
     @Column(name="id")

@@ -5,7 +5,7 @@
 <body>
 <h2>Sanoh warehouse.</h2>
 <br/>
-<a href="<c:url value="/delivery"/>" target="_blank">Test delivery</a>
-
+<%--<a href="<c:url value="/delivery"/>" target="_blank">Test delivery</a>--%>
+<a href="<c:url value="/operations/getAll"/>" target="_blank">Operation list</a>
 </body>
 </html>

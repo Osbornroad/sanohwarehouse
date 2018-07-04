@@ -1,11 +1,8 @@
 package com.gmail.osbornroad.service;
 
 import com.gmail.osbornroad.model.jpa.Operation;
-import com.gmail.osbornroad.model.jpa.Part;
 import com.gmail.osbornroad.repository.jpa.OperationRepository;
-import com.gmail.osbornroad.repository.jpa.PartRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,7 +11,6 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-//@Repository
 @Transactional
 public class OperationService {
 
