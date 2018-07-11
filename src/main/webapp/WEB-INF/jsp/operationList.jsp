@@ -2,6 +2,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
 
@@ -108,14 +110,15 @@
     <div class="tbl-content">
         <table cellpadding="0" cellspacing="0" border="0">
             <tbody>
-                <c:forEach items="${allOperationList}" var="operation">
+                <c:forEach items="${allOperationList}" var="operation" varStatus="oStatus" >
                     <jsp:useBean id="operation" scope="page" type="com.gmail.osbornroad.model.jpa.Operation"/>
-                    <tr>
-                        <td>${operation.operationName}</td>
-                        <td>${operation.operationSequence}</td>
-                        <td width="60"><a href="./edit/${operation.id}">Update</a></td>
-                        <td width="60"><a href="./delete/${operation.id}">Delete</a></td>
-                    </tr>
+                            <tr>
+                                <td>${operation.operationName}</td>
+                                <td>${operation.operationSequence}</td>
+                                <td width="60"><a href="./edit/${operation.id}">Update</a></td>
+                                <%--<td width="60"><a href="./${operation.id}" methods="DELETE">Delete</a></td>--%>
+                                <td><sf:form action="operations/${operation.id}" method="delete"><input type="submit"/></sf:form></td>
+                            </tr>
                 </c:forEach>
             </tbody>
         </table>
@@ -128,4 +131,5 @@
         $('.tbl-header').css({'padding-right':scrollWidth});
     }).resize();
 </script>
+</body>
 </html>
