@@ -39,11 +39,11 @@
     <ehcache.version>2.10.3</ehcache.version>
 
     <!--webjars-->
-    <webjars-bootstrap.version>3.3.7-1</webjars-bootstrap.version>
+    <webjars-bootstrap.version>4.1.1</webjars-bootstrap.version>
     <webjars-jquery.version>3.1.1-1</webjars-jquery.version>
     <webjars-datetimepicker.version>2.5.4</webjars-datetimepicker.version>
     <webjars-noty.version>2.3.8</webjars-noty.version>
-    <webjars-datatables.version>1.10.13</webjars-datatables.version>
+    <webjars-datatables.version>1.10.19</webjars-datatables.version>
 
     <org.aspectj-version>1.8.0</org.aspectj-version>
 
@@ -242,6 +242,12 @@
     </dependency>
 
     <!-- Webjars (static dependencies distributed as JAR files) -->
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>webjars-locator</artifactId>
+      <version>0.32</version>
+    </dependency>
+
     <dependency>
       <groupId>org.webjars</groupId>
       <artifactId>jquery</artifactId>

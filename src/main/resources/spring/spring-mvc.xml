@@ -11,6 +11,7 @@
     <mvc:annotation-driven />
 
     <mvc:resources mapping="/resources/**" location="/resources/"/>
+    <mvc:resources mapping="/webjars/**" location="/webjars/"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
           p:prefix="/WEB-INF/jsp/"
