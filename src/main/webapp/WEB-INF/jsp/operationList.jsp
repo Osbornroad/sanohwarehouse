@@ -17,6 +17,8 @@
     <script src="/webjars/jquery/3.1.1-1/jquery.js"></script>
     <script src="/webjars/datatables/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="/webjars/datatables/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <%--<link rel="stylesheet" href="/webjars/bootstrap/4.1.1/css/bootstrap.css">--%>
+    <link rel="stylesheet" href="/webjars/datatables/1.10.19/css/dataTables.bootstrap4.min.css">
     <script>
         $(document).ready(function() {
             $('#operationTable').DataTable();
@@ -103,32 +105,38 @@
 
 </head>
 <body>
-<table>
-    <tr>
-        <td class="operationList"><h2>Operation list</h2></td>
-        <td class="newOperation"><a class="btn btn-outline-info font-weight-bold h3" href="/operations/new">+</a></td>
-    </tr>
-</table>
 <div class="container">
-    <table class="table table-hover" id="operationTable">
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Sequence</th>
-            <th width="60"></th>
-        </tr>
-        </thead>
-        <tbody>
-        <c:forEach items="${allOperationList}" var="operation" varStatus="oStatus" >
-            <jsp:useBean id="operation" scope="page" type="com.gmail.osbornroad.model.jpa.Operation"/>
-            <tr>
-                <td><a href="/operations/${operation.id}">${operation.operationName}</a></td>
-                <td>${operation.operationSequence}</td>
-                <td><sf:form action="operations/${operation.id}" method="delete"><input type="submit" class="btn btn-outline-danger btn-sm font-weight-bold" value="X"/></sf:form></td>
-            </tr>
-        </c:forEach>
-        </tbody>
-    </table>
+    <div class="row mt-1 mb-1">
+        <div class="col">
+            <h3>Operation list</h3>
+        </div>
+        <div class="col">
+            <a class="btn btn-outline-info font-weight-bold h3" href="/operations/new">+</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-hover" id="operationTable">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Sequence</th>
+                    <th width="60"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <c:forEach items="${allOperationList}" var="operation" varStatus="oStatus" >
+                    <jsp:useBean id="operation" scope="page" type="com.gmail.osbornroad.model.jpa.Operation"/>
+                    <tr class="align-middle">
+                        <td><a href="/operations/${operation.id}">${operation.operationName}</a></td>
+                        <td>${operation.operationSequence}</td>
+                        <td><sf:form action="operations/${operation.id}" method="delete"><input type="submit" class="btn btn-outline-danger btn-sm font-weight-bold" value="X"/></sf:form></td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 <%--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>--%>
 <%--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>--%>
