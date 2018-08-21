@@ -1,5 +1,7 @@
 package com.gmail.osbornroad.model.jpa;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import static javax.persistence.GenerationType.IDENTITY;
 import java.io.Serializable;
 import java.util.HashSet;
@@ -52,6 +54,7 @@ public class Operation implements Serializable {
         this.operationSequence = operationSequence;
     }
 
+    @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "part_operation_detail",
             joinColumns = @JoinColumn(name = "operation_id"),

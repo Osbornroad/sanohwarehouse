@@ -4,3 +4,8 @@ Chamfering;30
 Brushing;40
 Reduction;50
 Endforming;60
+SUMI cutting;70
+SUMI oven;80
+Bending;90
+Assembly;100
+Shipping;110

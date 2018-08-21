@@ -24,6 +24,11 @@
     <context:component-scan base-package="com.gmail.osbornroad.controller"/>
     <context:component-scan base-package="com.gmail.osbornroad.repository"/>
 
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
 
 
 
