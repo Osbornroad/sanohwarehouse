@@ -20,6 +20,8 @@
     <script src="/webjars/datatables/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="/webjars/datatables/1.10.19/js/dataTables.bootstrap4.min.js"></script>
     <script src="/webjars/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="/resources/js/bootbox.min.js"></script>
+    <%--<script src="/webjars/bootbox/4.4.0/bootbox.js"></script>--%>
     <script>
         var table;
         var ajaxUrl = "operations/ajax/";
@@ -43,22 +45,28 @@
         } );
 
         function renderDeleteBtn(data, type, row) {
+            var id = row.id;
+            var opName = row.operationName;
             if (type == 'display') {
-                /*return '<a class="btn btn-xs btn-danger" onclick="deleteRow(' + row.id + ');">' +
-                    '<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>';*/
-                return '<a class="btn btn-xs btn-danger" onclick="deleteRow(' + row.id + ');">' +
+                return '<a class="btn btn-xs btn-danger" onclick="deleteRow(' + id + ', \'' + opName + '\');">' +
                     '<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>';
             }
         }
 
-        function deleteRow(id) {
-            $.ajax({
-                url: ajaxUrl + id,
-                type: 'DELETE',
-                success: function () {
-                    table.ajax.reload();
-                    /*updateTable();
-                    successNoty('Deleted');*/
+        function deleteRow(id, opName) {
+            bootbox.confirm({
+                title: "Delete operation",
+                message: "Are you sure to delete operation " + opName + "?\nAction is irreversible.",
+                callback: function (result) {
+                    if (result === true) {
+                        $.ajax({
+                            url: ajaxUrl + id,
+                            type: 'DELETE',
+                            success: function () {
+                                table.ajax.reload();
+                            }
+                        });
+                    }
                 }
             });
         }
@@ -188,12 +196,6 @@
         $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
     });*/
 </script>
-<%--<script>
-    setInterval( function () {
-        $('#operationTable').DataTable().ajax.reload();
-    }, 30000 );
-</script>--%>
-
 </body>
 
 </html>
