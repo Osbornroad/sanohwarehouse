@@ -11,7 +11,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <%--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">--%>
     <link rel="stylesheet" href="/webjars/bootstrap/4.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/webjars/datatables/1.10.19/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="/resources/bootstrap4-glyphicons/css/bootstrap-glyphicons.css">
@@ -21,10 +20,10 @@
     <script src="/webjars/datatables/1.10.19/js/dataTables.bootstrap4.min.js"></script>
     <script src="/webjars/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="/resources/js/bootbox.min.js"></script>
-    <%--<script src="/webjars/bootbox/4.4.0/bootbox.js"></script>--%>
     <script>
         var table;
         var ajaxUrl = "operations/ajax/";
+        var form;
 
         $(document).ready(function() {
             table = $('#operationTable').DataTable({
@@ -36,13 +35,74 @@
                     {"data" : "operationName"},
                     {"data" : "operationSequence"},
                     {
+                        "render": renderEditBtn,
+                        "defaultContent": "",
+                        "orderable": false
+                    },
+                    {
                         "render": renderDeleteBtn,
                         "defaultContent": "",
                         "orderable": false
                     }
-                ]
+                ],
+                "initComplete": makeEditable
             });
         } );
+
+        function makeEditable() {
+            form = $('#detailsForm');
+
+/*            $(document).ajaxError(function (event, jqXHR, options, jsExc) {
+                failNoty(event, jqXHR, options, jsExc);
+            });
+
+            var token = $("meta[name='_csrf']").attr("content");
+            var header = $("meta[name='_csrf_header']").attr("content");
+            $(document).ajaxSend(function(e, xhr, options) {
+                xhr.setRequestHeader(header, token);
+            });*/
+        }
+
+        function renderEditBtn(data, type, row) {
+            if (type == 'display') {
+                return '<a class="btn btn-xs btn-primary" onclick="openModalEdit(' + row.id + '/*, \'' + "edit" + '\'*/);">' +
+                    '<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>';
+            }
+        }
+
+        function openModalEdit(id) {
+            document.getElementById("modalTitle").innerHTML = id === "create" ? "New operation" : "Edit operation";
+            $.get(ajaxUrl + id, function (data) {
+                $.each(data, function (key, value) {
+                    form.find("input[name='" + key + "']").val(
+                        /*key === "dateTime" ? formatDate(value) : */value
+                    );
+                });
+            });
+            $('#editRow').modal('show');
+/*            $('#modalTitle').html(i18n[editTitleKey]);
+            $.get(ajaxUrl + id, function (data) {
+                $.each(data, function (key, value) {
+                    form.find("input[name='" + key + "']").val(
+                        key === "dateTime" ? formatDate(value) : value
+                    );
+                });
+                $('#editRow').modal();
+            });*/
+        }
+
+        function save() {
+            $.ajax({
+                type: "POST",
+                url: ajaxUrl,
+                data: form.serialize(),
+                success: function () {
+                    $('#editRow').modal('hide');
+                    table.ajax.reload();
+                    // successNoty('common.saved');
+                }
+            });
+        }
 
         function renderDeleteBtn(data, type, row) {
             var id = row.id;
@@ -70,26 +130,7 @@
                 }
             });
         }
-
-/*        $('#confirm-delete').on('click', '.btn-ok', function(e) {
-            var $modalDiv = $(e.delegateTarget);
-            var id = $(this).data('recordId');
-            $.ajax({url: '/operations/' + id, type: 'DELETE'});
-            // $.post('/api/record/' + id).then()
-            $modalDiv.addClass('loading');
-            setTimeout(function() {
-                $modalDiv.modal('hide').removeClass('loading');
-            }, 1)
-            table.ajax.reload();
-        });
-
-        $('#confirm-delete').on('show.bs.modal', function(e) {
-            var data = $(e.relatedTarget).data();
-            $('.title', this).text(data.recordTitle);
-            $('.btn-ok', this).data('recordId', data.recordId);
-        });*/
     </script>
-
 
     <style>
         .container {
@@ -106,8 +147,7 @@
             <h3>Operation list</h3>
         </div>
         <div class="col">
-            <a class="btn btn-outline-info float-right" href="/operations/new"><span class="glyphicon glyphicon-plus"></span></a>
-            <%--<a class="btn btn-outline-info font-weight-bold h3" href="/operations/new"><h3>+</h3></a>--%>
+            <a class="btn btn-outline-info float-right" onclick="openModalEdit('create')"><span class="glyphicon glyphicon-plus"></span></a>
         </div>
     </div>
     <div class="row">
@@ -118,84 +158,53 @@
                     <th>Name</th>
                     <th>Sequence</th>
                     <th width="60"></th>
+                    <th width="60"></th>
                 </tr>
                 </thead>
-<%--                <tbody>
-                <c:forEach items="${allOperationList}" var="operation" varStatus="oStatus" >
-                    <jsp:useBean id="operation" scope="page" type="com.gmail.osbornroad.model.jpa.Operation"/>
-                    <tr>
-                        <td class="align-middle"><a href="/operations/${operation.id}">${operation.operationName}</a></td>
-                        <td class="align-middle">${operation.operationSequence}</td>
-                        &lt;%&ndash;<td class="align-middle"><button class="btn btn-default" data-href="/delete.php?id=54" data-toggle="modal" data-target="#confirm-delete">&ndash;%&gt;
-                            &lt;%&ndash;Delete record #54&ndash;%&gt;
-                        &lt;%&ndash;</button></td>&ndash;%&gt;
-                        <td class="align-middle">
-                            &lt;%&ndash;<sf:form action="operations/${operation.id}" method="delete">&ndash;%&gt;
-                            <button class="btn btn-outline-danger float-right btn-sm"
-                                    data-record-id="${operation.id}"
-                                    data-record-title="${operation.operationName}"
-                                    &lt;%&ndash;data-href="/operations/${operation.id}"&ndash;%&gt;
-                                    data-toggle="modal"
-                                    data-target="#confirm-delete"><span class="glyphicon glyphicon-remove"></span></button>
-                            &lt;%&ndash;</sf:form>&ndash;%&gt;
-                        </td>
-                    </tr>
-                </c:forEach>
-                </tbody>--%>
             </table>
         </div>
     </div>
 </div>
 
-<div class="modal fade" id="confirm-delete" tabindex="-1"
-     role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+<div class="modal fade" id="editRow">
+    <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <div class="col">
-                    <h4 class="modal-title">Delete operation</h4>
-                </div>
-                <div class="col float-right">
-                    <button type="button" class="close" data-dismiss="modal"
-                        aria-hidden="true">×</button>
-                </div>
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-body">
-                <p>You are about to delete <b><i class="title"></i></b> operation, this procedure is irreversible.</p>
-                <p>Do you want to proceed?</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-danger btn-ok">Delete</button>
-                <%--<a class="btn btn-danger btn-ok">Delete</a>--%>
+                <form:form class="form-horizontal" id="detailsForm">
+                    <input type="hidden" id="id" name="id">
+
+                    <div class="form-group">
+                        <label for="operationName" class="control-label col-xs-3">Name</label>
+
+                        <div class="col-xs-9">
+                            <input class="form-control" id="operationName" name="operationName"
+                                   placeholder="Input name of operation">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="operationSequence" class="control-label col-xs-3">Sequence</label>
+
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" id="operationSequence" name="operationSequence"
+                                   placeholder="Input sequence of operation">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-offset-3 col-xs-9">
+                            <button class="btn btn-primary" type="button" onclick="save()">
+                                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                </form:form>
             </div>
         </div>
     </div>
 </div>
-
-<script>
-    $('#confirm-delete').on('click', '.btn-ok', function(e) {
-        var $modalDiv = $(e.delegateTarget);
-        var id = $(this).data('recordId');
-        $.ajax({url: '/operations/' + id, type: 'DELETE'});
-        // $.post('/api/record/' + id).then()
-        $modalDiv.addClass('loading');
-        setTimeout(function() {
-            $modalDiv.modal('hide').removeClass('loading');
-        }, 0);
-        // location.reload(true);
-        // table.clear().rows.draw();
-        // table.ajax.reload();
-    });
-    $('#confirm-delete').on('show.bs.modal', function(e) {
-        var data = $(e.relatedTarget).data();
-        $('.title', this).text(data.recordTitle);
-        $('.btn-ok', this).data('recordId', data.recordId);
-    })
-/*    $('#confirm-delete').on('show.bs.modal', function(e) {
-        $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
-    });*/
-</script>
 </body>
 
 </html>

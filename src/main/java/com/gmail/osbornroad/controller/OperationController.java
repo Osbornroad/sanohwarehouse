@@ -3,9 +3,11 @@ package com.gmail.osbornroad.controller;
 import com.gmail.osbornroad.model.jpa.Operation;
 import com.gmail.osbornroad.service.OperationService;
 import com.gmail.osbornroad.util.Message;
+import com.gmail.osbornroad.util.ValidationUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -33,21 +35,18 @@ public class OperationController {
     @Autowired
     private MessageSource messageSource;
 
-    @RequestMapping(method = RequestMethod.GET/*, produces = MediaType.APPLICATION_JSON_VALUE*/)
-    public String showOperationList (Model model) {
-        model.addAttribute("allOperationList", operationService.findAllOperations());
-        return "operationList";
-    }
+
 
     @GetMapping(value = "/ajax", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public List<Operation> getAllOperations (Model model) {
+    public List<Operation> getAjaxAllOperations() {
         List<Operation> operationList = operationService.findAllOperations();
         return operationList;
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public String getOperation (@PathVariable("id") String stringId, Model model) {
+    @GetMapping(value = "/ajax/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public Operation getAjaxOperation(@PathVariable("id") String stringId) {
         Operation operation;
         Integer id;
         try {
@@ -56,24 +55,40 @@ public class OperationController {
         } catch (NumberFormatException e) {
             operation = new Operation();
         }
-        model.addAttribute("operation", operation);
-        return "operation";
+        if (operation == null) {
+            operation = new Operation();
+        }
+        return operation;
     }
 
-    @RequestMapping(method = RequestMethod.POST)
-    public String saveOperation (@Valid Operation operation, BindingResult bindingResult) {
+    @PostMapping(value = "/ajax")
+    public ResponseEntity<String> saveAjaxOperation (@Valid Operation operation, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
-            return "operation";
+            return ValidationUtil.getErrorResponse(bindingResult);
         }
         if (operation.getId() != null) {
             operation.setPartSet(operationService.findOperationById(operation.getId()).getPartSet());
         }
         operationService.saveOperation(operation);
-        return "redirect:/operations";
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    @DeleteMapping(value = "/ajax/{id}")
+    @ResponseBody
+    public void deleteAjaxOperation (@PathVariable Integer id) {
+        Operation operation = operationService.findOperationById(id);
+        if (operation != null) {
+            operationService.deleteOperation(operation);
+        }
+    }
 
-    /*@RequestMapping(value = "/{id}", params = "form", method = RequestMethod.POST)
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public String showOperationList(Model model) {
+        model.addAttribute("allOperationList", operationService.findAllOperations());
+        return "operationList";
+    }
+
+     /*@RequestMapping(value = "/{id}", params = "form", method = RequestMethod.POST)
     public String updateOperation(Operation operation, BindingResult bindingResult,
                                   Model model, HttpServletRequest httpServletRequest,
                                   RedirectAttributes redirectAttributes, Locale locale) {
@@ -97,21 +112,39 @@ public class OperationController {
         return "operation";
     }*/
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+/*    @DeleteMapping(value = "/{id}")
     @ResponseBody
     public void deleteOperation (@PathVariable Integer id) {
         Operation operation = operationService.findOperationById(id);
         if (operation != null) {
             operationService.deleteOperation(operation);
         }
-    }
+    }*/
 
-    @RequestMapping(value = "/ajax/{id}", method = RequestMethod.DELETE)
-    @ResponseBody
-    public void deleteAjaxOperation (@PathVariable Integer id) {
-        Operation operation = operationService.findOperationById(id);
-        if (operation != null) {
-            operationService.deleteOperation(operation);
+/*    @PostMapping
+    public String saveOperation (@Valid Operation operation, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            return "operation";
         }
-    }
+        if (operation.getId() != null) {
+            operation.setPartSet(operationService.findOperationById(operation.getId()).getPartSet());
+        }
+        operationService.saveOperation(operation);
+        return "redirect:/operations";
+    }*/
+
+/*    @GetMapping(value = "/{id}")
+    public String getOperation(@PathVariable("id") String stringId, Model model) {
+        Operation operation;
+        Integer id;
+        try {
+            id = Integer.parseInt(stringId);
+            operation = operationService.findOperationById(id);
+        } catch (NumberFormatException e) {
+            operation = new Operation();
+        }
+        model.addAttribute("operation", operation);
+        return "operation";
+    }*/
+
 }
