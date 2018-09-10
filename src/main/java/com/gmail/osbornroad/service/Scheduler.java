@@ -4,6 +4,8 @@ import com.gmail.osbornroad.model.jdbc.FinishPart;
 import com.gmail.osbornroad.model.jdbc.Shipping;
 import com.gmail.osbornroad.model.jpa.Operation;
 import com.gmail.osbornroad.model.jpa.Part;
+import com.gmail.osbornroad.model.jpa.Role;
+import com.gmail.osbornroad.model.jpa.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,13 +47,34 @@ public class Scheduler {
     @Autowired
     OperationService operationService;
 
+    @Autowired
+    UserService userService;
+
     @PostConstruct
     public void testSpringJPA() {
         populateOperationTable();
         populatePartsTable();
+        populateUserTable();
 //        testPartTable();
 //        testOperatonTable();
 //        testPartOperationJoinTable();
+    }
+
+    public void populateUserTable() {
+        Set<Role> adminRoles = new HashSet<>();
+        Date adminRegistered = new Date();
+        Set<Role> notAdminRoles = new HashSet<>();
+        Date noAdminRegistered = new Date();
+
+        adminRoles.add(Role.ROLE_ADMIN);
+        adminRoles.add(Role.ROLE_USER);
+        notAdminRoles.add(Role.ROLE_USER);
+
+        User admin = new User("Maksim", "maksim.tkachenko@sanoh-rus.com", "111111", true, adminRegistered, adminRoles);
+        User noAdmin = new User("Pavel", "pavel.yulin@sanoh-rus.com", "222222", true, noAdminRegistered, notAdminRoles);
+
+        userService.saveUser(admin);
+        userService.saveUser(noAdmin);
     }
 
     public void populateOperationTable() {

@@ -2,7 +2,6 @@ package com.gmail.osbornroad.controller;
 
 import com.gmail.osbornroad.model.jpa.Operation;
 import com.gmail.osbornroad.service.OperationService;
-import com.gmail.osbornroad.util.Message;
 import com.gmail.osbornroad.util.ValidationUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,15 +11,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.context.MessageSource;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import java.net.Inet4Address;
 import java.util.List;
-import java.util.Locale;
 import java.util.logging.Logger;
 
 @Controller
@@ -55,9 +49,9 @@ public class OperationController {
         } catch (NumberFormatException e) {
             operation = new Operation();
         }
-        if (operation == null) {
+        /*if (operation == null) {
             operation = new Operation();
-        }
+        }*/
         return operation;
     }
 
@@ -85,7 +79,7 @@ public class OperationController {
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public String showOperationList(Model model) {
         model.addAttribute("allOperationList", operationService.findAllOperations());
-        return "operationList";
+        return "operations";
     }
 
      /*@RequestMapping(value = "/{id}", params = "form", method = RequestMethod.POST)

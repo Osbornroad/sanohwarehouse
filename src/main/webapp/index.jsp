@@ -6,7 +6,9 @@
 <h2>Sanoh warehouse.</h2>
 <br/>
 <%--<a href="<c:url value="/delivery"/>" target="_blank">Test delivery</a>--%>
-<% response.sendRedirect("/operations");%>
+<% response.sendRedirect("/main");%>
 <a href="<c:url value="/operations"/>" target="_blank">Operation list</a>
 </body>
 </html>
+
+

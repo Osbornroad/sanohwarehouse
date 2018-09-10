@@ -22,18 +22,22 @@
     <script src="/resources/js/bootbox.min.js"></script>
     <script>
         var table;
-        var ajaxUrl = "operations/ajax/";
+        var ajaxUrl = "users/ajax/";
         var form;
 
         $(document).ready(function() {
-            table = $('#operationTable').DataTable({
+            table = $('#userTable').DataTable({
                 ajax : {
                     url : ajaxUrl,
                     dataSrc : ""
                 },
                 columns : [
-                    {"data" : "operationName"},
-                    {"data" : "operationSequence"},
+                    {"data" : "userName"},
+                    {"data" : "email"},
+                    {"data" : "password"},
+                    {"data" : "enabled"},
+                    {"data" : "registered"},
+                    {"data" : "roles"},
                     {
                         "render": renderEditBtn,
                         "defaultContent": "",
@@ -52,26 +56,26 @@
         function makeEditable() {
             form = $('#detailsForm');
 
-/*            $(document).ajaxError(function (event, jqXHR, options, jsExc) {
-                failNoty(event, jqXHR, options, jsExc);
-            });
+            /*            $(document).ajaxError(function (event, jqXHR, options, jsExc) {
+                            failNoty(event, jqXHR, options, jsExc);
+                        });
 
-            var token = $("meta[name='_csrf']").attr("content");
-            var header = $("meta[name='_csrf_header']").attr("content");
-            $(document).ajaxSend(function(e, xhr, options) {
-                xhr.setRequestHeader(header, token);
-            });*/
+                        var token = $("meta[name='_csrf']").attr("content");
+                        var header = $("meta[name='_csrf_header']").attr("content");
+                        $(document).ajaxSend(function(e, xhr, options) {
+                            xhr.setRequestHeader(header, token);
+                        });*/
         }
 
         function renderEditBtn(data, type, row) {
             if (type == 'display') {
-                return '<a class="btn btn-xs btn-primary" onclick="openModalEdit(' + row.id + '/*, \'' + "edit" + '\'*/);">' +
-                    '<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>';
+                return '<a href="#" onclick="openModalEdit(' + row.id + '/*, \'' + "edit" + '\'*/);">' +
+                    '<span class="glyphicon glyphicon-pencil" style="color: blue" aria-hidden="true"></span></a>';
             }
         }
 
         function openModalEdit(id) {
-            document.getElementById("modalTitle").innerHTML = id === "create" ? "New operation" : "Edit operation";
+            document.getElementById("modalTitle").innerHTML = id === "create" ? "New user" : "Edit user";
             $.get(ajaxUrl + id, function (data) {
                 $.each(data, function (key, value) {
                     form.find("input[name='" + key + "']").val(
@@ -80,15 +84,15 @@
                 });
             });
             $('#editRow').modal('show');
-/*            $('#modalTitle').html(i18n[editTitleKey]);
-            $.get(ajaxUrl + id, function (data) {
-                $.each(data, function (key, value) {
-                    form.find("input[name='" + key + "']").val(
-                        key === "dateTime" ? formatDate(value) : value
-                    );
-                });
-                $('#editRow').modal();
-            });*/
+            /*            $('#modalTitle').html(i18n[editTitleKey]);
+                        $.get(ajaxUrl + id, function (data) {
+                            $.each(data, function (key, value) {
+                                form.find("input[name='" + key + "']").val(
+                                    key === "dateTime" ? formatDate(value) : value
+                                );
+                            });
+                            $('#editRow').modal();
+                        });*/
         }
 
         function save() {
@@ -106,17 +110,17 @@
 
         function renderDeleteBtn(data, type, row) {
             var id = row.id;
-            var opName = row.operationName;
+            var usName = row.userName;
             if (type == 'display') {
-                return '<a class="btn btn-xs btn-danger" onclick="deleteRow(' + id + ', \'' + opName + '\');">' +
-                    '<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>';
+                return '<a href="#" onclick="deleteRow(' + id + ', \'' + usName + '\');">' +
+                    '<span class="glyphicon glyphicon-remove" style="color: darkred" aria-hidden="true"></span></a>';
             }
         }
 
-        function deleteRow(id, opName) {
+        function deleteRow(id, usName) {
             bootbox.confirm({
-                title: "Delete operation",
-                message: "Are you sure to delete operation " + opName + "?\nAction is irreversible.",
+                title: "Delete user",
+                message: "Are you sure to delete user " + usName + "?\nAction is irreversible.",
                 callback: function (result) {
                     if (result === true) {
                         $.ajax({
@@ -141,10 +145,14 @@
 
 </head>
 <body>
+
+<jsp:include page="fragments/navbar.jsp"/>
+
+
 <div class="container float-left m-3">
     <div class="row mt-4 mb-4">
         <div class="col">
-            <h3>Operation list</h3>
+            <h3>User list</h3>
         </div>
         <div class="col">
             <a class="btn btn-outline-info float-right" onclick="openModalEdit('create')"><span class="glyphicon glyphicon-plus"></span></a>
@@ -152,11 +160,15 @@
     </div>
     <div class="row">
         <div class="col-12">
-            <table class="table table-hover" id="operationTable">
+            <table class="table table-hover" id="userTable">
                 <thead>
                 <tr>
                     <th>Name</th>
-                    <th>Sequence</th>
+                    <th>E-mail</th>
+                    <th>Password</th>
+                    <th>Enabled</th>
+                    <th>Registered</th>
+                    <th>Roles</th>
                     <th width="60"></th>
                     <th width="60"></th>
                 </tr>
@@ -178,19 +190,51 @@
                     <input type="hidden" id="id" name="id">
 
                     <div class="form-group">
-                        <label for="operationName" class="control-label col-xs-3">Name</label>
+                        <label for="userName" class="control-label col-xs-3">Name</label>
 
                         <div class="col-xs-9">
-                            <input class="form-control" id="operationName" name="operationName"
-                                   placeholder="Input name of operation">
+                            <input class="form-control" id="userName" name="userName"
+                                   placeholder="Input name of user">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="operationSequence" class="control-label col-xs-3">Sequence</label>
+                        <label for="email" class="control-label col-xs-3">E-mail</label>
 
                         <div class="col-xs-9">
-                            <input type="text" class="form-control" id="operationSequence" name="operationSequence"
-                                   placeholder="Input sequence of operation">
+                            <input type="text" class="form-control" id="email" name="email"
+                                   placeholder="Input e-mail">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label col-xs-3">Password</label>
+
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" id="password" name="password"
+                                   placeholder="Input password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="enabled" class="control-label col-xs-3">Enabled</label>
+
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" id="enabled" name="enabled"
+                                   placeholder="Input enabled or not">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="registered" class="control-label col-xs-3">Registered</label>
+
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" id="registered" name="registered"
+                                   placeholder="Input date of registration">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="roles" class="control-label col-xs-3">Roles</label>
+
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" id="roles" name="roles"
+                                   placeholder="Input roles">
                         </div>
                     </div>
                     <div class="form-group">
