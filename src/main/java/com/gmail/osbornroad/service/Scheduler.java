@@ -17,6 +17,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -62,16 +63,16 @@ public class Scheduler {
 
     public void populateUserTable() {
         Set<Role> adminRoles = new HashSet<>();
-        Date adminRegistered = new Date();
+        LocalDateTime adminRegistered = LocalDateTime.now();
         Set<Role> notAdminRoles = new HashSet<>();
-        Date noAdminRegistered = new Date();
+        LocalDateTime noAdminRegistered = LocalDateTime.now();
 
         adminRoles.add(Role.ROLE_ADMIN);
         adminRoles.add(Role.ROLE_USER);
         notAdminRoles.add(Role.ROLE_USER);
 
         User admin = new User("Maksim", "maksim.tkachenko@sanoh-rus.com", "111111", true, adminRegistered, adminRoles);
-        User noAdmin = new User("Pavel", "pavel.yulin@sanoh-rus.com", "222222", true, noAdminRegistered, notAdminRoles);
+        User noAdmin = new User("Pavel", "pavel.yulin@sanoh-rus.com", "222222", false, noAdminRegistered, notAdminRoles);
 
         userService.saveUser(admin);
         userService.saveUser(noAdmin);

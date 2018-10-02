@@ -36,7 +36,15 @@
                     {"data" : "email"},
                     {"data" : "password"},
                     {"data" : "enabled"},
-                    {"data" : "registered"},
+                    {
+                        "data" : "registered",
+                        "render": function (date, type, row) {
+                            if (type == 'display') {
+                                return formatDate(date);
+                            }
+                            return date;
+                        }
+                    },
                     {"data" : "roles"},
                     {
                         "render": renderEditBtn,
@@ -52,6 +60,10 @@
                 "initComplete": makeEditable
             });
         } );
+
+        function formatDate(date) {
+            return date.replace('T', ' ').substr(0, 16);
+        }
 
         function makeEditable() {
             form = $('#detailsForm');
@@ -79,6 +91,9 @@
             $.get(ajaxUrl + id, function (data) {
                 $.each(data, function (key, value) {
                     form.find("input[name='" + key + "']").val(
+                        key === "registered" ? formatDate(value) : value
+                    );
+                    form.find("select[name='" + key + "']").val(
                         /*key === "dateTime" ? formatDate(value) : */value
                     );
                 });
@@ -201,7 +216,7 @@
                         <label for="email" class="control-label col-xs-3">E-mail</label>
 
                         <div class="col-xs-9">
-                            <input type="text" class="form-control" id="email" name="email"
+                            <input type="email" class="form-control" id="email" name="email"
                                    placeholder="Input e-mail">
                         </div>
                     </div>
@@ -209,7 +224,7 @@
                         <label for="password" class="control-label col-xs-3">Password</label>
 
                         <div class="col-xs-9">
-                            <input type="text" class="form-control" id="password" name="password"
+                            <input type="password" class="form-control" id="password" name="password"
                                    placeholder="Input password">
                         </div>
                     </div>
@@ -217,26 +232,41 @@
                         <label for="enabled" class="control-label col-xs-3">Enabled</label>
 
                         <div class="col-xs-9">
+                            <select class="form-control" id="enabled" name="enabled">
+                                <option>true</option>
+                                <option>false</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <input type="hidden" id="registered" name="registered">
+                    <%--<div class="form-group">
+                        <label for="enabled" class="control-label col-xs-3">Enabled</label>
+
+                        <div class="col-xs-9">
                             <input type="text" class="form-control" id="enabled" name="enabled"
                                    placeholder="Input enabled or not">
                         </div>
-                    </div>
+                    </div>--%>
                     <div class="form-group">
-                        <label for="registered" class="control-label col-xs-3">Registered</label>
+                        <label for="roles" class="control-label col-xs-3">Roles</label>
 
                         <div class="col-xs-9">
-                            <input type="text" class="form-control" id="registered" name="registered"
-                                   placeholder="Input date of registration">
+                            <select multiple class="form-control" id="roles" name="roles">
+                                <option>ROLE_ADMIN</option>
+                                <option>ROLE_USER</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="form-group">
+                   <%-- <div class="form-group">
                         <label for="roles" class="control-label col-xs-3">Roles</label>
 
                         <div class="col-xs-9">
                             <input type="text" class="form-control" id="roles" name="roles"
                                    placeholder="Input roles">
                         </div>
-                    </div>
+                    </div>--%>
+
                     <div class="form-group">
                         <div class="col-xs-offset-3 col-xs-9">
                             <button class="btn btn-primary" type="button" onclick="save()">

@@ -1,14 +1,16 @@
 package com.gmail.osbornroad.model.jpa;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.gmail.osbornroad.util.DateTimeUtil;
 import org.hibernate.annotations.BatchSize;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import static javax.persistence.GenerationType.IDENTITY;
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.*;
@@ -22,13 +24,13 @@ public class User implements Serializable {
     private String email;
     private String password;
     private boolean enabled = true;
-    private Date registered = new Date();
+    private LocalDateTime registered;
     private Set<Role> roles = new HashSet<>();
 
     public User() {
     }
 
-    public User(String userName, String email, String password, boolean enabled, Date registered, Set<Role> roles) {
+    public User(String userName, String email, String password, boolean enabled, LocalDateTime registered, Set<Role> roles) {
         this.userName = userName;
         this.email = email;
         this.password = password;
@@ -37,7 +39,7 @@ public class User implements Serializable {
         this.roles = roles;
     }
 
-    public User(Integer id, String userName, String email, String password, boolean enabled, Date registered, Set<Role> roles) {
+    public User(Integer id, String userName, String email, String password, boolean enabled, LocalDateTime registered, Set<Role> roles) {
         this.id = id;
         this.userName = userName;
         this.email = email;
@@ -99,11 +101,12 @@ public class User implements Serializable {
     }
 
     @Column(name = "registered")
-    public Date getRegistered() {
+    @DateTimeFormat(pattern = DateTimeUtil.DATE_TIME_PATTERN)
+    public LocalDateTime getRegistered() {
         return registered;
     }
 
-    public void setRegistered(Date registered) {
+    public void setRegistered(LocalDateTime registered) {
         this.registered = registered;
     }
 
