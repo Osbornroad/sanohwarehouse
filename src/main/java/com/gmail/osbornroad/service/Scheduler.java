@@ -71,8 +71,8 @@ public class Scheduler {
         adminRoles.add(Role.ROLE_USER);
         notAdminRoles.add(Role.ROLE_USER);
 
-        User admin = new User("Maksim", "maksim.tkachenko@sanoh-rus.com", "111111", true, adminRegistered, adminRoles);
-        User noAdmin = new User("Pavel", "pavel.yulin@sanoh-rus.com", "222222", false, noAdminRegistered, notAdminRoles);
+        User admin = new User("Maksim", "maksim.tkachenko@sanoh-rus.com", "111111", adminRegistered, adminRoles);
+        User noAdmin = new User("Pavel", "pavel.yulin@sanoh-rus.com", "222222", noAdminRegistered, notAdminRoles);
 
         userService.saveUser(admin);
         userService.saveUser(noAdmin);

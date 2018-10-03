@@ -34,9 +34,11 @@
                 columns : [
                     {"data" : "userName"},
                     {"data" : "email"},
-                    {"data" : "password"},
+                    {"data" : "password"},/*
                     {"data" : "enabled"},
-                    {
+*/
+
+                                        {
                         "data" : "registered",
                         "render": function (date, type, row) {
                             if (type == 'display') {
@@ -98,7 +100,18 @@
                     );
                 });
             });
+
+            if (id === "create") {
+                var elements = document.getElementsByTagName("input");
+                for (var ii=0; ii < elements.length; ii++) {
+                    if (elements[ii].type == "text" || "hidden" || "email" || "password") {
+                        elements[ii].value = "";
+                    }
+                }
+            }
+
             $('#editRow').modal('show');
+
             /*            $('#modalTitle').html(i18n[editTitleKey]);
                         $.get(ajaxUrl + id, function (data) {
                             $.each(data, function (key, value) {
@@ -181,7 +194,9 @@
                     <th>Name</th>
                     <th>E-mail</th>
                     <th>Password</th>
+<%--
                     <th>Enabled</th>
+--%>
                     <th>Registered</th>
                     <th>Roles</th>
                     <th width="60"></th>
@@ -208,7 +223,7 @@
                         <label for="userName" class="control-label col-xs-3">Name</label>
 
                         <div class="col-xs-9">
-                            <input class="form-control" id="userName" name="userName"
+                            <input type="text" class="form-control" id="userName" name="userName"
                                    placeholder="Input name of user">
                         </div>
                     </div>
@@ -228,7 +243,7 @@
                                    placeholder="Input password">
                         </div>
                     </div>
-                    <div class="form-group">
+                    <%--<div class="form-group">
                         <label for="enabled" class="control-label col-xs-3">Enabled</label>
 
                         <div class="col-xs-9">
@@ -237,7 +252,7 @@
                                 <option>false</option>
                             </select>
                         </div>
-                    </div>
+                    </div>--%>
 
                     <input type="hidden" id="registered" name="registered">
                     <%--<div class="form-group">

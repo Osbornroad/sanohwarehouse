@@ -69,8 +69,8 @@ CREATE TABLE users
   user_name           VARCHAR NOT NULL,
   email               VARCHAR NOT NULL,
   password            VARCHAR NOT NULL,
-  enabled             BOOLEAN DEFAULT TRUE,
-  registered          TIMESTAMP DEFAULT now()
+--   enabled             BOOLEAN DEFAULT TRUE,
+  registered          TIMESTAMP DEFAULT now() NOT NULL 
 );
 
 DROP TABLE IF EXISTS user_roles CASCADE;

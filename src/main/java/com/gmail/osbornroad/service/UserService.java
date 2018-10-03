@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -35,6 +36,9 @@ public class UserService {
     }
 
     public User saveUser(User user) {
+        if (user.getRegistered() == null) {
+            user.setRegistered(LocalDateTime.now());
+        }
         return userRepository.save(user);
     }
 

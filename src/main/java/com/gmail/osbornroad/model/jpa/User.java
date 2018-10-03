@@ -23,28 +23,28 @@ public class User implements Serializable {
     private String userName;
     private String email;
     private String password;
-    private boolean enabled = true;
+//    private boolean enabled = true;
     private LocalDateTime registered;
     private Set<Role> roles = new HashSet<>();
 
     public User() {
     }
 
-    public User(String userName, String email, String password, boolean enabled, LocalDateTime registered, Set<Role> roles) {
+    public User(String userName, String email, String password, /*boolean enabled, */LocalDateTime registered, Set<Role> roles) {
         this.userName = userName;
         this.email = email;
         this.password = password;
-        this.enabled = enabled;
+//        this.enabled = enabled;
         this.registered = registered;
         this.roles = roles;
     }
 
-    public User(Integer id, String userName, String email, String password, boolean enabled, LocalDateTime registered, Set<Role> roles) {
+    public User(Integer id, String userName, String email, String password, /*boolean enabled, */LocalDateTime registered, Set<Role> roles) {
         this.id = id;
         this.userName = userName;
         this.email = email;
         this.password = password;
-        this.enabled = enabled;
+//        this.enabled = enabled;
         this.registered = registered;
         this.roles = roles;
     }
@@ -91,14 +91,14 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    @Column(name = "enabled")
+    /*@Column(name = "enabled")
     public boolean isEnabled() {
         return enabled;
     }
 
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
-    }
+    }*/
 
     @Column(name = "registered")
     @DateTimeFormat(pattern = DateTimeUtil.DATE_TIME_PATTERN)
