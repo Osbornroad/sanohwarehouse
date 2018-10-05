@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS operations CASCADE;
 CREATE TABLE operations
 (
   id                 SERIAL PRIMARY KEY,
-  operation_name     VARCHAR NOT NULL,
+  name               VARCHAR NOT NULL,
   operation_sequence INTEGER NOT NULL
 );
 
@@ -66,11 +66,11 @@ DROP TABLE IF EXISTS users CASCADE;
 CREATE TABLE users
 (
   id                  SERIAL PRIMARY KEY,
-  user_name           VARCHAR NOT NULL,
+  name                VARCHAR NOT NULL,
   email               VARCHAR NOT NULL,
   password            VARCHAR NOT NULL,
 --   enabled             BOOLEAN DEFAULT TRUE,
-  registered          TIMESTAMP DEFAULT now() NOT NULL 
+  registered          TIMESTAMP DEFAULT now() NOT NULL
 );
 
 DROP TABLE IF EXISTS user_roles CASCADE;

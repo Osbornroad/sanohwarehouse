@@ -20,10 +20,10 @@
     <script src="/webjars/datatables/1.10.19/js/dataTables.bootstrap4.min.js"></script>
     <script src="/webjars/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="/resources/js/bootbox.min.js"></script>
+    <script src="/resources/js/datatablesUtil.js"></script>
     <script>
-        var table;
         var ajaxUrl = "operations/ajax/";
-        var form;
+        reference = "operation";
 
         $(document).ready(function() {
             table = $('#operationTable').DataTable({
@@ -32,7 +32,7 @@
                     dataSrc : ""
                 },
                 columns : [
-                    {"data" : "operationName"},
+                    {"data" : "name"},
                     {"data" : "operationSequence"},
                     {
                         "render": renderEditBtn,
@@ -48,88 +48,6 @@
                 "initComplete": makeEditable
             });
         } );
-
-        function makeEditable() {
-            form = $('#detailsForm');
-
-/*            $(document).ajaxError(function (event, jqXHR, options, jsExc) {
-                failNoty(event, jqXHR, options, jsExc);
-            });
-
-            var token = $("meta[name='_csrf']").attr("content");
-            var header = $("meta[name='_csrf_header']").attr("content");
-            $(document).ajaxSend(function(e, xhr, options) {
-                xhr.setRequestHeader(header, token);
-            });*/
-        }
-
-        function renderEditBtn(data, type, row) {
-            if (type == 'display') {
-                return '<a href="#" onclick="openModalEdit(' + row.id + '/*, \'' + "edit" + '\'*/);">' +
-                    '<span class="glyphicon glyphicon-pencil" style="color: blue" aria-hidden="true"></span></a>';
-            }
-        }
-
-        function openModalEdit(id) {
-            document.getElementById("modalTitle").innerHTML = id === "create" ? "New operation" : "Edit operation";
-            $.get(ajaxUrl + id, function (data) {
-                $.each(data, function (key, value) {
-                    form.find("input[name='" + key + "']").val(
-                        /*key === "dateTime" ? formatDate(value) : */value
-                    );
-                });
-            });
-            $('#editRow').modal('show');
-/*            $('#modalTitle').html(i18n[editTitleKey]);
-            $.get(ajaxUrl + id, function (data) {
-                $.each(data, function (key, value) {
-                    form.find("input[name='" + key + "']").val(
-                        key === "dateTime" ? formatDate(value) : value
-                    );
-                });
-                $('#editRow').modal();
-            });*/
-        }
-
-        function save() {
-            $.ajax({
-                type: "POST",
-                url: ajaxUrl,
-                data: form.serialize(),
-                success: function () {
-                    $('#editRow').modal('hide');
-                    table.ajax.reload();
-                    // successNoty('common.saved');
-                }
-            });
-        }
-
-        function renderDeleteBtn(data, type, row) {
-            var id = row.id;
-            var opName = row.operationName;
-            if (type == 'display') {
-                return '<a href="#" onclick="deleteRow(' + id + ', \'' + opName + '\');">' +
-                    '<span class="glyphicon glyphicon-remove" style="color: darkred" aria-hidden="true"></span></a>';
-            }
-        }
-
-        function deleteRow(id, opName) {
-            bootbox.confirm({
-                title: "Delete operation",
-                message: "Are you sure to delete operation " + opName + "?\nAction is irreversible.",
-                callback: function (result) {
-                    if (result === true) {
-                        $.ajax({
-                            url: ajaxUrl + id,
-                            type: 'DELETE',
-                            success: function () {
-                                table.ajax.reload();
-                            }
-                        });
-                    }
-                }
-            });
-        }
     </script>
 
     <style>
@@ -182,11 +100,11 @@
                     <input type="hidden" id="id" name="id">
 
                     <div class="form-group">
-                        <label for="operationName" class="control-label col-xs-3">Name</label>
+                        <label for="name" class="control-label col-xs-3">Name</label>
 
                         <div class="col-xs-9">
-                            <input class="form-control" id="operationName" name="operationName"
-                                   placeholder="Input name of operation">
+                            <input class="form-control" id="name" name="name"
+                                   placeholder="Input name of operation" autofocus>
                         </div>
                     </div>
                     <div class="form-group">

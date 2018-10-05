@@ -9,7 +9,6 @@ import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import static javax.persistence.GenerationType.IDENTITY;
-import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
@@ -17,10 +16,9 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="users")
-public class User implements Serializable {
+public class User extends BaseEntity {
 
-    private Integer id;
-    private String userName;
+//    private String userName;
     private String email;
     private String password;
 //    private boolean enabled = true;
@@ -30,8 +28,8 @@ public class User implements Serializable {
     public User() {
     }
 
-    public User(String userName, String email, String password, /*boolean enabled, */LocalDateTime registered, Set<Role> roles) {
-        this.userName = userName;
+    public User(String name, String email, String password, /*boolean enabled, */LocalDateTime registered, Set<Role> roles) {
+        this.name = name;
         this.email = email;
         this.password = password;
 //        this.enabled = enabled;
@@ -39,9 +37,9 @@ public class User implements Serializable {
         this.roles = roles;
     }
 
-    public User(Integer id, String userName, String email, String password, /*boolean enabled, */LocalDateTime registered, Set<Role> roles) {
+    public User(Integer id, String name, String email, String password, /*boolean enabled, */LocalDateTime registered, Set<Role> roles) {
         this.id = id;
-        this.userName = userName;
+        this.name = name;
         this.email = email;
         this.password = password;
 //        this.enabled = enabled;
@@ -49,25 +47,14 @@ public class User implements Serializable {
         this.roles = roles;
     }
 
-    @Id
-    @GeneratedValue(strategy = IDENTITY)
-    @Column(name="id")
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    @Column(name = "user_name")
+   /* @Column(name = "user_name")
     public String getUserName() {
         return userName;
     }
 
     public void setUserName(String userName) {
         this.userName = userName;
-    }
+    }*/
 
     @Column(name = "email")
     @Email
@@ -121,5 +108,16 @@ public class User implements Serializable {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", registered=" + registered +
+                '}';
     }
 }

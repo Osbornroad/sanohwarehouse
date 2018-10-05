@@ -124,7 +124,7 @@ public class Scheduler {
         LOGGER.info("2 step");
 
         Operation operation4 = operationService.findOperationById(4);
-        operation4.setOperationName("Some new operation name 4");
+        operation4.setName("Some new operation name 4");
         operationService.saveOperation(operation4);
         partList = partService.findAllParts();
         operationList = operationService.findAllOperations();
@@ -165,7 +165,7 @@ public class Scheduler {
         }
         Operation operation = operationService.findOperationById(3);
         LOGGER.info("Get Operation #3: " + operation.toString());
-        operation.setOperationName("Modified Op Name #3.1");
+        operation.setName("Modified Op Name #3.1");
         operation.setOperationSequence(1001);
         operationService.saveOperation(operation);
         operationService.saveOperation(new Operation("Created Operation", 222));

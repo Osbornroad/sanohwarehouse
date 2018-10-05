@@ -10,39 +10,23 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="operations")
-public class Operation implements Serializable {
+public class Operation extends BaseEntity {
 
-    private Integer id;
-    private String operationName;
     private Integer operationSequence;
     private Set<Part> partSet = new HashSet<>();
 
     public Operation() {
     }
 
-    public Operation(String operationName, Integer operationSequence) {
-        this.operationName = operationName;
+    public Operation(String name, Integer operationSequence) {
+        this.name = name;
         this.operationSequence = operationSequence;
     }
 
-    @Id
-    @GeneratedValue(strategy = IDENTITY)
-    @Column(name="id")
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
+    public Operation(Integer id, String name, Integer operationSequence) {
         this.id = id;
-    }
-
-    @Column(name="operation_name")
-    public String getOperationName() {
-        return operationName;
-    }
-
-    public void setOperationName(String operationName) {
-        this.operationName = operationName;
+        this.name = name;
+        this.operationSequence = operationSequence;
     }
 
     @Column(name="operation_sequence")
@@ -71,7 +55,7 @@ public class Operation implements Serializable {
     public String toString() {
         return "Operation{" +
                 "id=" + id +
-                ", operationName='" + operationName + '\'' +
+                ", name='" + name + '\'' +
                 ", operationSequence=" + operationSequence +
                 '}';
     }
