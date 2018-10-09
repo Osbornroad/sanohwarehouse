@@ -8,9 +8,21 @@
 
     <!-- HTTP basic authentication in Spring Security -->
     <http>
-        <intercept-url pattern="/**" access="hasRole('ROLE_USER')" />
-        <form-login />
-        <logout />
+        <intercept-url pattern="/login" access="permitAll"/>
+        <intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')" />
+        <intercept-url pattern="/**" access="isAuthenticated()" />
+        <access-denied-handler error-page="/403" />
+
+        <form-login
+                login-page="/login"
+                login-processing-url="/j_spring_security_check"
+                authentication-failure-url="/login?error"
+                default-target-url="/main"
+        />
+        <logout logout-success-url="/login?logout"
+                logout-url="/j_spring_security_logout"/>
+        <csrf/>
+
     </http>
 
     <authentication-manager>

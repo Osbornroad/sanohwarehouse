@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 @Controller
-@RequestMapping("/users")
+@RequestMapping("/admin/users")
 public class UserController {
 
     private static final Logger LOGGER = Logger.getLogger(UserController.class.getName());
