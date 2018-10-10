@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <style>
     /* unvisited link */
@@ -47,8 +48,20 @@
             </ul>
             <ul class="nav navbar-nav ml-auto">
                 <li>
-                    <sec:authorize access="isAuthenticated()">
-                        <%--authenticated as <sec:authentication property="principal.username" />--%>
+                    <form:form action="logout" method="post">
+                        <sec:authorize access="isAuthenticated()">
+                            <c:if test="${pageContext.request.userPrincipal.name != null}">
+                                <span class="glyphicon glyphicon-user"></span>
+                                    ${pageContext.request.userPrincipal.name}  |  <button class="btn btn-primary" type="submit">
+                                        <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                                    </button>
+                            </c:if>
+                        </sec:authorize>
+                    </form:form>
+
+
+                <%--                    <sec:authorize access="isAuthenticated()">
+                        &lt;%&ndash;authenticated as <sec:authentication property="principal.username" />&ndash;%&gt;
                         <!-- For login user -->
                         <c:url value="/j_spring_security_logout" var="logoutUrl" />
                         <form action="${logoutUrl}" method="post" id="logoutForm">
@@ -67,7 +80,7 @@
                             <span class="glyphicon glyphicon-log-out"></span> Logout</a>
                         </c:if>
                     </sec:authorize>
-                </li>
+                </li>--%>
             </ul>
         </div>
 </nav>

@@ -20,7 +20,11 @@
                 default-target-url="/main"
         />
         <logout logout-success-url="/login?logout"
-                logout-url="/j_spring_security_logout"/>
+        logout-url="/logout"
+        />
+
+        <!--<logout logout-success-url="/login?logout"
+                logout-url="/j_spring_security_logout"/>-->
         <csrf/>
 
     </http>
@@ -28,8 +32,8 @@
     <authentication-manager>
         <authentication-provider>
             <user-service>
-                <user name="user" password="{noop}123456" authorities="ROLE_USER" />
-                <user name="admin" password="{noop}654321" authorities="ROLE_ADMIN" />
+                <user name="Pavel" password="{noop}1" authorities="ROLE_USER" />
+                <user name="Maksim" password="{noop}2" authorities="ROLE_ADMIN" />
             </user-service>
         </authentication-provider>
     </authentication-manager>

@@ -6,9 +6,17 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
+
+    <jsp:include page="fragments/headerTags.jsp"/>
+
+
+<%--    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    &lt;%&ndash;Csfr token&ndash;%&gt;
+    <meta name="_csrf" content="${_csrf.token}"/>
+    <meta name="_csrf_header" content="${_csrf.headerName}"/>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/webjars/bootstrap/4.1.1/css/bootstrap.min.css">
@@ -20,7 +28,7 @@
     <script src="/webjars/datatables/1.10.19/js/dataTables.bootstrap4.min.js"></script>
     <script src="/webjars/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="/resources/js/bootbox.min.js"></script>
-    <script src="/resources/js/datatablesUtil.js"></script>
+    <script src="/resources/js/datatablesUtil.js"></script>--%>
     <script>
         var ajaxUrl = "operations/ajax/";
         reference = "operation";
@@ -97,13 +105,13 @@
             </div>
             <div class="modal-body">
                 <form:form class="form-horizontal" id="detailsForm">
-                    <input type="hidden" id="id" name="id">
+                    <input type="hidden" id="id" name="id" class="to-empty">
 
                     <div class="form-group">
                         <label for="name" class="control-label col-xs-3">Name</label>
 
                         <div class="col-xs-9">
-                            <input class="form-control" id="name" name="name"
+                            <input class="form-control to-empty" id="name" name="name"
                                    placeholder="Input name of operation" autofocus>
                         </div>
                     </div>
@@ -111,13 +119,13 @@
                         <label for="operationSequence" class="control-label col-xs-3">Sequence</label>
 
                         <div class="col-xs-9">
-                            <input type="text" class="form-control" id="operationSequence" name="operationSequence"
+                            <input type="text" class="form-control to-empty" id="operationSequence" name="operationSequence"
                                    placeholder="Input sequence of operation">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-xs-offset-3 col-xs-9">
-                            <button class="btn btn-primary" type="button" onclick="save()">
+                            <button class="btn btn-primary toBeEmpty" type="button" onclick="save()">
                                 <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                             </button>
                         </div>

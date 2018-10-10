@@ -6,7 +6,10 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
+
+    <jsp:include page="fragments/headerTags.jsp"/>
+
+<%--<!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -20,7 +23,7 @@
     <script src="/webjars/datatables/1.10.19/js/dataTables.bootstrap4.min.js"></script>
     <script src="/webjars/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="/resources/js/bootbox.min.js"></script>
-    <script src="/resources/js/datatablesUtil.js"></script>
+    <script src="/resources/js/datatablesUtil.js"></script>--%>
     <script>
         ajaxUrl = "users/ajax/";
         reference = "user";
@@ -115,13 +118,13 @@
             </div>
             <div class="modal-body">
                 <form:form class="form-horizontal" id="detailsForm">
-                    <input type="hidden" id="id" name="id">
+                    <input type="hidden" id="id" name="id" class="to-empty">
 
                     <div class="form-group">
                         <label for="name" class="control-label col-xs-3">Name</label>
 
                         <div class="col-xs-9">
-                            <input type="text" class="form-control" id="name" name="name"
+                            <input type="text" class="form-control to-empty" id="name" name="name"
                                    placeholder="Input name of user" autofocus>
                         </div>
                     </div>
@@ -129,7 +132,7 @@
                         <label for="email" class="control-label col-xs-3">E-mail</label>
 
                         <div class="col-xs-9">
-                            <input type="email" class="form-control" id="email" name="email"
+                            <input type="email" class="form-control to-empty" id="email" name="email"
                                    placeholder="Input e-mail">
                         </div>
                     </div>
@@ -137,7 +140,7 @@
                         <label for="password" class="control-label col-xs-3">Password</label>
 
                         <div class="col-xs-9">
-                            <input type="password" class="form-control" id="password" name="password"
+                            <input type="password" class="form-control to-empty" id="password" name="password"
                                    placeholder="Input password">
                         </div>
                     </div>
@@ -152,7 +155,7 @@
                         </div>
                     </div>--%>
 
-                    <input type="hidden" id="registered" name="registered">
+                    <input type="hidden" id="registered" name="registered" class="to-empty">
                     <%--<div class="form-group">
                         <label for="enabled" class="control-label col-xs-3">Enabled</label>
 
@@ -165,7 +168,7 @@
                         <label for="roles" class="control-label col-xs-3">Roles</label>
 
                         <div class="col-xs-9">
-                            <select multiple class="form-control" id="roles" name="roles">
+                            <select multiple class="form-control to-empty" id="roles" name="roles">
                                 <option>ROLE_ADMIN</option>
                                 <option>ROLE_USER</option>
                             </select>

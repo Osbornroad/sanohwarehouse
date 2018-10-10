@@ -6,7 +6,10 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html lang="en">
     <head>
-        <!-- Required meta tags -->
+
+        <jsp:include page="fragments/headerTags.jsp"/>
+
+    <%--        <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -19,7 +22,7 @@
         <script src="/webjars/datatables/1.10.19/js/jquery.dataTables.min.js"></script>
         <script src="/webjars/datatables/1.10.19/js/dataTables.bootstrap4.min.js"></script>
         <script src="/webjars/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-        <script src="/resources/js/bootbox.min.js"></script>
+        <script src="/resources/js/bootbox.min.js"></script>--%>
     </head>
 
     <body>

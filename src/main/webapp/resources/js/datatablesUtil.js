@@ -13,12 +13,12 @@ function makeEditable() {
     /*            $(document).ajaxError(function (event, jqXHR, options, jsExc) {
                     failNoty(event, jqXHR, options, jsExc);
                 });
-
+*/
                 var token = $("meta[name='_csrf']").attr("content");
                 var header = $("meta[name='_csrf_header']").attr("content");
                 $(document).ajaxSend(function(e, xhr, options) {
                     xhr.setRequestHeader(header, token);
-                });*/
+                });
 }
 
 function renderEditBtn(data, type, row) {
@@ -42,11 +42,9 @@ function openModalEdit(id) {
     });
 
     if (id === "create") {
-        var elements = document.getElementsByTagName("input");
+        var elements = document.getElementsByClassName("to-empty");
         for (var ii=0; ii < elements.length; ii++) {
-            if (elements[ii].type == "text" || "hidden" || "email" || "password") {
                 elements[ii].value = "";
-            }
         }
     }
 

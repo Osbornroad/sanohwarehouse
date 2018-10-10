@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+
 <%@page session="true"%>
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="_csrf" content="${_csrf.token}"/>
+    <meta name="_csrf_header" content="${_csrf.headerName}"/>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/webjars/bootstrap/4.1.1/css/bootstrap.min.css">
@@ -107,9 +112,7 @@
             <c:if test="${not empty msg}">
                 <div class="msg">${msg}</div>
             </c:if>
-
         </div>
-
         <%--<div class="imgcontainer">
             <img src="img_avatar2.png" alt="Avatar" class="avatar">
         </div>--%>
@@ -121,12 +124,14 @@
                 <label for="password"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="password" required>
 
+                <input type="hidden" name="${_csrf.parameterName}"
+                       value="${_csrf.token}" />
+
                 <button type="submit">Login</button>
                 <%--<label>
                     <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label>--%>
             </div>
-
 <%--
             <div class="container" style="background-color:#f1f1f1">
                 <button type="button" class="cancelbtn">Cancel</button>
@@ -134,8 +139,6 @@
             </div>
 --%>
 
-            <input type="hidden" name="${_csrf.parameterName}"
-                   value="${_csrf.token}" />
     </form>
 
 
