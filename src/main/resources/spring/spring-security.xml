@@ -38,14 +38,14 @@
     </authentication-manager>
 -->
 
-<!--    <beans:bean id="passwordEncoder"
+    <beans:bean id="passwordEncoder"
           class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
-        <beans:constructor-arg value="11"/>
-    </beans:bean>-->
+        <beans:constructor-arg name="strength" value="11"/>
+    </beans:bean>
 
     <authentication-manager>
         <authentication-provider>
-            <password-encoder hash="bcrypt"/>
+            <password-encoder ref="passwordEncoder"/>
             <jdbc-user-service data-source-ref="postgreeDataSource"
                                users-by-username-query="SELECT name, password, enabled FROM users WHERE name = ?"
                                authorities-by-username-query="

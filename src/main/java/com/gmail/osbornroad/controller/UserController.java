@@ -15,13 +15,15 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.logging.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Controller
 @RequestMapping("/admin/users")
 public class UserController {
 
-    private static final Logger LOGGER = Logger.getLogger(UserController.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class.getName());
 
     @Autowired
     private UserService userService;
@@ -29,6 +31,7 @@ public class UserController {
     @GetMapping(value = "/ajax", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public List<User> getAllUsers() {
+        LOGGER.info("get all users");
         List<User> userList = userService.findAllUsers();
         return userList;
     }

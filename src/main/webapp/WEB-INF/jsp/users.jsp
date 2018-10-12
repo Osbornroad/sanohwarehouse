@@ -2,7 +2,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html lang="en">
 <head>
@@ -37,7 +36,7 @@
                 columns : [
                     {"data" : "name"},
                     {"data" : "email"},
-                    {"data" : "password"},
+                    // {"data" : "password"},
                     {
                         "data" : "registered",
                         "render": function (date, type, row) {
@@ -94,7 +93,7 @@
                 <tr>
                     <th>Name</th>
                     <th>E-mail</th>
-                    <th>Password</th>
+                    <%--<th>Password</th>--%>
 <%--
                     <th>Enabled</th>
 --%>
