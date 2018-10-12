@@ -39,6 +39,7 @@ public class UserService {
         return null;
     }
 
+
     public User saveUser(User user) {
         if (user.getRegistered() == null) {
             user.setRegistered(LocalDateTime.now());
