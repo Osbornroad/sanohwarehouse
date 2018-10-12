@@ -68,8 +68,8 @@ CREATE TABLE users
   id                  SERIAL PRIMARY KEY,
   name                VARCHAR NOT NULL,
   email               VARCHAR NOT NULL,
-  password            VARCHAR NOT NULL,
---   enabled             BOOLEAN DEFAULT TRUE,
+  password            VARCHAR(60) NOT NULL,
+  enabled             BOOLEAN DEFAULT TRUE,
   registered          TIMESTAMP DEFAULT now() NOT NULL
 );
 

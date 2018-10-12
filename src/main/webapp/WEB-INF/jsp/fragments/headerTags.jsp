@@ -14,14 +14,15 @@
     <meta name="_csrf_header" content="${_csrf.headerName}"/>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/webjars/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/webjars/bootstrap/4.1.3/css/bootstrap.min.css">
+    <%--<link rel="stylesheet" href="/resources/bootstrap4-glyphicons/css/bootstrap.min.css">--%>
     <link rel="stylesheet" href="/webjars/datatables/1.10.19/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="/resources/bootstrap4-glyphicons/css/bootstrap-glyphicons.css">
     <script src="/webjars/jquery/3.1.1-1/jquery.js"></script>
     <script src="/webjars/jquery/3.1.1-1/jquery.min.js"></script>
     <script src="/webjars/datatables/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="/webjars/datatables/1.10.19/js/dataTables.bootstrap4.min.js"></script>
-    <script src="/webjars/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="/webjars/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="/resources/js/bootbox.min.js"></script>
     <script src="/resources/js/datatablesUtil.js"></script>
 </head>

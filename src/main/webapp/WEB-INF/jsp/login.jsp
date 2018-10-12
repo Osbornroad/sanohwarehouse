@@ -5,7 +5,10 @@
 <%@page session="true"%>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <%--<jsp:include page="fragments/headerTags.jsp"/>--%>
+
+<%--    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="_csrf" content="${_csrf.token}"/>
     <meta name="_csrf_header" content="${_csrf.headerName}"/>
@@ -16,10 +19,10 @@
     <script src="/webjars/jquery/3.1.1-1/jquery.js"></script>
     <script src="/webjars/jquery/3.1.1-1/jquery.min.js"></script>
     <script src="/webjars/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="/resources/js/bootbox.min.js"></script>
+    <script src="/resources/js/bootbox.min.js"></script>--%>
 
     <style>
-        body {font-family: Arial, Helvetica, sans-serif;}
+        body {font-family: Arial, Helvetica, sans-serif; height: 100%}
         form {border: 3px solid #f1f1f1;}
 
         input[type=text], input[type=password] {
@@ -88,17 +91,15 @@
 
         .login-box {
             width: 600px;
+            margin: 100px auto;
+
         }
 
     </style>
 </head>
-<%--<body onload='document.loginForm.username.focus();'>--%>
+<body onload='document.loginForm.username.focus();'>
 
-<body>
-
-
-
-<div class="container login-box" id="login-box">
+<div class="container login-box">
 
     <form name='loginForm'
           action="<c:url value='/j_spring_security_check' />" method='POST'>

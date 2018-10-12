@@ -21,14 +21,14 @@ public class User extends BaseEntity {
 //    private String userName;
     private String email;
     private String password;
-//    private boolean enabled = true;
+    private boolean enabled = true;
     private LocalDateTime registered;
     private Set<Role> roles = new HashSet<>();
 
     public User() {
     }
 
-    public User(String name, String email, String password, /*boolean enabled, */LocalDateTime registered, Set<Role> roles) {
+    public User(String name, String email, String password, boolean enabled, LocalDateTime registered, Set<Role> roles) {
         this.name = name;
         this.email = email;
         this.password = password;
@@ -37,7 +37,7 @@ public class User extends BaseEntity {
         this.roles = roles;
     }
 
-    public User(Integer id, String name, String email, String password, /*boolean enabled, */LocalDateTime registered, Set<Role> roles) {
+    public User(Integer id, String name, String email, String password, boolean enabled, LocalDateTime registered, Set<Role> roles) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -78,14 +78,14 @@ public class User extends BaseEntity {
         this.password = password;
     }
 
-    /*@Column(name = "enabled")
+    @Column(name = "enabled")
     public boolean isEnabled() {
         return enabled;
     }
 
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
-    }*/
+    }
 
     @Column(name = "registered")
     @DateTimeFormat(pattern = DateTimeUtil.DATE_TIME_PATTERN)
