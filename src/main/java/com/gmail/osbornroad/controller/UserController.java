@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -19,11 +20,13 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static com.gmail.osbornroad.util.AuthorizedUser.getAutorizedUserName;
+
 @Controller
 @RequestMapping("/admin/users")
 public class UserController {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger("osbornroad");
 
     @Autowired
     private UserService userService;
@@ -31,7 +34,7 @@ public class UserController {
     @GetMapping(value = "/ajax", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public List<User> getAllUsers() {
-        LOGGER.info("get all users");
+        LOGGER.info("User: " + getAutorizedUserName() + " - " + getClass().getSimpleName() + ": " + "get all users");
         List<User> userList = userService.findAllUsers();
         return userList;
     }
