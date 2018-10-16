@@ -3,6 +3,8 @@ package com.gmail.osbornroad.controller;
 import com.gmail.osbornroad.model.jpa.Operation;
 import com.gmail.osbornroad.service.OperationService;
 import com.gmail.osbornroad.util.ValidationUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -15,13 +17,14 @@ import org.springframework.context.MessageSource;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.logging.Logger;
+
+import static com.gmail.osbornroad.util.AuthorizedUser.getAutorizedUserName;
 
 @Controller
 @RequestMapping("/operations")
 public class OperationController {
 
-    private static final Logger LOGGER = Logger.getLogger(OperationController.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger("osbornroad");
 
     @Autowired
     private OperationService operationService;
@@ -29,11 +32,10 @@ public class OperationController {
     @Autowired
     private MessageSource messageSource;
 
-
-
     @GetMapping(value = "/ajax", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public List<Operation> getAjaxAllOperations() {
+        LOGGER.info("{} - User: {} - {}", getClass().getSimpleName(), getAutorizedUserName(), "get all operations");
         List<Operation> operationList = operationService.findAllOperations();
         return operationList;
     }
@@ -52,6 +54,7 @@ public class OperationController {
         /*if (operation == null) {
             operation = new Operation();
         }*/
+        LOGGER.info("{} - User: {} - {}{}", getClass().getSimpleName(), getAutorizedUserName(), "get operation: ", operation);
         return operation;
     }
 
@@ -63,6 +66,7 @@ public class OperationController {
         if (operation.getId() != null) {
             operation.setPartSet(operationService.findOperationById(operation.getId()).getPartSet());
         }
+        LOGGER.info("{} - User: {} - {}{}", getClass().getSimpleName(), getAutorizedUserName(), "save operation: ", operation.toString());
         operationService.saveOperation(operation);
         return new ResponseEntity<>(HttpStatus.OK);
     }
@@ -72,12 +76,14 @@ public class OperationController {
     public void deleteAjaxOperation (@PathVariable Integer id) {
         Operation operation = operationService.findOperationById(id);
         if (operation != null) {
+            LOGGER.info("{} - User: {} - {}{}", getClass().getSimpleName(), getAutorizedUserName(), "delete operation: ", operation);
             operationService.deleteOperation(operation);
         }
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public String showOperationList(Model model) {
+        LOGGER.info("{} - User: {} - {}", getClass().getSimpleName(), getAutorizedUserName(), "show operation page");
         model.addAttribute("allOperationList", operationService.findAllOperations());
         return "operations";
     }

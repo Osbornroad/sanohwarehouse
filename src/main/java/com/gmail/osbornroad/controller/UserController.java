@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -34,7 +33,7 @@ public class UserController {
     @GetMapping(value = "/ajax", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public List<User> getAllUsers() {
-        LOGGER.info("User: " + getAutorizedUserName() + " - " + getClass().getSimpleName() + ": " + "get all users");
+        LOGGER.info("{} - User: {} - {}", getClass().getSimpleName(), getAutorizedUserName(), "get all users");
         List<User> userList = userService.findAllUsers();
         return userList;
     }
@@ -50,6 +49,7 @@ public class UserController {
         } catch (NumberFormatException e) {
             user = new User();
         }
+        LOGGER.info("{} - User: {} - {}{}", getClass().getSimpleName(), getAutorizedUserName(), "get user: ", user.toString());
         return user;
     }
 
@@ -58,6 +58,7 @@ public class UserController {
         if (bindingResult.hasErrors()) {
             return ValidationUtil.getErrorResponse(bindingResult);
         }
+        LOGGER.info("{} - User: {} - {}{}", getClass().getSimpleName(), getAutorizedUserName(), "save user: ", user.toString());
         userService.saveUser(user);
         return new ResponseEntity<>(HttpStatus.OK);
     }
@@ -67,12 +68,14 @@ public class UserController {
     public void deleteUser(@PathVariable Integer id) {
         User user = userService.findUserById(id);
         if(user != null) {
+            LOGGER.info("{} - User: {} - {}{}", getClass().getSimpleName(), getAutorizedUserName(), "delete user: ", user.toString());
             userService.deleteUser(user);
         }
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public String showUserPage(Model model) {
+        LOGGER.info("{} - User: {} - {}", getClass().getSimpleName(), getAutorizedUserName(), "show user page");
         model.addAttribute("allUsersList", userService.findAllUsers());
         return "users";
     }

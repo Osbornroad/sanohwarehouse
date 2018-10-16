@@ -23,11 +23,21 @@
         <script src="/webjars/datatables/1.10.19/js/dataTables.bootstrap4.min.js"></script>
         <script src="/webjars/bootstrap/4.1.1/js/bootstrap.min.js"></script>
         <script src="/resources/js/bootbox.min.js"></script>--%>
+
+
     </head>
 
     <body>
 
     <jsp:include page="fragments/navbar.jsp"/>
+
+    <div class="container">
+        <h4>
+        <c:if test="${not empty response403}">
+            <div class="mt-4 alert alert-danger response403">${response403}</div>
+        </c:if>
+        </h4>
+    </div>
 
     </body>
 </html>

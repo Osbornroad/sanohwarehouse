@@ -11,7 +11,7 @@
         <intercept-url pattern="/login" access="permitAll"/>
         <intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')" />
         <intercept-url pattern="/**" access="isAuthenticated()" />
-        <access-denied-handler error-page="/403" />
+        <access-denied-handler ref="customAccessDeniedHandler"/>
 
         <form-login
                 login-page="/login"
@@ -26,6 +26,8 @@
         <csrf/>
 
     </http>
+
+    <beans:bean name="customAccessDeniedHandler" class="com.gmail.osbornroad.util.CustomAccessDeniedHandler"/>
 
 <!--
     <authentication-manager>

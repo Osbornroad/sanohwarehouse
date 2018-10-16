@@ -1,0 +1,78 @@
+2018-10-16 11:51:02 [http-nio-8080-exec-6] INFO  osbornroad - MainPageController - User: Maksim - show main page
+2018-10-16 11:51:23 [http-nio-8080-exec-4] INFO  osbornroad - OperationController - User: Maksim - show operation page
+2018-10-16 11:51:24 [http-nio-8080-exec-1] INFO  osbornroad - OperationController - User: Maksim - get all operations
+2018-10-16 11:51:29 [http-nio-8080-exec-3] INFO  osbornroad - OperationController - User: Maksim - get operation: Operation{id=10, name='Assembly', operationSequence=100}
+2018-10-16 11:51:42 [http-nio-8080-exec-4] INFO  osbornroad - OperationController - User: Maksim - save operation: Operation{id=10, name='Assembly12', operationSequence=100}
+2018-10-16 11:51:43 [http-nio-8080-exec-2] INFO  osbornroad - OperationController - User: Maksim - get all operations
+2018-10-16 11:51:53 [http-nio-8080-exec-9] INFO  osbornroad - OperationController - User: Maksim - get operation: Operation{id=null, name='null', operationSequence=null}
+2018-10-16 11:52:12 [http-nio-8080-exec-1] INFO  osbornroad - OperationController - User: Maksim - save operation: Operation{id=null, name='jyhgnvuv', operationSequence=5454}
+2018-10-16 11:52:12 [http-nio-8080-exec-3] INFO  osbornroad - OperationController - User: Maksim - get all operations
+2018-10-16 11:52:35 [http-nio-8080-exec-2] INFO  osbornroad - OperationController - User: Maksim - delete operation: Operation{id=10, name='Assembly12', operationSequence=100}
+2018-10-16 11:52:35 [http-nio-8080-exec-10] INFO  osbornroad - OperationController - User: Maksim - get all operations
+2018-10-16 11:52:42 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - show user page
+2018-10-16 11:52:44 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-10-16 11:53:16 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', password='$2a$11$qpWUPTOROQhEKq5WfEHrfOLmQVJKw0IeHYrGXG7OhEAstI7zhmWcq', enabled=true, registered=2018-10-16T11:50:50.729, roles=[ROLE_ADMIN, ROLE_USER]}
+2018-10-16 11:53:37 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - save user: User{id='1', name='Maksim1', email='maksim.tkachenko@sanoh-rus.com', password='$2a$11$qpWUPTOROQhEKq5WfEHrfOLmQVJKw0IeHYrGXG7OhEAstI7zhmWcq', enabled=true, registered=2018-10-16T11:50, roles=[ROLE_ADMIN, ROLE_USER]}
+2018-10-16 11:53:37 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-10-16 11:54:52 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', password='null', enabled=true, registered=null, roles=[]}
+2018-10-16 11:55:09 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='gk,g', email='ighgkjh@hfhgv.hhh', password='jjjjjjj', enabled=true, registered=null, roles=[ROLE_ADMIN]}
+2018-10-16 11:55:09 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-10-16 11:56:22 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - delete user: User{id='3', name='gk,g', email='ighgkjh@hfhgv.hhh', password='$2a$11$Ci8E/OVZVJpFlI2Xmpg24.t/pdcQcd9NtHgMk.RQ53w.lwv883L.S', enabled=true, registered=2018-10-16T11:55:09.408, roles=[ROLE_ADMIN]}
+2018-10-16 11:56:22 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-10-16 11:57:15 [http-nio-8080-exec-10] INFO  osbornroad - MainPageController - User: Pavel - show main page
+2018-10-16 11:57:54 [http-nio-8080-exec-1] INFO  osbornroad - MainPageController - User: Pavel - show main page
+2018-10-16 11:58:03 [http-nio-8080-exec-9] INFO  osbornroad - OperationController - User: Pavel - show operation page
+2018-10-16 11:58:04 [http-nio-8080-exec-6] INFO  osbornroad - OperationController - User: Pavel - get all operations
+2018-10-16 11:58:11 [http-nio-8080-exec-4] INFO  osbornroad - OperationController - User: Pavel - delete operation: Operation{id=9, name='Bending', operationSequence=90}
+2018-10-16 11:58:11 [http-nio-8080-exec-9] INFO  osbornroad - OperationController - User: Pavel - get all operations
+2018-10-16 12:25:34 [http-nio-8080-exec-6] INFO  osbornroad - MainPageController - User: Pavel - show main page
+2018-10-16 12:25:34 [http-nio-8080-exec-8] INFO  osbornroad - MainPageController - User: Pavel - show main page
+2018-10-16 12:25:51 [http-nio-8080-exec-4] INFO  osbornroad - OperationController - User: Pavel - show operation page
+2018-10-16 12:25:52 [http-nio-8080-exec-10] INFO  osbornroad - OperationController - User: Pavel - get all operations
+2018-10-16 12:26:05 [http-nio-8080-exec-9] INFO  osbornroad - OperationController - User: Pavel - get operation: Operation{id=4, name='Brushing', operationSequence=40}
+2018-10-16 12:26:09 [http-nio-8080-exec-4] INFO  osbornroad - OperationController - User: Pavel - save operation: Operation{id=4, name='Brushingfukfuk', operationSequence=40}
+2018-10-16 12:26:09 [http-nio-8080-exec-7] INFO  osbornroad - OperationController - User: Pavel - get all operations
+2018-10-16 12:26:24 [http-nio-8080-exec-2] INFO  osbornroad - OperationController - User: Pavel - delete operation: Operation{id=4, name='Brushingfukfuk', operationSequence=40}
+2018-10-16 12:26:24 [http-nio-8080-exec-10] INFO  osbornroad - OperationController - User: Pavel - get all operations
+2018-10-16 12:26:36 [http-nio-8080-exec-9] INFO  osbornroad - OperationController - User: Pavel - get operation: Operation{id=null, name='null', operationSequence=null}
+2018-10-16 12:26:42 [http-nio-8080-exec-4] INFO  osbornroad - OperationController - User: Pavel - save operation: Operation{id=null, name='cgmcghm', operationSequence=4343}
+2018-10-16 12:26:42 [http-nio-8080-exec-7] INFO  osbornroad - OperationController - User: Pavel - get all operations
+2018-10-16 12:41:24 [http-nio-8080-exec-8] INFO  osbornroad - MainPageController - User: Pavel - show main page
+2018-10-16 12:41:29 [http-nio-8080-exec-2] WARN  osbornroad - User: Pavel attempted to access the protected URL: /admin/users
+2018-10-16 13:15:00 [http-nio-8080-exec-7] INFO  osbornroad - MainPageController - User: Pavel - show main page
+2018-10-16 13:15:05 [http-nio-8080-exec-6] WARN  osbornroad - User: Pavel attempted to access the protected URL: /admin/users
+2018-10-16 13:15:05 [http-nio-8080-exec-8] INFO  osbornroad - MainPageController - User: Pavel - show main page
+2018-10-16 13:15:12 [http-nio-8080-exec-6] INFO  osbornroad - OperationController - User: Pavel - show operation page
+2018-10-16 13:15:14 [http-nio-8080-exec-6] INFO  osbornroad - OperationController - User: Pavel - get all operations
+2018-10-16 13:15:20 [http-nio-8080-exec-3] WARN  osbornroad - User: Pavel attempted to access the protected URL: /admin/users
+2018-10-16 13:15:20 [http-nio-8080-exec-9] INFO  osbornroad - MainPageController - User: Pavel - show main page
+2018-10-16 13:19:13 [http-nio-8080-exec-8] INFO  osbornroad - MainPageController - User: Pavel - show main page
+2018-10-16 13:19:17 [http-nio-8080-exec-8] WARN  osbornroad - User: Pavel attempted to access the protected URL: /admin/users
+2018-10-16 13:19:17 [http-nio-8080-exec-7] INFO  osbornroad - MainPageController - User: Pavel - show main page
+2018-10-16 13:20:41 [http-nio-8080-exec-2] INFO  osbornroad - MainPageController - User: Pavel - show main page
+2018-10-16 13:25:06 [http-nio-8080-exec-7] INFO  osbornroad - MainPageController - User: Pavel - show main page
+2018-10-16 13:25:17 [http-nio-8080-exec-9] INFO  osbornroad - MainPageController - User: Pavel - show main page
+2018-10-16 13:40:59 [http-nio-8080-exec-9] INFO  osbornroad - MainPageController - User: Pavel - show main page
+2018-10-16 13:41:17 [http-nio-8080-exec-8] WARN  osbornroad - User: Pavel attempted to access the protected URL: /admin/users
+2018-10-16 13:41:17 [http-nio-8080-exec-9] INFO  osbornroad - MainPageController - User: Pavel - show main page
+2018-10-16 13:43:56 [http-nio-8080-exec-9] INFO  osbornroad - MainPageController - User: Pavel - show main page
+2018-10-16 13:44:02 [http-nio-8080-exec-6] WARN  osbornroad - User: Pavel attempted to access the protected URL: /admin/users
+2018-10-16 13:44:02 [http-nio-8080-exec-9] INFO  osbornroad - MainPageController - User: Pavel - show main page
+2018-10-16 13:44:06 [http-nio-8080-exec-5] INFO  osbornroad - MainPageController - User: Pavel - show main page
+2018-10-16 13:44:10 [http-nio-8080-exec-8] WARN  osbornroad - User: Pavel attempted to access the protected URL: /admin/users
+2018-10-16 13:44:10 [http-nio-8080-exec-1] INFO  osbornroad - MainPageController - User: Pavel - show main page
+2018-10-16 13:44:44 [http-nio-8080-exec-4] INFO  osbornroad - MainPageController - User: Pavel - show main page
+2018-10-16 13:44:57 [http-nio-8080-exec-4] INFO  osbornroad - MainPageController - User: Pavel - show main page
+2018-10-16 13:45:19 [http-nio-8080-exec-8] INFO  osbornroad - MainPageController - User: Pavel - show main page
+2018-10-16 13:46:07 [http-nio-8080-exec-8] INFO  osbornroad - MainPageController - User: Pavel - show main page
+2018-10-16 13:46:21 [http-nio-8080-exec-10] INFO  osbornroad - OperationController - User: Pavel - show operation page
+2018-10-16 13:46:22 [http-nio-8080-exec-7] INFO  osbornroad - OperationController - User: Pavel - get all operations
+2018-10-16 13:46:26 [http-nio-8080-exec-4] WARN  osbornroad - User: Pavel attempted to access the protected URL: /admin/users
+2018-10-16 13:46:26 [http-nio-8080-exec-10] INFO  osbornroad - MainPageController - User: Pavel - show main page
+2018-10-16 13:46:32 [http-nio-8080-exec-10] INFO  osbornroad - MainPageController - User: Pavel - show main page
+2018-10-16 13:47:02 [http-nio-8080-exec-7] INFO  osbornroad - MainPageController - User: Maksim - show main page
+2018-10-16 13:47:04 [http-nio-8080-exec-5] INFO  osbornroad - MainPageController - User: Maksim - show main page
+2018-10-16 13:47:05 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - show user page
+2018-10-16 13:47:06 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-10-16 13:47:08 [http-nio-8080-exec-3] INFO  osbornroad - OperationController - User: Maksim - show operation page
+2018-10-16 13:47:08 [http-nio-8080-exec-7] INFO  osbornroad - OperationController - User: Maksim - get all operations
