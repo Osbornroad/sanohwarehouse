@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -51,6 +52,9 @@ public class Scheduler {
     @Autowired
     UserService userService;
 
+    @Autowired
+    PasswordEncoder passwordEncoder;
+
     @PostConstruct
     public void testSpringJPA() {
         populateOperationTable();
@@ -71,8 +75,11 @@ public class Scheduler {
         adminRoles.add(Role.ROLE_USER);
         notAdminRoles.add(Role.ROLE_USER);
 
-        User admin = new User("Maksim", "maksim.tkachenko@sanoh-rus.com", "111111", true, adminRegistered, adminRoles);
-        User noAdmin = new User("Pavel", "pavel.yulin@sanoh-rus.com", "222222", true, noAdminRegistered, notAdminRoles);
+        String maksimPassword = passwordEncoder.encode("111111");
+        String pavelPassword = passwordEncoder.encode("222222");
+
+        User admin = new User("Maksim", "maksim.tkachenko@sanoh-rus.com", maksimPassword, true, adminRegistered, adminRoles);
+        User noAdmin = new User("Pavel", "pavel.yulin@sanoh-rus.com", pavelPassword, true, noAdminRegistered, notAdminRoles);
 
         userService.saveUser(admin);
         userService.saveUser(noAdmin);

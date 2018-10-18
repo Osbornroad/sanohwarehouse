@@ -44,7 +44,7 @@ public class UserService {
         if (user.getRegistered() == null) {
             user.setRegistered(LocalDateTime.now());
         }
-        Integer userId = user.getId();
+/*        Integer userId = user.getId();
         String rawPassword = user.getPassword();
         if (userId != null) {
             String savedPassword = findUserById(userId).getPassword();
@@ -53,7 +53,7 @@ public class UserService {
             }
         } else {
             user.setPassword(passwordEncoder.encode(rawPassword));
-        }
+        }*/
 
         return userRepository.save(user);
     }

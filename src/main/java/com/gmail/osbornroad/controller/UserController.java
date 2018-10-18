@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -29,6 +30,9 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    PasswordEncoder passwordEncoder;
 
     @GetMapping(value = "/ajax", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
@@ -58,6 +62,18 @@ public class UserController {
         if (bindingResult.hasErrors()) {
             return ValidationUtil.getErrorResponse(bindingResult);
         }
+        Integer userId = user.getId();
+        String rawPassword = user.getPassword();
+        if (userId != null) {
+            String savedPassword = userService.findUserById(userId).getPassword();
+            if (!rawPassword.equals(savedPassword)) {
+                user.setPassword(passwordEncoder.encode(rawPassword));
+            }
+        } else {
+            user.setPassword(passwordEncoder.encode(rawPassword));
+        }
+
+
         LOGGER.info("{} - User: {} - {}{}", getClass().getSimpleName(), getAutorizedUserName(), "save user: ", user.toString());
         userService.saveUser(user);
         return new ResponseEntity<>(HttpStatus.OK);

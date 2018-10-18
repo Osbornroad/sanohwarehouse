@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -18,7 +19,9 @@ import org.springframework.context.MessageSource;
 import javax.validation.Valid;
 import java.util.List;
 
+import static com.gmail.osbornroad.model.jpa.Role.ROLE_ADMIN;
 import static com.gmail.osbornroad.util.AuthorizedUser.getAutorizedUserName;
+import static com.gmail.osbornroad.util.AuthorizedUser.hasRequestedAuthirity;
 
 @Controller
 @RequestMapping("/operations")
@@ -42,6 +45,7 @@ public class OperationController {
 
     @GetMapping(value = "/ajax/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public Operation getAjaxOperation(@PathVariable("id") String stringId) {
         Operation operation;
         Integer id;
@@ -59,6 +63,7 @@ public class OperationController {
     }
 
     @PostMapping(value = "/ajax")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<String> saveAjaxOperation (@Valid Operation operation, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return ValidationUtil.getErrorResponse(bindingResult);
@@ -73,6 +78,7 @@ public class OperationController {
 
     @DeleteMapping(value = "/ajax/{id}")
     @ResponseBody
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public void deleteAjaxOperation (@PathVariable Integer id) {
         Operation operation = operationService.findOperationById(id);
         if (operation != null) {
@@ -85,7 +91,10 @@ public class OperationController {
     public String showOperationList(Model model) {
         LOGGER.info("{} - User: {} - {}", getClass().getSimpleName(), getAutorizedUserName(), "show operation page");
         model.addAttribute("allOperationList", operationService.findAllOperations());
-        return "operations";
+        if (hasRequestedAuthirity(ROLE_ADMIN.getAuthority())) {
+            return "operations";
+        }
+        return "operationsForUsers";
     }
 
      /*@RequestMapping(value = "/{id}", params = "form", method = RequestMethod.POST)

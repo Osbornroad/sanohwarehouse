@@ -189,6 +189,14 @@
       <version>${spring-security.version}</version>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-aspects -->
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-aspects</artifactId>
+      <version>${spring-security.version}</version>
+    </dependency>
+
+
     <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2 -->
     <dependency>
       <groupId>org.apache.commons</groupId>
@@ -397,8 +405,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.1</version>
         <configuration>
-          <source>${java.version}</source>
-          <target>${java.version}</target>
+          <source>1.8</source>
+          <target>1.8</target>
         </configuration>
       </plugin>
       <plugin>
@@ -408,6 +416,47 @@
         <configuration>
           <argLine>-Dfile.encoding=UTF-8</argLine>
         </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>aspectj-maven-plugin</artifactId>
+        <version>1.8</version>
+        <configuration>
+          <showWeaveInfo>true</showWeaveInfo>
+          <source>1.8</source>
+          <target>1.8</target>
+          <Xlint>ignore</Xlint>
+          <complianceLevel>1.8</complianceLevel>
+          <encoding>UTF-8</encoding>
+          <verbose>false</verbose>
+          <aspectLibraries>
+            <aspectLibrary>
+              <groupId>org.springframework.security</groupId>
+              <artifactId>spring-security-aspects</artifactId>
+            </aspectLibrary>
+          </aspectLibraries>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>compile</goal>
+              <goal>test-compile</goal>
+            </goals>
+          </execution>
+        </executions>
+        <dependencies>
+          <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>1.9.1</version>
+          </dependency>
+          <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjtools</artifactId>
+            <version>1.8.2</version>
+          </dependency>
+        </dependencies>
       </plugin>
 
       <!--<plugin>

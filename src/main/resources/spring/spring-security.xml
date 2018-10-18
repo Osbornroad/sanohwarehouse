@@ -27,6 +27,13 @@
 
     </http>
 
+    <global-method-security
+            mode="aspectj"
+            secured-annotations="enabled"
+            pre-post-annotations="enabled"
+            jsr250-annotations="enabled"
+    />
+
     <beans:bean name="customAccessDeniedHandler" class="com.gmail.osbornroad.util.CustomAccessDeniedHandler"/>
 
 <!--

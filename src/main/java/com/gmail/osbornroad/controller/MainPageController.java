@@ -25,16 +25,12 @@ public class MainPageController {
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ModelAndView showMainPage(@RequestParam(value = "response403", required = false) String response403) {
-
-
         LOGGER.info("{} - User: {} - {}", getClass().getSimpleName(), getAutorizedUserName(), "show main page");
-
         ModelAndView model = new ModelAndView();
         if (response403 != null) {
             model.addObject("response403",
                     "<strong>User: " + getAutorizedUserName() + "!</strong> You do not have permission to access this page!");
         }
-
         return model;
     }
 }
