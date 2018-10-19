@@ -38,6 +38,11 @@
                     {"data" : "email"},
                     // {"data" : "password"},
                     {
+                        "data" : "enabled",
+                        // "render" : renderCheckBox
+                        "render": renderCheckBox
+                    },
+                    {
                         "data" : "registered",
                         "render": function (date, type, row) {
                             if (type == 'display') {
@@ -61,6 +66,25 @@
                 "initComplete": makeEditable
             });
         } );
+
+        function renderCheckBox(data, type, row) {
+            if (data.toString() === "true")
+                return '<span class="glyphicon glyphicon-check" aria-hidden="true"></span>';
+            else
+                return '<span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>';
+        }
+/*
+        function clickCheckbox() {
+            var label = $(document).getElementById("labelForEnabled");
+            var checkbox = $(document).getElementById("enabled");
+            if (checkbox.checked) {
+                label.style.color("Red");
+            } else {
+                label.style.color("Green");
+            }
+        }*/
+
+
 
     </script>
 
@@ -94,9 +118,7 @@
                     <th>Name</th>
                     <th>E-mail</th>
                     <%--<th>Password</th>--%>
-<%--
                     <th>Enabled</th>
---%>
                     <th>Registered</th>
                     <th>Roles</th>
                     <th width="60"></th>
@@ -143,16 +165,23 @@
                                    placeholder="Input password">
                         </div>
                     </div>
-                    <%--<div class="form-group">
-                        <label for="enabled" class="control-label col-xs-3">Enabled</label>
+                    <div class="form-group">
+                        <%--<label for="enabled" class="control-label col-xs-3">Enabled</label>--%>
 
                         <div class="col-xs-9">
+                            <div class="checkbox" onclick="clickCheckbox()">
+                                <label id="labelForEnabled"><input type="checkbox" id="checkbox" name="checkbox"> Enabled</label>
+                            </div>
+                        </div>
+                        <%--<div class="col-xs-9">
                             <select class="form-control" id="enabled" name="enabled">
                                 <option>true</option>
                                 <option>false</option>
                             </select>
-                        </div>
-                    </div>--%>
+                        </div>--%>
+                    </div>
+
+                    <input type="hidden" id="enabled" name="enabled" class="to-empty">
 
                     <input type="hidden" id="registered" name="registered" class="to-empty">
                     <%--<div class="form-group">

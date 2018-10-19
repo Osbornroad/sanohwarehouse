@@ -28,6 +28,27 @@ function renderEditBtn(data, type, row) {
     }
 }
 
+
+function clickCheckbox() {
+    var checkbox = document.getElementById("checkbox");
+    var enadled = document.getElementById("enabled");
+    if (checkbox.checked) {
+        enadled.value = "true";
+    } else {
+        enadled.value = "false";
+    }
+}
+
+function setInitCheckbox() {
+    var checkbox = document.getElementById("checkbox");
+    var enadled = document.getElementById("enabled");
+    var currentVal = enadled.value;
+    if (currentVal == "true")
+        checkbox.checked = "true";
+    else
+        checkbox.checked = "false";
+}
+
 function openModalEdit(id) {
     document.getElementById("modalTitle").innerHTML = id === "create" ? "New " + reference : "Edit " + reference;
     $.get(ajaxUrl + id, function (data) {
@@ -35,11 +56,14 @@ function openModalEdit(id) {
             form.find("input[name='" + key + "']").val(
                 key === "registered" ? formatDate(value) : value
             );
+            if (key === "enabled")
+                document.getElementById("checkbox").checked = value;
             form.find("select[name='" + key + "']").val(
                 /*key === "dateTime" ? formatDate(value) : */value
             );
         });
     });
+
 
     if (id === "create") {
         var elements = document.getElementsByClassName("to-empty");
