@@ -19,13 +19,12 @@ public class Operation extends BaseEntity {
     }
 
     public Operation(String name, Integer operationSequence) {
-        this.name = name;
+        super(name);
         this.operationSequence = operationSequence;
     }
 
     public Operation(Integer id, String name, Integer operationSequence) {
-        this.id = id;
-        this.name = name;
+        super(id, name);
         this.operationSequence = operationSequence;
     }
 
@@ -49,6 +48,26 @@ public class Operation extends BaseEntity {
 
     public void setPartSet(Set<Part> partSet) {
         this.partSet = partSet;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Operation operation = (Operation) o;
+
+        if (id != null ? !id.equals(operation.id) : operation.id != null) return false;
+        if (name != null ? !name.equals(operation.name) : operation.name != null) return false;
+        return operationSequence != null ? operationSequence.equals(operation.operationSequence) : operation.operationSequence == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (operationSequence != null ? operationSequence.hashCode() : 0);
+        return result;
     }
 
     @Override

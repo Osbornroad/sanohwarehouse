@@ -13,6 +13,18 @@ public class BaseEntity implements Serializable {
     protected Integer id;
     protected String name;
 
+    public BaseEntity() {
+    }
+
+    public BaseEntity(String name) {
+        this.name = name;
+    }
+
+    public BaseEntity(Integer id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     @Id
     @GeneratedValue(strategy = IDENTITY)
     @Column(name="id")

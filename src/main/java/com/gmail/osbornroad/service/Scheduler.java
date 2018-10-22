@@ -2,10 +2,7 @@ package com.gmail.osbornroad.service;
 
 import com.gmail.osbornroad.model.jdbc.FinishPart;
 import com.gmail.osbornroad.model.jdbc.Shipping;
-import com.gmail.osbornroad.model.jpa.Operation;
-import com.gmail.osbornroad.model.jpa.Part;
-import com.gmail.osbornroad.model.jpa.Role;
-import com.gmail.osbornroad.model.jpa.User;
+import com.gmail.osbornroad.model.jpa.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -102,7 +99,7 @@ public class Scheduler {
             String line;
             while ((line = br.readLine()) != null) {
                 String [] splitted = line.split(";");
-                partService.savePart(new Part(splitted[0], Integer.parseInt(splitted[1]), operationSet));
+                partService.savePart(new Part(splitted[0], PartType.valueOf(splitted[1]), operationSet));
             }
         } catch (IOException e) {
         }

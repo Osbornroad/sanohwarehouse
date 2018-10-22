@@ -16,40 +16,39 @@ import javax.persistence.*;
 })*/
 public class Part extends BaseEntity {
 
-    private Integer partTypeId;
+    private PartType partType;
     private Set<Operation> operationSet = new HashSet<>();
 
     public Part() {
     }
 
-    public Part(String name, Integer partTypeId) {
-        this.name = name;
-        this.partTypeId = partTypeId;
+    public Part(String name, PartType partType) {
+        super(name);
+        this.partType = partType;
     }
 
-    public Part(String name, Integer partTypeId, Set<Operation> operationSet) {
-        this.name = name;
-        this.partTypeId = partTypeId;
+    public Part(String name, PartType partType, Set<Operation> operationSet) {
+        super(name);
+        this.partType = partType;
         this.operationSet = operationSet;
     }
 
-    public Part(Integer id, String name, Integer partTypeId, Set<Operation> operationSet) {
-        this.id = id;
-        this.name = name;
-        this.partTypeId = partTypeId;
+    public Part(Integer id, String name, PartType partType, Set<Operation> operationSet) {
+        super(id, name);
+        this.partType = partType;
         this.operationSet = operationSet;
     }
 
-    @Column(name="part_type_id")
-    public Integer getPartTypeId() {
-        return partTypeId;
+    @Column(name="part_type")
+    public PartType getPartType() {
+        return partType;
     }
 
-    public void setPartTypeId(Integer partTypeId) {
-        this.partTypeId = partTypeId;
+    public void setPartType(PartType partType) {
+        this.partType = partType;
     }
 
-    @JsonIgnore
+//    @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "part_operation_detail",
         joinColumns = @JoinColumn(name = "part_id"),
@@ -63,11 +62,31 @@ public class Part extends BaseEntity {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Part part = (Part) o;
+
+        if (id != null ? !id.equals(part.id) : part.id != null) return false;
+        if (name != null ? !name.equals(part.name) : part.name != null) return false;
+        return partType == part.partType;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (partType != null ? partType.hashCode() : 0);
+        return result;
+    }
+
+    @Override
     public String toString() {
         return "Part{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", partTypeId=" + partTypeId +
+                ", partType=" + partType +
                 '}';
     }
 }

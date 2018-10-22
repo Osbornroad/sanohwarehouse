@@ -31,8 +31,8 @@ DROP TABLE IF EXISTS parts CASCADE;
 CREATE TABLE parts
 (
   id                 SERIAL PRIMARY KEY,
-  part_name          VARCHAR NOT NULL,
-  part_type_id       INTEGER NOT NULL
+  name               VARCHAR NOT NULL,
+  part_type          VARCHAR NOT NULL
 );
 
 DROP TABLE IF EXISTS part_operation_detail CASCADE;
