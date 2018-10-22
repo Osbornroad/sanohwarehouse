@@ -1,5 +1,7 @@
 package com.gmail.osbornroad.model.jpa;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import static javax.persistence.GenerationType.IDENTITY;
 import java.io.Serializable;
 import java.util.HashSet;
@@ -12,45 +14,30 @@ import javax.persistence.*;
 /*@NamedQueries({
         @NamedQuery(name="Part.findAll", query = "select c from Part c")
 })*/
-public class Part implements Serializable {
+public class Part extends BaseEntity {
 
-    private Integer id;
-    private String partName;
     private Integer partTypeId;
     private Set<Operation> operationSet = new HashSet<>();
 
     public Part() {
     }
 
-    public Part(String partName, Integer partTypeId) {
-        this.partName = partName;
+    public Part(String name, Integer partTypeId) {
+        this.name = name;
         this.partTypeId = partTypeId;
     }
 
-    public Part(String partName, Integer partTypeId, Set<Operation> operationSet) {
-        this.partName = partName;
+    public Part(String name, Integer partTypeId, Set<Operation> operationSet) {
+        this.name = name;
         this.partTypeId = partTypeId;
         this.operationSet = operationSet;
     }
 
-    @Id
-    @GeneratedValue(strategy = IDENTITY)
-    @Column(name="id")
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
+    public Part(Integer id, String name, Integer partTypeId, Set<Operation> operationSet) {
         this.id = id;
-    }
-
-    @Column(name="part_name")
-    public String getPartName() {
-        return partName;
-    }
-
-    public void setPartName(String partName) {
-        this.partName = partName;
+        this.name = name;
+        this.partTypeId = partTypeId;
+        this.operationSet = operationSet;
     }
 
     @Column(name="part_type_id")
@@ -62,6 +49,7 @@ public class Part implements Serializable {
         this.partTypeId = partTypeId;
     }
 
+    @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "part_operation_detail",
         joinColumns = @JoinColumn(name = "part_id"),
@@ -78,7 +66,7 @@ public class Part implements Serializable {
     public String toString() {
         return "Part{" +
                 "id=" + id +
-                ", partName='" + partName + '\'' +
+                ", name='" + name + '\'' +
                 ", partTypeId=" + partTypeId +
                 '}';
     }
