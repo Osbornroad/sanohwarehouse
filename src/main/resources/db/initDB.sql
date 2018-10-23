@@ -19,14 +19,6 @@ CREATE TABLE recieving_fg
   comment            VARCHAR
 );
 
-DROP TABLE IF EXISTS operations CASCADE;
-CREATE TABLE operations
-(
-  id                 SERIAL PRIMARY KEY,
-  name               VARCHAR NOT NULL,
-  operation_sequence INTEGER NOT NULL
-);
-
 DROP TABLE IF EXISTS parts CASCADE;
 CREATE TABLE parts
 (
@@ -35,7 +27,7 @@ CREATE TABLE parts
   part_type          VARCHAR NOT NULL
 );
 
-DROP TABLE IF EXISTS part_operation_detail CASCADE;
+/*DROP TABLE IF EXISTS part_operation_detail CASCADE;
 CREATE TABLE part_operation_detail
 (
   operation_id        INTEGER NOT NULL,
@@ -43,7 +35,7 @@ CREATE TABLE part_operation_detail
   PRIMARY KEY (operation_id, part_id),
   CONSTRAINT fk_part_operation_detail_2 FOREIGN KEY (operation_id) REFERENCES operations (id),
   CONSTRAINT fk_part_operation_detail_1 FOREIGN KEY (part_id) REFERENCES parts (id) ON DELETE CASCADE
-);
+);*/
 
 DROP TABLE IF EXISTS persons CASCADE;
 CREATE TABLE persons
@@ -80,4 +72,13 @@ CREATE TABLE user_roles
   role    VARCHAR,
   CONSTRAINT user_roles_idx UNIQUE (user_id, role),
   FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
+);
+
+DROP TABLE IF EXISTS part_operations CASCADE;
+CREATE TABLE part_operations
+(
+  part_id                 INTEGER NOT NULL,
+  operation               VARCHAR,
+  CONSTRAINT part_operations_idx UNIQUE (part_id, operation),
+  FOREIGN KEY (part_id) REFERENCES parts (id) ON DELETE CASCADE
 );

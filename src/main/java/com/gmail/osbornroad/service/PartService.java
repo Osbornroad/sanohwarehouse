@@ -1,5 +1,6 @@
 package com.gmail.osbornroad.service;
 
+import com.gmail.osbornroad.model.jpa.Operation;
 import com.gmail.osbornroad.model.jpa.Part;
 import com.gmail.osbornroad.repository.jpa.PartRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -35,6 +37,7 @@ public class PartService {
     }
 
     public Part savePart(Part part) {
+        Collections.sort(part.getOperationList(), Operation.operationComparator);
         return partRepository.save(part);
     }
 

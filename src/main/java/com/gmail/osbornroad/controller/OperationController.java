@@ -23,10 +23,10 @@ import static com.gmail.osbornroad.util.AuthorizedUser.getAutorizedUserName;
 import static com.gmail.osbornroad.util.AuthorizedUser.hasRequestedAuthirity;
 
 @Controller
-@RequestMapping("/operations")
+//@RequestMapping("/operations")
 public class OperationController {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger("osbornroad");
+    /*private static final Logger LOGGER = LoggerFactory.getLogger("osbornroad");
 
     @Autowired
     private OperationService operationService;
@@ -51,9 +51,9 @@ public class OperationController {
         } catch (NumberFormatException e) {
             operation = new Operation();
         }
-        /*if (operation == null) {
+        *//*if (operation == null) {
             operation = new Operation();
-        }*/
+        }*//*
         LOGGER.info("{} - User: {} - {}{}", getClass().getSimpleName(), getAutorizedUserName(), "get operation: ", operation);
         return operation;
     }
@@ -91,65 +91,11 @@ public class OperationController {
             return "operations";
         }
         return "operationsForUsers";
-    }
-
-     /*@RequestMapping(value = "/{id}", params = "form", method = RequestMethod.POST)
-    public String updateOperation(Operation operation, BindingResult bindingResult,
-                                  Model model, HttpServletRequest httpServletRequest,
-                                  RedirectAttributes redirectAttributes, Locale locale) {
-        LOGGER.info("Updating operation: " + operation.toString());
-        if (bindingResult.hasErrors()) {
-            model.addAttribute("message", new Message("error", messageSource.getMessage("operation_save_fail",
-                    new Object[]{}, locale)));
-            model.addAttribute("operation", operation);
-            return "operation";
-        }
-        model.asMap().clear();
-        redirectAttributes.addFlashAttribute("message", new Message("success", messageSource.getMessage("operation_save_success",
-                new Object[]{}, locale)));
-        operationService.saveOperation(operation);
-        return "redirect:/operations";
-    }
-
-    @RequestMapping(value = "/{id}", params = "form", method = RequestMethod.GET)
-    public String updateFormOperation (@PathVariable ("id") Integer id, Model model) {
-        model.addAttribute("operation", operationService.findOperationById(id));
-        return "operation";
     }*/
 
-/*    @DeleteMapping(value = "/{id}")
-    @ResponseBody
-    public void deleteOperation (@PathVariable Integer id) {
-        Operation operation = operationService.findOperationById(id);
-        if (operation != null) {
-            operationService.deleteOperation(operation);
-        }
-    }*/
 
-/*    @PostMapping
-    public String saveOperation (@Valid Operation operation, BindingResult bindingResult) {
-        if (bindingResult.hasErrors()) {
-            return "operation";
-        }
-        if (operation.getId() != null) {
-            operation.setPartSet(operationService.findOperationById(operation.getId()).getPartSet());
-        }
-        operationService.saveOperation(operation);
-        return "redirect:/operations";
-    }*/
 
-/*    @GetMapping(value = "/{id}")
-    public String getOperation(@PathVariable("id") String stringId, Model model) {
-        Operation operation;
-        Integer id;
-        try {
-            id = Integer.parseInt(stringId);
-            operation = operationService.findOperationById(id);
-        } catch (NumberFormatException e) {
-            operation = new Operation();
-        }
-        model.addAttribute("operation", operation);
-        return "operation";
-    }*/
+
+
 
 }

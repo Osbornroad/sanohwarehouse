@@ -54,7 +54,7 @@ public class Scheduler {
 
     @PostConstruct
     public void testSpringJPA() {
-        populateOperationTable();
+//        populateOperationTable();
         populatePartsTable();
         populateUserTable();
 //        testPartTable();
@@ -82,7 +82,7 @@ public class Scheduler {
         userService.saveUser(noAdmin);
     }
 
-    public void populateOperationTable() {
+/*    public void populateOperationTable() {
         try (BufferedReader br = new BufferedReader(new FileReader(PATH_TO_OPERATION_FAKE_DATA))) {
             String line;
             while ((line = br.readLine()) != null) {
@@ -91,15 +91,17 @@ public class Scheduler {
             }
         } catch (IOException e) {
         }
-    }
+    }*/
 
     public void populatePartsTable() {
-        Set<Operation> operationSet = new HashSet<>(operationService.findAllOperations());
+        List<Operation> operationList = new ArrayList<>();
+        operationList.add(Operation.HPC);
+        operationList.add(Operation.LASER);
         try (BufferedReader br = new BufferedReader(new FileReader(PATH_TO_PART_FAKE_DATA))) {
             String line;
             while ((line = br.readLine()) != null) {
                 String [] splitted = line.split(";");
-                partService.savePart(new Part(splitted[0], PartType.valueOf(splitted[1]), operationSet));
+                partService.savePart(new Part(splitted[0], PartType.valueOf(splitted[1]), operationList));
             }
         } catch (IOException e) {
         }

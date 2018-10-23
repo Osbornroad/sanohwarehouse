@@ -14,7 +14,7 @@ import java.util.Optional;
 @Transactional
 public class OperationService {
 
-    @Autowired
+   /* @Autowired
     OperationRepository operationRepository;
 
     @Transactional(readOnly = true)
@@ -40,5 +40,5 @@ public class OperationService {
 
     public void deleteOperation(Operation operation) {
         operationRepository.delete(operation);
-    }
+    }*/
 }

@@ -20,7 +20,14 @@
                 columns : [
                     {"data" : "name"},
                     {"data" : "partType"},
-                    {"data" : "operationSet.name"},
+                    {
+                        "data" : "operationList",
+                        "render" : function (opsFlow, type, row) {
+                            // if (type == 'display') {
+                                return formatOpsFlow(opsFlow);
+                            // }
+                        }
+                    },
                     {
                         "render": renderEditBtn,
                         "defaultContent": "",
@@ -35,6 +42,28 @@
                 "initComplete": makeEditable
             });
         } );
+
+        $(document).ready(function() {
+            $("#editRow").on('show.bs.modal', function () {
+                var operationList = document.getElementById("operationList");
+                var allOperations = ${allOperationList};
+                if (allOperations) {
+                    var i;
+                    for (i = 0; i < allOperations.length; i++) {
+                        operationList.options.add(new Option(allOperations[i].toString()));
+                    }
+                }
+            })
+        });
+
+        function formatOpsFlow(opsFlow) {
+            var flowForDisplay = " ";
+            opsFlow.forEach(function (item, index) {
+                var cutItem = item.substr(0,5);
+                flowForDisplay = flowForDisplay + cutItem + ' > ';
+            });
+            return flowForDisplay;
+        }
     </script>
 
     <style>
@@ -74,7 +103,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="editRow">
+<div class="modal fade" id="editRow" on>
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -102,6 +131,26 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label for="operationList" class="control-label col-xs-3">Operations</label>
+
+                        <div class="col-xs-9">
+                            <select multiple class="form-control to-empty" id="operationList" name="operationList">
+                                <%--<options items="${allOperationList}"/>--%>
+                                <%--<option>HPC</option>
+                                <option>LASER</option>
+                                <option>CHAMPHERING</option>
+                                <option>BRUSHING</option>
+                                <option>REDUCTION</option>
+                                <option>ENDFORMING</option>
+                                <option>SUMI_CUTTING</option>
+                                <option>SUMI_OVEN</option>
+                                <option>BENDING</option>
+                                <option>ASSEMBLY</option>
+                                <option>DELIVERY</option>--%>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <div class="col-xs-offset-3 col-xs-9">
                             <button class="btn btn-primary toBeEmpty" type="button" onclick="save()">
                                 <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
@@ -115,4 +164,4 @@
 </div>
 </body>
 
-</html>body>
+</html>

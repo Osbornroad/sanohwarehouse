@@ -1,10 +1,13 @@
 package com.gmail.osbornroad.model.jpa;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.BatchSize;
 
 import static javax.persistence.GenerationType.IDENTITY;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import javax.persistence.*;
 
@@ -17,7 +20,7 @@ import javax.persistence.*;
 public class Part extends BaseEntity {
 
     private PartType partType;
-    private Set<Operation> operationSet = new HashSet<>();
+    private List<Operation> operationList = new ArrayList<>();
 
     public Part() {
     }
@@ -27,16 +30,16 @@ public class Part extends BaseEntity {
         this.partType = partType;
     }
 
-    public Part(String name, PartType partType, Set<Operation> operationSet) {
+    public Part(String name, PartType partType, List<Operation> operationList) {
         super(name);
         this.partType = partType;
-        this.operationSet = operationSet;
+        this.operationList = operationList;
     }
 
-    public Part(Integer id, String name, PartType partType, Set<Operation> operationSet) {
+    public Part(Integer id, String name, PartType partType, List<Operation> operationList) {
         super(id, name);
         this.partType = partType;
-        this.operationSet = operationSet;
+        this.operationList = operationList;
     }
 
     @Column(name="part_type")
@@ -49,16 +52,21 @@ public class Part extends BaseEntity {
     }
 
 //    @JsonIgnore
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "part_operation_detail",
-        joinColumns = @JoinColumn(name = "part_id"),
-        inverseJoinColumns = @JoinColumn(name = "operation_id"))
-    public Set<Operation> getOperationSet() {
-        return operationSet;
+//    @ManyToMany(fetch = FetchType.EAGER)
+//    @JoinTable(name = "part_operation_detail",
+//        joinColumns = @JoinColumn(name = "part_id"),
+//        inverseJoinColumns = @JoinColumn(name = "operation_id"))
+    @Enumerated(EnumType.STRING)
+    @CollectionTable(name = "part_operations", joinColumns = @JoinColumn(name = "part_id"))
+    @Column(name = "operation")
+    @ElementCollection(fetch = FetchType.EAGER)
+    @BatchSize(size = 200)
+    public List<Operation> getOperationList() {
+        return operationList;
     }
 
-    public void setOperationSet(Set<Operation> operationSet) {
-        this.operationSet = operationSet;
+    public void setOperationList(List<Operation> operationList) {
+        this.operationList = operationList;
     }
 
     @Override
@@ -87,6 +95,7 @@ public class Part extends BaseEntity {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", partType=" + partType +
+                ", operationList=" + operationList +
                 '}';
     }
 }

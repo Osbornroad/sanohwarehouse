@@ -54,7 +54,7 @@ function openModalEdit(id) {
     $.get(ajaxUrl + id, function (data) {
         $.each(data, function (key, value) {
             form.find("input[name='" + key + "']").val(
-                key === "registered" ? formatDate(value) : value
+                /*key === "registered" ? formatDate(value) : */value
             );
             if (key === "enabled")
                 document.getElementById("checkbox").checked = value;
