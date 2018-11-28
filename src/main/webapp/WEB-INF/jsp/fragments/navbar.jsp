@@ -35,7 +35,7 @@
                     <div class="dropdown-menu">
                         <%--<a class="dropdown-item" href="<c:url value="/operations"/>">Operations</a>--%>
                         <a class="dropdown-item" href="<c:url value="/parts"/>">Parts</a>
-                        <a class="dropdown-item" href="#">Staff</a>
+                        <a class="dropdown-item" href="<c:url value="/jobs"/>">Jobs</a>
                         <a class="dropdown-item" href="<c:url value="/admin/users"/>">Users</a>
                     </div>
                 </li>

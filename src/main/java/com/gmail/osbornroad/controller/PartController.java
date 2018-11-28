@@ -2,8 +2,6 @@ package com.gmail.osbornroad.controller;
 
 import com.gmail.osbornroad.model.jpa.Operation;
 import com.gmail.osbornroad.model.jpa.Part;
-import com.gmail.osbornroad.model.jpa.User;
-import com.gmail.osbornroad.service.OperationService;
 import com.gmail.osbornroad.service.PartService;
 import com.gmail.osbornroad.util.ValidationUtil;
 import org.slf4j.Logger;
@@ -12,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -20,7 +17,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import static com.gmail.osbornroad.model.jpa.Role.ROLE_ADMIN;
@@ -46,7 +42,7 @@ public class PartController {
 
     @GetMapping(value = "/ajax/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public Part getPart(@PathVariable("id") String stringId) {
+    public Part getPart(@PathVariable("id") String stringId/*, Model model*/) {
         Part part;
         Integer id;
         try {
@@ -55,6 +51,9 @@ public class PartController {
         } catch (NumberFormatException e) {
             part = new Part();
         }
+//        List<String> shortOpNames = new ArrayList<>();
+
+//        model.addAttribute("shortOpNames", shortOpNames);
         LOGGER.info("{} - User: {} - {}{}", getClass().getSimpleName(), getAutorizedUserName(), "get part: ", part.toString());
         return part;
     }
@@ -83,7 +82,6 @@ public class PartController {
     public String showPartsList(Model model) {
         LOGGER.info("{} - User: {} - {}", getClass().getSimpleName(), getAutorizedUserName(), "show parts page");
         model.addAttribute("allPartList", partService.findAllParts());
-
         model.addAttribute("allOperationList", Operation.getOperationsArray());
         if (hasRequestedAuthirity(ROLE_ADMIN.getAuthority())) {
             return "parts";

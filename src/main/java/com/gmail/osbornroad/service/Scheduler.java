@@ -57,6 +57,7 @@ public class Scheduler {
 //        populateOperationTable();
         populatePartsTable();
         populateUserTable();
+        populateJobTable();
 //        testPartTable();
 //        testOperatonTable();
 //        testPartOperationJoinTable();
@@ -101,13 +102,30 @@ public class Scheduler {
             String line;
             while ((line = br.readLine()) != null) {
                 String [] splitted = line.split(";");
-                partService.savePart(new Part(splitted[0], PartType.valueOf(splitted[1]), operationList));
+                partService.savePart(new Part(splitted[0], PartType.valueOf(splitted[1])/*, operationList*/));
             }
         } catch (IOException e) {
         }
     }
 
+    @Autowired
+    JobService jobService;
 
+    public void populateJobTable() {
+        Part part1 = partService.findPartById(1);
+        Part part2 = partService.findPartById(2);
+        Job job11 = new Job(part1, Operation.HPC, Machine.HPC, 10);
+        Job job12 = new Job(part1, Operation.BRUSHING, Machine.BRUSHING, 8);
+        Job job21 = new Job(part2, Operation.ENDFORMING, Machine.T_007, 20);
+        Job job22 = new Job(part2, Operation.ENDFORMING, Machine.T_008, 21);
+        Job job23 = new Job(part2, Operation.LASER, Machine.LASER, 12);
+
+        jobService.saveJob(job11);
+        jobService.saveJob(job12);
+        jobService.saveJob(job21);
+        jobService.saveJob(job22);
+        jobService.saveJob(job23);
+    }
 
     int counterShipping = 0;
 

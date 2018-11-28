@@ -23,7 +23,7 @@ function makeEditable() {
 
 function renderEditBtn(data, type, row) {
     if (type == 'display') {
-        return '<a href="#" onclick="openModalEdit(' + row.id + '/*, \'' + "edit" + '\'*/);">' +
+        return '<a href="#" onclick="openModalEdit(' + row.id + ', \'' + "edit" + '\');">' +
             '<span class="glyphicon glyphicon-pencil" style="color: blue" aria-hidden="true"></span></a>';
     }
 }
@@ -54,22 +54,35 @@ function openModalEdit(id) {
     $.get(ajaxUrl + id, function (data) {
         $.each(data, function (key, value) {
             form.find("input[name='" + key + "']").val(
-                /*key === "registered" ? formatDate(value) : */value
+                key === "registered" ? formatDate(value) : value
             );
             if (key === "enabled")
                 document.getElementById("checkbox").checked = value;
             form.find("select[name='" + key + "']").val(
-                /*key === "dateTime" ? formatDate(value) : */value
+                function() {
+                    var currentValue;
+                    switch(key) {
+                        case "operation":
+                            currentValue = value.fullName;
+                            break;
+                        default:
+                            currentValue = value;
+                    }
+                    return currentValue;
+                }
             );
         });
     });
-
-
     if (id === "create") {
         var elements = document.getElementsByClassName("to-empty");
         for (var ii=0; ii < elements.length; ii++) {
                 elements[ii].value = "";
         }
+        $('#buttonLinkToOperation').hide();
+        /*var buttonLinkToOperation = document.getElementById("buttonLinkToOperation");
+        buttonLinkToOperation.display = "none";*/
+    } else {
+        $('#buttonLinkToOperation').show();
     }
 
     $('#editRow').modal('show');

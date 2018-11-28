@@ -37,7 +37,7 @@ public class PartService {
     }
 
     public Part savePart(Part part) {
-        Collections.sort(part.getOperationList(), Operation.operationComparator);
+//        Collections.sort(part.getOperationList(), Operation.operationComparator);
         return partRepository.save(part);
     }
 

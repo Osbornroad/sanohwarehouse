@@ -25,4 +25,7 @@
     <script src="/webjars/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="/resources/js/bootbox.min.js"></script>
     <script src="/resources/js/datatablesUtil.js"></script>
+
+    <%--<link rel="shortcut icon" href="/resources/images/details_open.png">--%>
+
 </head>

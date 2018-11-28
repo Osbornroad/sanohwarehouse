@@ -3,8 +3,6 @@ package com.gmail.osbornroad.model.jpa;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.BatchSize;
 
-import static javax.persistence.GenerationType.IDENTITY;
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -17,10 +15,11 @@ import javax.persistence.*;
 /*@NamedQueries({
         @NamedQuery(name="Part.findAll", query = "select c from Part c")
 })*/
-public class Part extends BaseEntity {
+public class Part extends NamedEntity {
 
     private PartType partType;
-    private List<Operation> operationList = new ArrayList<>();
+//    private List<Operation> operationList = new ArrayList<>();
+    protected Set<Job> jobSet = new HashSet<>();
 
     public Part() {
     }
@@ -30,16 +29,30 @@ public class Part extends BaseEntity {
         this.partType = partType;
     }
 
-    public Part(String name, PartType partType, List<Operation> operationList) {
+/*    public Part(String name, PartType partType, List<Operation> operationList) {
         super(name);
         this.partType = partType;
         this.operationList = operationList;
-    }
+    }*/
 
-    public Part(Integer id, String name, PartType partType, List<Operation> operationList) {
+    public Part(Integer id, String name, PartType partType/*, List<Operation> operationList*/) {
         super(id, name);
         this.partType = partType;
-        this.operationList = operationList;
+//        this.operationList = operationList;
+    }
+
+    public Part(String name, PartType partType, /*List<Operation> operationList, */Set<Job> jobSet) {
+        super(name);
+        this.partType = partType;
+//        this.operationList = operationList;
+        this.jobSet = jobSet;
+    }
+
+    public Part(Integer id, String name, PartType partType, /*List<Operation> operationList, */Set<Job> jobSet) {
+        super(id, name);
+        this.partType = partType;
+//        this.operationList = operationList;
+        this.jobSet = jobSet;
     }
 
     @Column(name="part_type")
@@ -56,7 +69,7 @@ public class Part extends BaseEntity {
 //    @JoinTable(name = "part_operation_detail",
 //        joinColumns = @JoinColumn(name = "part_id"),
 //        inverseJoinColumns = @JoinColumn(name = "operation_id"))
-    @Enumerated(EnumType.STRING)
+/*    @Enumerated(EnumType.STRING)
     @CollectionTable(name = "part_operations", joinColumns = @JoinColumn(name = "part_id"))
     @Column(name = "operation")
     @ElementCollection(fetch = FetchType.EAGER)
@@ -67,6 +80,16 @@ public class Part extends BaseEntity {
 
     public void setOperationList(List<Operation> operationList) {
         this.operationList = operationList;
+    }*/
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "part")
+    @OrderBy("operation")
+    public Set<Job> getJobSet() {
+        return jobSet;
+    }
+
+    public void setJobSet(Set<Job> jobSet) {
+        this.jobSet = jobSet;
     }
 
     @Override
@@ -95,7 +118,7 @@ public class Part extends BaseEntity {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", partType=" + partType +
-                ", operationList=" + operationList +
+//                ", operationList=" + operationList +
                 '}';
     }
 }

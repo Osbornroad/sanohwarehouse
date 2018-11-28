@@ -27,6 +27,27 @@ CREATE TABLE parts
   part_type          VARCHAR NOT NULL
 );
 
+DROP TABLE IF EXISTS job CASCADE;
+CREATE TABLE job
+(
+  id                  SERIAL PRIMARY KEY,
+  part_id             INTEGER NOT NULL,
+  operation           VARCHAR NOT NULL,
+  machine             VARCHAR NOT NULL,
+  cycle_time          INTEGER NOT NULL,
+  FOREIGN KEY (part_id) REFERENCES parts (id) ON DELETE CASCADE
+);
+
+DROP TABLE IF EXISTS part_operations CASCADE;
+CREATE TABLE part_operations
+(
+  part_id                 INTEGER NOT NULL,
+  operation               VARCHAR,
+  CONSTRAINT part_operations_idx UNIQUE (part_id, operation),
+  FOREIGN KEY (part_id) REFERENCES parts (id) ON DELETE CASCADE
+);
+
+
 /*DROP TABLE IF EXISTS part_operation_detail CASCADE;
 CREATE TABLE part_operation_detail
 (
@@ -74,11 +95,4 @@ CREATE TABLE user_roles
   FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
 );
 
-DROP TABLE IF EXISTS part_operations CASCADE;
-CREATE TABLE part_operations
-(
-  part_id                 INTEGER NOT NULL,
-  operation               VARCHAR,
-  CONSTRAINT part_operations_idx UNIQUE (part_id, operation),
-  FOREIGN KEY (part_id) REFERENCES parts (id) ON DELETE CASCADE
-);
+

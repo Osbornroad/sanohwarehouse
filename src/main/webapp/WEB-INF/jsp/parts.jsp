@@ -7,24 +7,50 @@
 <html lang="en">
 <head>
     <jsp:include page="fragments/headerTags.jsp"/>
+    <style>
+        .container {
+            max-width: 900px;
+        }
+
+        childrow {
+            font-size: 10px;
+        }
+
+        td.details-control {
+            background: url("/resources/images/details_open.png") no-repeat center center;
+            cursor: pointer;
+        }
+        tr.shown td.details-control {
+            background: url("/resources/images/details_close.png") no-repeat center center;
+        }
+    </style>
     <script>
         var ajaxUrl = "parts/ajax/";
         reference = "part";
 
         $(document).ready(function() {
             table = $('#partTable').DataTable({
+                "scrollY":        "600px",
+                "scrollCollapse": true,
+                "paging":         false,
                 ajax : {
                     url : ajaxUrl,
                     dataSrc : ""
                 },
                 columns : [
+                    {
+                        "className": 'details-control',
+                        "orderable": false,
+                        "data": null,
+                        "defaultContent": ''
+                    },
                     {"data" : "name"},
                     {"data" : "partType"},
                     {
-                        "data" : "operationList",
+                        "data" : "jobSet",
                         "render" : function (opsFlow, type, row) {
                             // if (type == 'display') {
-                                return formatOpsFlow(opsFlow);
+                                return '<a href="/jobs/' + row.id + '">' + formatOpsFlow(opsFlow) + '</a>';
                             // }
                         }
                     },
@@ -41,10 +67,53 @@
                 ],
                 "initComplete": makeEditable
             });
+
+            function renderEditBtn(data, type, row) {
+                if (type == 'display') {
+                    return '<a href="#" onclick="openModalEdit(' + row.id + ', \'' + "edit" + '\');">' +
+                        '<span class="glyphicon glyphicon-pencil" style="color: blue" aria-hidden="true"></span></a>';
+                }
+            }
+
+            // Add event listener for opening and closing details
+            $('#partTable tbody').on('click', 'td.details-control', function () {
+                var tr = $(this).closest('tr');
+                var row = table.row( tr );
+
+                if ( row.child.isShown() ) {
+                    // This row is already open - close it
+                    row.child.hide();
+                    tr.removeClass('shown');
+                }
+                else {
+                    // Open this row
+                    row.child( format(row.data()) ).show();
+                    tr.addClass('shown');
+                }
+            } );
         } );
 
-        $(document).ready(function() {
-            $("#editRow").on('show.bs.modal', function () {
+        function format ( d ) {
+            var jobs= d.jobSet;
+            var childTable = '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px; margin-left: 100px">'+
+                '<tr>' +
+                '<th width="200">Operation</th>' +
+                '<th width="200">Machine</th>' +
+                '<th>Cycle time</th>' +
+                '</tr>';
+            jobs.forEach(function (item, i, arr)
+            {
+                childTable = childTable +
+                    '<tr>' +
+                    '<td>' + item.operation.fullName + '</td>' +
+                    '<td>' + item.machine + '</td>' +
+                    '<td>' + item.cycleTime + '</td>' +
+                    '</tr>';
+            });
+            return childTable;
+        }
+
+/*        $(document).ready(function() {
                 var operationList = document.getElementById("operationList");
                 var allOperations = ${allOperationList};
                 if (allOperations) {
@@ -53,25 +122,29 @@
                         operationList.options.add(new Option(allOperations[i].toString()));
                     }
                 }
-            })
-        });
+        });*/
 
         function formatOpsFlow(opsFlow) {
             var flowForDisplay = " ";
+            var previousOperation = "FakeOperation";
             opsFlow.forEach(function (item, index) {
-                var cutItem = item.substr(0,5);
-                flowForDisplay = flowForDisplay + cutItem + ' > ';
+                var currentOperation = item.operation.shortName;
+                if (previousOperation !== currentOperation) {
+                    flowForDisplay = flowForDisplay + currentOperation + ' > ';
+                    previousOperation = currentOperation;
+                }
             });
             return flowForDisplay;
         }
+
+        function generateLinkToOperation() {
+            save();
+            var modalId = document.getElementById("id").value;
+            window.open("/jobs/" + modalId, "_self");
+        }
     </script>
 
-    <style>
-        .container {
-            max-width: 900px;
-        }
 
-    </style>
 </head>
 <body>
 
@@ -88,14 +161,15 @@
     </div>
     <div class="row">
         <div class="col-12">
-            <table class="table table-hover" id="partTable">
-                <thead>
+            <table class="table table-hover table-striped display table-sm small" id="partTable">
+                <thead class="thead-light">
                 <tr>
-                    <th>Name</th>
-                    <th width="80">Type</th>
+                    <th width="10px"></th>
+                    <th width="100px">Name</th>
+                    <th width="80px">Type</th>
                     <th>Operations</th>
-                    <th width="60"></th>
-                    <th width="60"></th>
+                    <th width="40px"></th>
+                    <th width="10px"></th>
                 </tr>
                 </thead>
             </table>
@@ -131,28 +205,19 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="operationList" class="control-label col-xs-3">Operations</label>
+                        <%--<label for="operationList" class="control-label col-xs-3">Operations</label>
 
                         <div class="col-xs-9">
-                            <select multiple class="form-control to-empty" id="operationList" name="operationList">
-                                <%--<options items="${allOperationList}"/>--%>
-                                <%--<option>HPC</option>
-                                <option>LASER</option>
-                                <option>CHAMPHERING</option>
-                                <option>BRUSHING</option>
-                                <option>REDUCTION</option>
-                                <option>ENDFORMING</option>
-                                <option>SUMI_CUTTING</option>
-                                <option>SUMI_OVEN</option>
-                                <option>BENDING</option>
-                                <option>ASSEMBLY</option>
-                                <option>DELIVERY</option>--%>
+                            <select multiple size="15" class="form-control to-empty" id="operationList" name="operationList">
                             </select>
+                        </div>--%>
+                        <div class="col-xs-9" >
+                            <a role="button"  id="buttonLinkToOperation" class="btn btn-outline-primary mt-3 mb-3" href="#" onclick=generateLinkToOperation()>Operations</a>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-xs-offset-3 col-xs-9">
-                            <button class="btn btn-primary toBeEmpty" type="button" onclick="save()">
+                            <button class="btn btn-primary toBeEmpty float-right" type="button" onclick="save()">
                                 <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                             </button>
                         </div>

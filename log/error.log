@@ -1,9 +1,9 @@
-2018-10-23 07:48:24 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2018-10-23 08:18:49 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2018-10-23 10:41:44 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2018-10-23 11:48:17 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2018-10-23 11:49:41 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2018-10-23 11:58:30 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2018-10-23 12:03:05 [RMI TCP Connection(5)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2018-10-23 12:28:44 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2018-10-23 12:34:57 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2018-11-28 13:27:58 [http-nio-8080-exec-4] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/jobs] in DispatcherServlet with name 'mvc-dispatcher'
+2018-11-28 14:29:09 [http-nio-8080-exec-5] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/jobs/] in DispatcherServlet with name 'mvc-dispatcher'
+2018-11-28 14:32:58 [http-nio-8080-exec-7] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/jobs/] in DispatcherServlet with name 'mvc-dispatcher'
+2018-11-28 14:42:37 [http-nio-8080-exec-8] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/jobs/] in DispatcherServlet with name 'mvc-dispatcher'
+2018-11-28 14:42:37 [http-nio-8080-exec-4] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2018-11-28 14:42:37 [http-nio-8080-exec-4] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ОШИБКА: нулевое значение в столбце "part_type" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (13, , null).
+2018-11-28 15:21:10 [http-nio-8080-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Failed to bind request element: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "create"
+2018-11-28 15:21:36 [http-nio-8080-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Failed to bind request element: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "create"

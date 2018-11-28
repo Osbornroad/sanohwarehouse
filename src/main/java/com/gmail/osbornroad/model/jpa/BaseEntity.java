@@ -1,7 +1,5 @@
 package com.gmail.osbornroad.model.jpa;
 
-import org.hibernate.Hibernate;
-
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -11,18 +9,12 @@ import static javax.persistence.GenerationType.IDENTITY;
 public class BaseEntity implements Serializable {
 
     protected Integer id;
-    protected String name;
 
     public BaseEntity() {
     }
 
-    public BaseEntity(String name) {
-        this.name = name;
-    }
-
-    public BaseEntity(Integer id, String name) {
+    public BaseEntity(Integer id) {
         this.id = id;
-        this.name = name;
     }
 
     @Id
@@ -37,14 +29,7 @@ public class BaseEntity implements Serializable {
         this.id = id;
     }
 
-    @Column(name = "name")
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
 
 }
