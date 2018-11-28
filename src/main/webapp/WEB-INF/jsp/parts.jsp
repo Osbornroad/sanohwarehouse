@@ -200,8 +200,13 @@
                         <label for="partType" class="control-label col-xs-3">Type</label>
 
                         <div class="col-xs-9">
-                            <input type="text" class="form-control to-empty" id="partType" name="partType"
-                                   placeholder="Choose type of part">
+                            <select class="form-control to-empty" id="partType" name="partType">
+                                <c:forEach var="item" items="${partTypeList}">
+                                    <option value="${item}">${item}</option>
+                                </c:forEach>
+                            </select>
+                        <%--<input type="text" class="form-control to-empty" id="partType" name="partType"
+                                   placeholder="Choose type of part">--%>
                         </div>
                     </div>
                     <div class="form-group">

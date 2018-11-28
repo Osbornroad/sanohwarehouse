@@ -70,7 +70,7 @@ public enum Operation {
         return allOperationList;
     }
 
-    public static String getOperationsArray() {
+/*    public static String getOperationsArray() {
         List<Operation> allOperationList = getOperationList();
         StringBuffer sb = new StringBuffer();
         sb.append("[");
@@ -82,7 +82,7 @@ public enum Operation {
         }
         sb.append("]");
         return sb.toString();
-    }
+    }*/
 }
 
 /*
