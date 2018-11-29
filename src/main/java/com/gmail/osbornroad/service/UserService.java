@@ -2,6 +2,7 @@ package com.gmail.osbornroad.service;
 
 import com.gmail.osbornroad.model.jpa.User;
 import com.gmail.osbornroad.repository.jpa.UserRepository;
+import com.gmail.osbornroad.util.exception.RegistrationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -39,11 +40,23 @@ public class UserService {
         return null;
     }
 
+    private List<String> getAllUserNames() {
+        List<String> allUserNames = new ArrayList<>();
+        List<User> userList = findAllUsers();
+        for(User user : userList) {
+            allUserNames.add(user.getName());
+        }
+        return allUserNames;
+    }
 
-    public User saveUser(User user) {
+    public User saveUser(User user) throws RegistrationException {
         if (user.getRegistered() == null) {
             user.setRegistered(LocalDateTime.now());
         }
+        if(user.getId() == null && getAllUserNames().contains(user.getName())){
+            throw new RegistrationException(user.getName());
+        }
+
 /*        Integer userId = user.getId();
         String rawPassword = user.getPassword();
         if (userId != null) {

@@ -28,17 +28,6 @@ function renderEditBtn(data, type, row) {
     }
 }
 
-
-function clickCheckbox() {
-    var checkbox = document.getElementById("checkbox");
-    var enadled = document.getElementById("enabled");
-    if (checkbox.checked) {
-        enadled.value = "true";
-    } else {
-        enadled.value = "false";
-    }
-}
-
 function setInitCheckbox() {
     var checkbox = document.getElementById("checkbox");
     var enadled = document.getElementById("enabled");
@@ -57,7 +46,7 @@ function openModalEdit(id) {
                 key === "registered" ? formatDate(value) : value
             );
             if (key === "enabled")
-                document.getElementById("checkbox").checked = value;
+                document.getElementById("checkboxEnabled").checked = value;
             form.find("select[name='" + key + "']").val(
                 function() {
                     var currentValue;
@@ -72,20 +61,30 @@ function openModalEdit(id) {
                 }
             );
         });
-    });
-    if (id === "create") {
-        var elements = document.getElementsByClassName("to-empty");
-        for (var ii=0; ii < elements.length; ii++) {
-                elements[ii].value = "";
-        }
-        $('#buttonLinkToOperation').hide();
-        /*var buttonLinkToOperation = document.getElementById("buttonLinkToOperation");
-        buttonLinkToOperation.display = "none";*/
-    } else {
-        $('#buttonLinkToOperation').show();
-    }
+    })
+        .done(function () {
+            if (id === "create") {
+                var elements = document.getElementsByClassName("to-empty");
+                for (var ii=0; ii < elements.length; ii++) {
+                    elements[ii].value = "";
+                }
+                $('#enabled').val('true');
+                $('#buttonLinkToOperation').hide();
+                /*var buttonLinkToOperation = document.getElementById("buttonLinkToOperation");
+                buttonLinkToOperation.display = "none";*/
+            } else {
+                $('#buttonLinkToOperation').show();
+            }
 
-    $('#editRow').modal('show');
+            $('#editRow').modal('show');
+        })
+        .fail(function() {
+            bootbox.alert("You could not edit yourself")
+            // $('#editRow').modal('hide');
+            // return;
+        });
+
+
 
     /*            $('#modalTitle').html(i18n[editTitleKey]);
                 $.get(ajaxUrl + id, function (data) {
@@ -107,6 +106,9 @@ function save() {
             $('#editRow').modal('hide');
             table.ajax.reload();
             // successNoty('common.saved');
+        },
+        statusCode:{
+            403: response403()
         }
     });
 }

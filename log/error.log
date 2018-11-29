@@ -1,14 +1,11 @@
-2018-11-28 13:27:58 [http-nio-8080-exec-4] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/jobs] in DispatcherServlet with name 'mvc-dispatcher'
-2018-11-28 14:29:09 [http-nio-8080-exec-5] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/jobs/] in DispatcherServlet with name 'mvc-dispatcher'
-2018-11-28 14:32:58 [http-nio-8080-exec-7] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/jobs/] in DispatcherServlet with name 'mvc-dispatcher'
-2018-11-28 14:42:37 [http-nio-8080-exec-8] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/jobs/] in DispatcherServlet with name 'mvc-dispatcher'
-2018-11-28 14:42:37 [http-nio-8080-exec-4] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
-2018-11-28 14:42:37 [http-nio-8080-exec-4] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ОШИБКА: нулевое значение в столбце "part_type" нарушает ограничение NOT NULL
-  Подробности: Ошибочная строка содержит (13, , null).
-2018-11-28 15:21:10 [http-nio-8080-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Failed to bind request element: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "create"
-2018-11-28 15:21:36 [http-nio-8080-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Failed to bind request element: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "create"
-2018-11-28 15:45:20 [RMI TCP Connection(2)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2018-11-28 15:46:25 [http-nio-8080-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Failed to bind request element: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "create"
-2018-11-28 15:46:34 [http-nio-8080-exec-8] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
-2018-11-28 15:46:34 [http-nio-8080-exec-8] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ОШИБКА: нулевое значение в столбце "operation" нарушает ограничение NOT NULL
-  Подробности: Ошибочная строка содержит (6, 1, null, null, null).
+2018-11-29 07:57:46 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2018-11-29 07:58:36 [http-nio-8080-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Failed to bind request element: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "create"
+2018-11-29 08:07:03 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2018-11-29 08:59:11 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2018-11-29 08:59:49 [http-nio-8080-exec-10] WARN  osbornroad - User: Pavel attempted to access the protected URL: /admin/users
+2018-11-29 12:51:42 [RMI TCP Connection(2)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2018-11-29 13:01:42 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2018-11-29 14:24:27 [RMI TCP Connection(2)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2018-11-29 14:27:04 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2018-11-29 14:50:56 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2018-11-29 14:51:57 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE

@@ -117,8 +117,7 @@
 
                         <div class="col-xs-9">
 
-                            <select class="form-control to-empty" id="operation" name="operation"
-                                    autofocus>
+                            <select class="form-control to-empty" id="operation" name="operation" autofocus>
                                 <c:forEach var="item" items="${operationList}">
                                     <option value="${item}">${item}</option>
                                 </c:forEach>
@@ -129,8 +128,11 @@
                         <label for="machine" class="control-label col-xs-3">Machine</label>
 
                         <div class="col-xs-9">
-                            <input type="text" class="form-control to-empty" id="machine" name="machine"
-                                   placeholder="Input name of machine">
+                            <select class="form-control to-empty" id="machine" name="machine">
+                                <c:forEach var="item" items="${machineList}">
+                                    <option value="${item}">${item}</option>
+                                </c:forEach>
+                            </select>
                         </div>
                     </div>
 

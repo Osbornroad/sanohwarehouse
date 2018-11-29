@@ -116,8 +116,8 @@ public class Scheduler {
         Part part2 = partService.findPartById(2);
         Job job11 = new Job(part1, Operation.HPC, Machine.HPC, 10);
         Job job12 = new Job(part1, Operation.BRUSHING, Machine.BRUSHING, 8);
-        Job job21 = new Job(part2, Operation.ENDFORMING, Machine.T_007, 20);
-        Job job22 = new Job(part2, Operation.ENDFORMING, Machine.T_008, 21);
+        Job job21 = new Job(part2, Operation.ENDFORMING, Machine.ENDFORMING_LONG, 20);
+        Job job22 = new Job(part2, Operation.ENDFORMING, Machine.ENDFORMING_SHORT, 21);
         Job job23 = new Job(part2, Operation.LASER, Machine.LASER, 12);
 
         jobService.saveJob(job11);

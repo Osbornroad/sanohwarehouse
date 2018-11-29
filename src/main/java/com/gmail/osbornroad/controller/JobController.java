@@ -1,6 +1,7 @@
 package com.gmail.osbornroad.controller;
 
 import com.gmail.osbornroad.model.jpa.Job;
+import com.gmail.osbornroad.model.jpa.Machine;
 import com.gmail.osbornroad.model.jpa.Operation;
 import com.gmail.osbornroad.model.jpa.Part;
 import com.gmail.osbornroad.service.JobService;
@@ -110,6 +111,7 @@ public class JobController {
                 model.addAttribute("partId", partId);
                 model.addAttribute("partName", partService.findPartById(partId).getName());
                 model.addAttribute("operationList", Operation.getOperationList());
+                model.addAttribute("machineList", Machine.getMachineList());
             }
             return "jobs";
         }

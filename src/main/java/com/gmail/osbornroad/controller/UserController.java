@@ -4,6 +4,7 @@ package com.gmail.osbornroad.controller;
 import com.gmail.osbornroad.model.jpa.User;
 import com.gmail.osbornroad.service.UserService;
 import com.gmail.osbornroad.util.ValidationUtil;
+import com.gmail.osbornroad.util.exception.RegistrationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -44,7 +45,7 @@ public class UserController {
 
     @GetMapping(value = "/ajax/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public User getUser(@PathVariable("id") String stringId) {
+    public ResponseEntity<User> getUser(@PathVariable("id") String stringId) {
         User user;
         Integer id;
         try {
@@ -54,7 +55,9 @@ public class UserController {
             user = new User();
         }
         LOGGER.info("{} - User: {} - {}{}", getClass().getSimpleName(), getAutorizedUserName(), "get user: ", user.toString());
-        return user;
+        if (getAutorizedUserName().equals(user.getName()))
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+        return new ResponseEntity<>(user, HttpStatus.OK);
     }
 
     @PostMapping(value = "/ajax")
@@ -72,10 +75,12 @@ public class UserController {
         } else {
             user.setPassword(passwordEncoder.encode(rawPassword));
         }
-
-
         LOGGER.info("{} - User: {} - {}{}", getClass().getSimpleName(), getAutorizedUserName(), "save user: ", user.toString());
-        userService.saveUser(user);
+        try {
+            userService.saveUser(user);
+        } catch (RegistrationException e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.FORBIDDEN);
+        }
         return new ResponseEntity<>(HttpStatus.OK);
     }
 

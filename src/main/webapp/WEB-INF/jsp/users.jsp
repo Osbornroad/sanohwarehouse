@@ -26,6 +26,7 @@
     <script>
         ajaxUrl = "users/ajax/";
         reference = "user";
+        var enabledAdmins = 0;
 
         $(document).ready(function() {
             table = $('#userTable').DataTable({
@@ -73,6 +74,36 @@
             else
                 return '<span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>';
         }
+
+        function clickCheckbox() {
+            var checkbox = document.getElementById("checkboxEnabled");
+            var enabled = document.getElementById("enabled");
+            if (checkbox.checked) {
+                enabled.value = "true";
+            } else {
+                // $('#checkboxEnabled').prop('checked', true);
+                // $('#alertDisable').show();
+
+
+                enabled.value = "false";
+            }
+        }
+
+        function response403() {
+            $('#name').val("").attr("placeholder", "This name already used");
+        }
+
+        $(document).on('show.bs.modal', function () {
+            $('#alertDisable').hide();
+        });
+
+        function placeholderNameReset() {
+            $('#name').attr("placeholder", "Input name of user");
+        }
+
+/*        $(document).on('hidden.bs.modal', function () {
+            $('#name').attr("placeholder", "Input name of user");
+        });*/
 /*
         function clickCheckbox() {
             var label = $(document).getElementById("labelForEnabled");
@@ -93,6 +124,9 @@
             max-width: 900px;
         }
 
+        #alertDisable {
+            color: red;
+        }
     </style>
 
 </head>
@@ -112,8 +146,8 @@
     </div>
     <div class="row">
         <div class="col-12">
-            <table class="table table-hover" id="userTable">
-                <thead>
+            <table class="table table-hover table-striped display table-sm small" id="userTable">
+                <thead class="thead-light">
                 <tr>
                     <th>Name</th>
                     <th>E-mail</th>
@@ -121,8 +155,8 @@
                     <th>Enabled</th>
                     <th>Registered</th>
                     <th>Roles</th>
-                    <th width="60"></th>
-                    <th width="60"></th>
+                    <th width="40px"></th>
+                    <th width="10px"></th>
                 </tr>
                 </thead>
             </table>
@@ -146,7 +180,7 @@
 
                         <div class="col-xs-9">
                             <input type="text" class="form-control to-empty" id="name" name="name"
-                                   placeholder="Input name of user" autofocus>
+                                   placeholder="Input name of user" autofocus onclick="placeholderNameReset()">
                         </div>
                     </div>
                     <div class="form-group">
@@ -165,14 +199,18 @@
                                    placeholder="Input password">
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-row">
                         <%--<label for="enabled" class="control-label col-xs-3">Enabled</label>--%>
-
-                        <div class="col-xs-9">
-                            <div class="checkbox" onclick="clickCheckbox()">
-                                <label id="labelForEnabled"><input type="checkbox" id="checkbox" name="checkbox"> Enabled</label>
+                        <%--<div class="row">--%>
+                            <div class="col-xs-4">
+                                <div class="checkbox" onclick="clickCheckbox()">
+                                    <label id="labelForEnabled"><input type="checkbox" id="checkboxEnabled"<%-- name="checkbox"--%>> Enabled</label>
+                                </div>
                             </div>
-                        </div>
+                            <div class="col-xs-6" id="alertDisable">
+                                *** You could not disable yourself! ***
+                            </div>
+                        <%--</div>--%>
                         <%--<div class="col-xs-9">
                             <select class="form-control" id="enabled" name="enabled">
                                 <option>true</option>
@@ -180,7 +218,11 @@
                             </select>
                         </div>--%>
                     </div>
-
+          <%--          <div class="form-group">
+                        <div class="col-xs-9" id="alertDisable">
+                            *** You could not disable yourself! ***
+                        </div>
+                    </div>--%>
                     <input type="hidden" id="enabled" name="enabled" class="to-empty">
 
                     <input type="hidden" id="registered" name="registered" class="to-empty">
