@@ -192,7 +192,7 @@
                         <label for="name" class="control-label col-xs-3">Name</label>
 
                         <div class="col-xs-9">
-                            <input class="form-control to-empty" id="name" name="name"
+                            <input class="form-control to-empty not-empty" id="name" name="name"
                                    placeholder="Input name of part" autofocus>
                         </div>
                     </div>
@@ -200,7 +200,7 @@
                         <label for="partType" class="control-label col-xs-3">Type</label>
 
                         <div class="col-xs-9">
-                            <select class="form-control to-empty" id="partType" name="partType">
+                            <select class="form-control to-empty not-empty" id="partType" name="partType">
                                 <c:forEach var="item" items="${partTypeList}">
                                     <option value="${item}">${item}</option>
                                 </c:forEach>
@@ -222,7 +222,7 @@
                     </div>
                     <div class="form-group">
                         <div class="col-xs-offset-3 col-xs-9">
-                            <button class="btn btn-primary toBeEmpty float-right" type="button" onclick="save()">
+                            <button class="btn btn-primary toBeEmpty float-right enter-pressed" type="button" onclick="save()">
                                 <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                             </button>
                         </div>

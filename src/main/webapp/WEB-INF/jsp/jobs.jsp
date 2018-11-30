@@ -56,6 +56,7 @@
                     '<span class="glyphicon glyphicon-remove" style="color: darkred" aria-hidden="true"></span></a>';
             }
         }
+
     </script>
 
     <style>
@@ -92,7 +93,7 @@
             </table>
         </div>
     </div>
-    <div class="row mt-5">
+    <div class="row mt-5 pl-3">
         <a role="button" class="btn btn-outline-primary" href="/parts">
             Back to Part list
         </a>

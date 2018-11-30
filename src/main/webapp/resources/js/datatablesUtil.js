@@ -97,6 +97,43 @@ function openModalEdit(id) {
                 });*/
 }
 
+function validationFunction() {
+    var allFilled = true;
+    var allInputs = $( ".not-empty" );
+
+    $(allInputs).each(function() {
+        if($(this).val().length === 0) {
+            allFilled = false;
+            return false;
+        }
+    });
+    return allFilled;
+}
+
+$(document).ready(function() {
+    $(window).keydown(function(event){
+        if( (event.keyCode == 13) && (validationFunction() == false) ) {
+            event.preventDefault();
+            return false;
+        }
+    });
+});
+
+$(document).ready(function() {
+    $(window).keydown(function(event){
+        if(event.keyCode == 13) {
+            var focused = document.activeElement;
+            if ($(focused).hasClass("enter-pressed")) {
+
+            } else {
+                event.preventDefault();
+                return true;
+            }
+            return false;
+        }
+    });
+});
+
 function save() {
     $.ajax({
         type: "POST",
@@ -108,9 +145,13 @@ function save() {
             // successNoty('common.saved');
         },
         statusCode:{
-            403: response403()
+            422: response422()
         }
     });
+}
+
+function response422() {
+    //Nothing to do
 }
 
 function renderDeleteBtn(data, type, row) {
@@ -133,6 +174,9 @@ function deleteRow(id, referenceName) {
                     type: 'DELETE',
                     success: function () {
                         table.ajax.reload();
+                    },
+                    error: function(){
+                        bootbox.alert("You could not delete yourself")
                     }
                 });
             }

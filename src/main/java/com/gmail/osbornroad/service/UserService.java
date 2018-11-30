@@ -53,7 +53,7 @@ public class UserService {
         if (user.getRegistered() == null) {
             user.setRegistered(LocalDateTime.now());
         }
-        if(user.getId() == null && getAllUserNames().contains(user.getName())){
+        if(getAllUserNames().contains(user.getName())){
             throw new RegistrationException(user.getName());
         }
 

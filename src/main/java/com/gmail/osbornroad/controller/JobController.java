@@ -68,15 +68,17 @@ public class JobController {
 
     @GetMapping(value = "/ajax/{partId}/{jobId}", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public Job getJob(@PathVariable("partId") Integer partId, @PathVariable("jobId") Integer jobId) {
+    public ResponseEntity<Job> getJob(@PathVariable("partId") Integer partId, @PathVariable("jobId") String stringId) {
         Job job;
+        Integer jobId;
         try {
+            jobId = Integer.parseInt(stringId);
             job = jobService.findJobById(jobId);
         } catch (NumberFormatException e) {
             job = new Job();
         }
         LOGGER.info("{} - User: {} - {}{}", getClass().getSimpleName(), getAutorizedUserName(), "get job: ", job.toString());
-        return job;
+        return new ResponseEntity<>(job, HttpStatus.OK);
     }
 
     @PostMapping(value = "/ajax/{partId}/")

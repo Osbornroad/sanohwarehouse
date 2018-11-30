@@ -89,7 +89,7 @@
             }
         }
 
-        function response403() {
+        function response422() {
             $('#name').val("").attr("placeholder", "This name already used");
         }
 

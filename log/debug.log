@@ -1,523 +1,408 @@
-2018-11-29 07:58:13 [http-nio-8080-exec-3] INFO  osbornroad - MainPageController - User: Maksim - show main page
-2018-11-29 07:58:19 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-29 07:58:20 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-29 07:58:27 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-29 07:58:32 [http-nio-8080-exec-5] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-29 07:58:32 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-29 07:58:32 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-29 07:58:34 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-29 07:58:54 [http-nio-8080-exec-10] INFO  osbornroad - JobController - User: Maksim - save job: Job{id=null, part=null, operation=ENDFORMING, machine=ENDFORMING_SHORT, cycleTime=10}
-2018-11-29 07:58:55 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-29 07:58:58 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-29 07:58:59 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-29 07:59:02 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-29 07:59:03 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-29 07:59:10 [http-nio-8080-exec-6] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=6, part=Part{id=3, name='46283-4CM0A', partType=TUBE}, operation=ENDFORMING, machine=ENDFORMING_SHORT, cycleTime=10}
-2018-11-29 07:59:23 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-29 07:59:24 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-29 07:59:26 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-29 07:59:26 [http-nio-8080-exec-1] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=1, name='17339-4CM0A', partType=TUBE}
-2018-11-29 07:59:28 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-29 07:59:30 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=1, name='17339-4CM0A', partType=TUBE}
-2018-11-29 08:00:17 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=1, name='17339-4CM0A', partType=TUBE}
-2018-11-29 08:00:17 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-29 08:08:00 [http-nio-8080-exec-10] INFO  osbornroad - MainPageController - User: Maksim - show main page
-2018-11-29 08:17:15 [http-nio-8080-exec-3] INFO  osbornroad - MainPageController - User: Maksim - show main page
-2018-11-29 08:20:09 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 08:20:10 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 08:23:26 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 08:23:28 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 08:24:26 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 08:24:27 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 08:24:52 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T08:07:18.383, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 08:24:55 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - save user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=false, registered=2018-11-29T08:07, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 08:24:55 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 08:25:02 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=false, registered=2018-11-29T08:07, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 08:25:08 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - save user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T08:07, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 08:25:08 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 08:59:44 [http-nio-8080-exec-2] INFO  osbornroad - MainPageController - User: Pavel - show main page
-2018-11-29 08:59:49 [http-nio-8080-exec-10] WARN  osbornroad - User: Pavel attempted to access the protected URL: /admin/users
-2018-11-29 08:59:49 [http-nio-8080-exec-7] INFO  osbornroad - MainPageController - User: Pavel - show main page
-2018-11-29 09:00:14 [http-nio-8080-exec-8] INFO  osbornroad - MainPageController - User: Maksim - show main page
-2018-11-29 09:00:16 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 09:00:17 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:00:19 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-29T08:59:27.374, roles=[ROLE_USER]}
-2018-11-29 09:00:22 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - save user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=false, registered=2018-11-29T08:59, roles=[ROLE_USER]}
-2018-11-29 09:00:22 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:01:04 [http-nio-8080-exec-6] INFO  osbornroad - MainPageController - User: Maksim - show main page
-2018-11-29 09:01:07 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 09:01:07 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:01:10 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=false, registered=2018-11-29T08:59, roles=[ROLE_USER]}
-2018-11-29 09:01:13 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - save user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-29T08:59, roles=[ROLE_USER]}
-2018-11-29 09:01:13 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:20:44 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T08:59:27.373, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 09:20:50 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - save user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=false, registered=2018-11-29T08:59, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 09:20:50 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:20:55 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 09:20:56 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:20:58 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=false, registered=2018-11-29T08:59, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 09:21:01 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - save user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=null, roles=[]}
-2018-11-29 09:21:01 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:21:03 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:21:01.706, roles=[]}
-2018-11-29 09:30:27 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:21:01.706, roles=[]}
-2018-11-29 09:30:45 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - save user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=null, roles=[ROLE_ADMIN]}
-2018-11-29 09:30:45 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:30:47 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:30:45.914, roles=[ROLE_ADMIN]}
-2018-11-29 09:30:55 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - save user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=null, roles=[ROLE_ADMIN]}
-2018-11-29 09:30:55 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:30:59 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 09:31:00 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:31:03 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:30:55.424, roles=[ROLE_ADMIN]}
-2018-11-29 09:31:17 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - save user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=null, roles=[]}
-2018-11-29 09:31:17 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:31:25 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:31:17.706, roles=[]}
-2018-11-29 09:31:29 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - save user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=null, roles=[ROLE_USER]}
-2018-11-29 09:31:29 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:31:31 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:31:29.631, roles=[ROLE_USER]}
-2018-11-29 09:31:36 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - save user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=null, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 09:31:36 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:31:39 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:31:36.521, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 09:31:43 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 09:31:44 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:31:46 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:31:36.521, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 09:32:25 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - save user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=null, roles=[ROLE_ADMIN]}
-2018-11-29 09:32:25 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:32:28 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 09:32:29 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:32:30 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32:25.641, roles=[ROLE_ADMIN]}
-2018-11-29 09:32:38 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-29T08:59, roles=[ROLE_USER]}
-2018-11-29 09:32:42 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-29T08:59, roles=[ROLE_USER]}
-2018-11-29 09:32:43 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - save user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=null, roles=[]}
-2018-11-29 09:32:43 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:33:35 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 09:33:35 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:33:40 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32:43.955, roles=[]}
-2018-11-29 09:33:45 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - save user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=null, roles=[]}
-2018-11-29 09:33:46 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:33:49 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 09:33:49 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:35:39 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 09:35:45 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 09:35:45 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:35:48 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-29T09:33:45.986, roles=[]}
-2018-11-29 09:35:52 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - save user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=false, registered=2018-11-29T09:33, roles=[]}
-2018-11-29 09:35:52 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:35:54 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=false, registered=2018-11-29T09:33, roles=[]}
-2018-11-29 09:35:56 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - save user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=false, registered=2018-11-29T09:33, roles=[ROLE_ADMIN]}
-2018-11-29 09:35:56 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:35:59 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 09:36:00 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:36:01 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=false, registered=2018-11-29T09:33, roles=[ROLE_ADMIN]}
-2018-11-29 09:36:38 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - save user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-29T09:33, roles=[ROLE_USER]}
-2018-11-29 09:36:38 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:36:40 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 09:36:40 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:36:42 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32:25.641, roles=[ROLE_ADMIN]}
-2018-11-29 09:36:45 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - save user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=false, registered=2018-11-29T09:32, roles=[ROLE_ADMIN]}
-2018-11-29 09:36:45 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:36:47 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=false, registered=2018-11-29T09:32, roles=[ROLE_ADMIN]}
-2018-11-29 09:36:53 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - save user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=false, registered=2018-11-29T09:32, roles=[ROLE_ADMIN]}
-2018-11-29 09:36:53 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:36:56 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 09:36:56 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:37:19 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=false, registered=2018-11-29T09:32, roles=[ROLE_ADMIN]}
-2018-11-29 09:37:27 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - save user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 09:37:27 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:37:54 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 09:37:57 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - save user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=false, registered=2018-11-29T09:32, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 09:37:57 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:38:03 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 09:38:03 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:38:05 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=false, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 09:38:08 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - save user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 09:38:08 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:38:10 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 09:38:14 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - save user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 09:38:14 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:38:15 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-29T09:33, roles=[ROLE_USER]}
-2018-11-29 09:38:19 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - save user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-29T09:33, roles=[ROLE_USER]}
-2018-11-29 09:38:19 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:44:12 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 09:44:13 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:44:17 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 09:44:42 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 09:44:46 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-29T09:33, roles=[ROLE_USER]}
-2018-11-29 09:48:09 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 09:48:11 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:48:16 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 09:48:25 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - save user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 09:48:25 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:48:27 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-29T09:33, roles=[ROLE_USER]}
-2018-11-29 09:50:31 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 09:50:32 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 09:50:34 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:18:44 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:18:47 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:18:58 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:19:24 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:19:25 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:19:27 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:19:36 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - save user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 10:19:36 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:19:38 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:19:46 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - save user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 10:19:46 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:19:47 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-29T09:33, roles=[ROLE_USER]}
-2018-11-29 10:22:31 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:22:32 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:22:33 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:22:39 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:26:38 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:26:46 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:26:46 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:26:47 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:28:04 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:28:06 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:28:07 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:30:20 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:30:21 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:30:23 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:31:30 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:31:32 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:31:33 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:31:46 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:32:34 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:32:35 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:32:36 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:35:04 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:35:06 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:35:07 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:35:50 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:35:52 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:35:53 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:35:55 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:36:32 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:36:35 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:36:35 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:36:37 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:38:09 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:38:13 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:38:14 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:38:15 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:40:05 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:40:06 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:40:08 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:40:09 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:40:09 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:40:11 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:41:35 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:41:37 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:41:38 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:42:32 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:42:33 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:42:34 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:42:36 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:43:08 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:43:09 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:43:11 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:44:17 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:44:18 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:44:19 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:44:57 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:44:58 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:45:00 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:45:01 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:47:33 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:47:45 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:47:46 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:47:49 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:53:23 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:53:26 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:53:27 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:53:29 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:54:30 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:54:31 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:54:33 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:54:35 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:54:54 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:54:55 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:54:57 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:54:59 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:56:51 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:56:56 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:56:58 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:56:59 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:57:00 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:58:23 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:58:28 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:58:29 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:58:30 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:58:35 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:58:35 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:58:37 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:59:38 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:59:39 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:59:40 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 10:59:47 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 10:59:47 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 10:59:48 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 11:00:35 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 11:00:36 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 11:00:37 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 11:02:17 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 11:02:19 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 11:02:20 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 11:12:49 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 11:13:32 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 11:13:33 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 11:13:36 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 11:15:54 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 11:15:55 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 11:15:56 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 11:16:50 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 11:16:51 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 11:16:52 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 11:17:41 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 11:17:42 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 11:17:44 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 11:17:48 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 11:18:02 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 11:18:03 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 11:18:04 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 11:18:10 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - save user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 11:18:10 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 11:18:12 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 11:19:51 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 11:19:52 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 11:19:53 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 11:19:57 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - save user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 11:19:57 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 11:19:58 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-29T09:33, roles=[ROLE_USER]}
-2018-11-29 11:20:01 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - save user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-29T09:33, roles=[ROLE_USER]}
-2018-11-29 11:20:01 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 11:20:03 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 11:20:10 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - save user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T09:32, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 11:20:10 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 11:20:11 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-29T09:33, roles=[ROLE_USER]}
-2018-11-29 11:24:14 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 11:24:23 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 11:24:42 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Maksim', email='kdfskd@hg.kk', enabled=true, registered=null, roles=[ROLE_ADMIN]}
-2018-11-29 11:24:42 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 11:25:07 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - delete user: User{id='3', name='Maksim', email='kdfskd@hg.kk', enabled=true, registered=2018-11-29T11:24:42.940, roles=[ROLE_ADMIN]}
-2018-11-29 11:25:07 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 12:52:14 [http-nio-8080-exec-9] INFO  osbornroad - MainPageController - User: Maksim - show main page
-2018-11-29 12:52:19 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 12:52:21 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 12:52:27 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 12:52:43 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Maksim', email='ddfsdf@kbbkjb.jj', enabled=true, registered=null, roles=[ROLE_USER]}
-2018-11-29 12:53:21 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-29T12:52:02.125, roles=[ROLE_USER]}
-2018-11-29 12:53:33 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 12:53:37 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 12:53:37 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 12:53:43 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 12:53:44 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 12:53:51 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 12:54:10 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='ttt', email='lll@jjj.uu', enabled=true, registered=null, roles=[]}
-2018-11-29 12:54:10 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 12:54:13 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 12:54:33 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Pavel', email='ukhknk@kmlnk.uu', enabled=true, registered=null, roles=[ROLE_USER]}
-2018-11-29 13:02:11 [http-nio-8080-exec-8] INFO  osbornroad - MainPageController - User: Maksim - show main page
-2018-11-29 13:02:16 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 13:02:18 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 13:02:25 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 13:02:42 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Maksim', email='ffgubs@jhj.jjj', enabled=true, registered=null, roles=[]}
-2018-11-29 13:03:59 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Pavel', email='ffgubs@jhj.jjj', enabled=true, registered=null, roles=[]}
-2018-11-29 13:04:08 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Lfbhbd', email='ffgubs@jhj.jjj', enabled=true, registered=null, roles=[]}
-2018-11-29 13:04:09 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 13:17:49 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 13:17:50 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 13:17:52 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 13:18:06 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Maksim', email='dghskdrgh@hgvvnvj.jyg', enabled=true, registered=null, roles=[]}
-2018-11-29 13:24:44 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 13:24:45 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 13:24:48 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 13:25:04 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Maksim', email='xgnfgb@hljuh.uugy', enabled=true, registered=null, roles=[]}
-2018-11-29 13:25:10 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='fjfjfty', email='xgnfgb@hljuh.uugy', enabled=true, registered=null, roles=[]}
-2018-11-29 13:25:10 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 13:25:15 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 13:26:44 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 13:26:46 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 13:26:48 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 13:27:02 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Maksim', email='ggtrhrt@jhjgjg.jjj', enabled=true, registered=null, roles=[]}
-2018-11-29 13:27:09 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='tytytytyty', email='ggtrhrt@jhjgjg.jjj', enabled=true, registered=null, roles=[]}
-2018-11-29 13:27:09 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 13:27:22 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 13:27:38 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='uhdkhdkhbkdh', email='kgbgbflb@jhkkj.k', enabled=true, registered=null, roles=[]}
-2018-11-29 13:27:38 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 13:31:14 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 13:31:18 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 13:31:20 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - delete user: User{id='4', name='fjfjfty', email='xgnfgb@hljuh.uugy', enabled=true, registered=2018-11-29T13:25:10.934, roles=[]}
-2018-11-29 13:31:21 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 13:31:23 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - delete user: User{id='3', name='Lfbhbd', email='ffgubs@jhj.jjj', enabled=true, registered=2018-11-29T13:04:08.984, roles=[]}
-2018-11-29 13:31:23 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 13:31:25 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - delete user: User{id='5', name='tytytytyty', email='ggtrhrt@jhjgjg.jjj', enabled=true, registered=2018-11-29T13:27:09.240, roles=[]}
-2018-11-29 13:31:25 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 13:31:28 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - delete user: User{id='6', name='uhdkhdkhbkdh', email='kgbgbflb@jhkkj.k', enabled=true, registered=2018-11-29T13:27:38.663, roles=[]}
-2018-11-29 13:31:28 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 13:31:29 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 13:31:43 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Maksim', email='xjjbkgbnkgn@jhjygjy.jjj', enabled=true, registered=null, roles=[]}
-2018-11-29 13:31:48 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='ghfhfyhfy', email='xjjbkgbnkgn@jhjygjy.jjj', enabled=true, registered=null, roles=[]}
-2018-11-29 13:31:48 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 13:31:51 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 13:34:41 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 13:34:43 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 13:34:44 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 13:35:02 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Maksim', email='nnbnbjn@gvvjv.jjj', enabled=true, registered=null, roles=[]}
-2018-11-29 13:35:12 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='bjmjmjm', email='nnbnbjn@gvvjv.jjj', enabled=true, registered=null, roles=[]}
-2018-11-29 13:35:12 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 13:36:10 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 13:36:28 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Maksim', email='kkdnkdn@kkk.jj', enabled=true, registered=null, roles=[]}
-2018-11-29 13:36:53 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Maksim', email='kkdnkdn@kkk.jj', enabled=true, registered=null, roles=[]}
-2018-11-29 13:37:31 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Maksim', email='kkdnkdn@kkk.jj', enabled=true, registered=null, roles=[]}
-2018-11-29 13:38:20 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='KKKKK', email='kkdnkdn@kkk.jj', enabled=true, registered=null, roles=[]}
-2018-11-29 13:38:20 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 13:38:37 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 13:39:25 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Maksim', email='djghdkgdkgh@hhh.khkh', enabled=true, registered=null, roles=[]}
-2018-11-29 13:39:54 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='ullioioio', email='djghdkgdkgh@hhh.khkh', enabled=true, registered=null, roles=[]}
-2018-11-29 13:39:54 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 14:10:25 [http-nio-8080-exec-7] INFO  osbornroad - MainPageController - User: Maksim - show main page
-2018-11-29 14:10:28 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 14:10:33 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 14:10:35 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='8', name='bjmjmjm', email='nnbnbjn@gvvjv.jjj', enabled=true, registered=2018-11-29T13:35:12.149, roles=[]}
-2018-11-29 14:10:39 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T13:01:58.874, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-29 14:25:02 [http-nio-8080-exec-9] INFO  osbornroad - MainPageController - User: Maksim - show main page
-2018-11-29 14:25:09 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 14:25:10 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 14:25:12 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:24:50.194, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 14:25:18 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - save user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.co', enabled=true, registered=2018-11-29T14:24, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 14:27:33 [http-nio-8080-exec-8] INFO  osbornroad - MainPageController - User: Maksim - show main page
-2018-11-29 14:27:39 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 14:27:40 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 14:27:43 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:27:21.153, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 14:27:52 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - save user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.co', enabled=true, registered=2018-11-29T14:27, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 14:27:52 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 14:27:57 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.co', enabled=true, registered=2018-11-29T14:27, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 14:28:03 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - save user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:27, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 14:28:03 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 14:28:04 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 14:28:22 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Maksim', email='kdkgdg@hgvhnbn.jjj', enabled=true, registered=null, roles=[]}
-2018-11-29 14:28:30 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Pavel', email='kdkgdg@hgvhnbn.jjj', enabled=true, registered=null, roles=[]}
-2018-11-29 14:28:33 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='ghhngfnghngh', email='kdkgdg@hgvhnbn.jjj', enabled=true, registered=null, roles=[]}
-2018-11-29 14:28:33 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 14:52:24 [http-nio-8080-exec-8] INFO  osbornroad - MainPageController - User: Maksim - show main page
-2018-11-29 14:52:29 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 14:52:30 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 14:52:32 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:52:12.256, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 14:52:43 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-29T14:52:12.256, roles=[ROLE_USER]}
-2018-11-29 14:52:47 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:52:12.256, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 14:52:56 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:52:12.256, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 14:53:04 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - save user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com2', enabled=true, registered=2018-11-29T14:52, roles=[ROLE_USER]}
-2018-11-29 14:53:04 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 14:54:13 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 14:54:14 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 14:54:16 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:52:12.256, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 14:54:22 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 14:54:23 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 14:54:24 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:52:12.256, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 14:59:15 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 14:59:30 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:00:02 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 15:00:03 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:00:06 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:52:12.256, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 15:00:32 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:52:12.256, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 15:01:13 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:52:12.256, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 15:01:59 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 15:02:01 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:02:12 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 15:02:13 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:02:18 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:52:12.256, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 15:02:38 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:52:12.256, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 15:02:44 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 15:02:49 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 15:02:50 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:02:59 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:52:12.256, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 15:03:22 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:52:12.256, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 15:04:27 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 15:04:28 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:04:29 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:52:12.256, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 15:04:44 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:52:12.256, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 15:07:32 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 15:07:33 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:07:35 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:52:12.256, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 15:07:52 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com2', enabled=true, registered=2018-11-29T14:52, roles=[ROLE_USER]}
-2018-11-29 15:08:34 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 15:08:35 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:08:37 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:52:12.256, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 15:08:40 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:52:12.256, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 15:08:43 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com2', enabled=true, registered=2018-11-29T14:52, roles=[ROLE_USER]}
-2018-11-29 15:08:48 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - save user: User{id='2', name='Pavelz', email='pavel.yulin@sanoh-rus.com2', enabled=true, registered=2018-11-29T14:52, roles=[ROLE_USER]}
-2018-11-29 15:08:48 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:08:50 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavelz', email='pavel.yulin@sanoh-rus.com2', enabled=true, registered=2018-11-29T14:52, roles=[ROLE_USER]}
-2018-11-29 15:08:54 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:52:12.256, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 15:08:57 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 15:09:08 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 15:13:18 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:52:12.256, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 15:13:22 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 15:13:27 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavelz', email='pavel.yulin@sanoh-rus.com2', enabled=true, registered=2018-11-29T14:52, roles=[ROLE_USER]}
-2018-11-29 15:13:31 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 15:13:34 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:52:12.256, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 15:13:36 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 15:13:44 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 15:21:44 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 15:23:23 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 15:23:24 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 15:23:26 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:23:28 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 15:23:29 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:23:30 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 15:23:54 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Maksim', email='dkjdjgndg@jhbkbjn.fghg', enabled=true, registered=null, roles=[]}
-2018-11-29 15:24:05 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='fghfghfhfh', email='dkjdjgndg@jhbkbjn.fghg', enabled=true, registered=null, roles=[]}
-2018-11-29 15:24:05 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:26:02 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 15:27:13 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Maksim', email='kufhvkfjvkfv@hghbjkhbjn.jygjyh', enabled=true, registered=null, roles=[]}
-2018-11-29 15:27:27 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='tttttttttttttttttt', email='kufhvkfjvkfv@hghbjkhbjn.jygjyh', enabled=true, registered=null, roles=[]}
-2018-11-29 15:27:27 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:28:18 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 15:28:19 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:28:45 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 15:30:16 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 15:32:33 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 15:32:36 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:32:38 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 15:38:41 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 15:39:01 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 15:39:01 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:39:06 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 15:39:28 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='ghmcghmcgh', email='ikhjn@htgfh.kjh', enabled=false, registered=null, roles=[]}
-2018-11-29 15:39:28 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:41:43 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 15:41:43 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:41:45 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 15:42:01 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Maksim', email='kjhjn@grhfgvb.jh', enabled=true, registered=null, roles=[]}
-2018-11-29 15:42:05 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='ghghjgj', email='kjhjn@grhfgvb.jh', enabled=true, registered=null, roles=[]}
-2018-11-29 15:42:05 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:42:12 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - delete user: User{id='3', name='fghfghfhfh', email='dkjdjgndg@jhbkbjn.fghg', enabled=true, registered=2018-11-29T15:24:05.901, roles=[]}
-2018-11-29 15:42:12 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:42:15 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - delete user: User{id='6', name='ghghjgj', email='kjhjn@grhfgvb.jh', enabled=true, registered=2018-11-29T15:42:05.380, roles=[]}
-2018-11-29 15:42:15 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:42:18 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - delete user: User{id='5', name='ghmcghmcgh', email='ikhjn@htgfh.kjh', enabled=false, registered=2018-11-29T15:39:28.790, roles=[]}
-2018-11-29 15:42:18 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:42:21 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - delete user: User{id='4', name='tttttttttttttttttt', email='kufhvkfjvkfv@hghbjkhbjn.jygjyh', enabled=true, registered=2018-11-29T15:27:27.187, roles=[]}
-2018-11-29 15:42:21 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:42:23 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavelz', email='pavel.yulin@sanoh-rus.com2', enabled=true, registered=2018-11-29T14:52, roles=[ROLE_USER]}
-2018-11-29 15:42:29 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - save user: User{id='2', name='Pavelz', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-29T14:52, roles=[ROLE_USER]}
-2018-11-29 15:42:29 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:42:32 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 15:42:41 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 15:42:45 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 15:43:02 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='ggigi', email='jhbn@gfgh.jh', enabled=true, registered=null, roles=[]}
-2018-11-29 15:43:03 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:43:06 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='7', name='ggigi', email='jhbn@gfgh.jh', enabled=true, registered=2018-11-29T15:43:02.968, roles=[]}
-2018-11-29 15:43:10 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - save user: User{id='7', name='ggigi', email='jhbn@gfgh.jh', enabled=true, registered=2018-11-29T15:43, roles=[ROLE_USER]}
-2018-11-29 15:43:10 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:43:21 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:52:12.256, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 15:43:24 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:52:12.256, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 15:51:06 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-29 15:51:07 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:51:08 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:52:12.256, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 15:51:14 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get user: User{id='7', name='ggigi', email='jhbn@gfgh.jh', enabled=true, registered=2018-11-29T15:43, roles=[ROLE_USER]}
-2018-11-29 15:51:17 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-29 15:51:40 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='yyyyyyyyy', email='jymghb@jmh.hghb', enabled=false, registered=null, roles=[]}
-2018-11-29 15:51:40 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-29 15:51:46 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-29T14:52:12.256, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-29 15:51:48 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get user: User{id='8', name='yyyyyyyyy', email='jymghb@jmh.hghb', enabled=false, registered=2018-11-29T15:51:40.856, roles=[]}
+2018-11-30 07:46:19 [http-nio-8080-exec-1] INFO  osbornroad - MainPageController - User: Maksim - show main page
+2018-11-30 07:46:28 [http-nio-8080-exec-10] INFO  osbornroad - MainPageController - User: Maksim - show main page
+2018-11-30 07:46:30 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 07:46:31 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 07:46:42 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 07:47:24 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 07:47:25 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 07:47:27 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 07:51:24 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 07:51:25 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 07:51:27 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 07:53:20 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 07:53:21 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 07:53:24 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 07:54:15 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 07:54:16 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 07:54:17 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 07:54:19 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 07:55:42 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 07:55:43 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 07:55:46 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 08:09:48 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 08:09:49 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 08:09:53 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 08:09:58 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=3, name='46283-4CM0A', partType=CLIP}
+2018-11-30 08:09:58 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 08:19:03 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=4, name='46282-4CM0A', partType=TUBE}
+2018-11-30 08:19:40 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=4, name='46282-4CM0A', partType=CLUSTER}
+2018-11-30 08:19:40 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 08:20:02 [http-nio-8080-exec-8] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 08:20:04 [http-nio-8080-exec-10] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=2, name='17338-4CM0A', partType=TUBE}
+2018-11-30 08:20:46 [http-nio-8080-exec-6] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=5, part=Part{id=2, name='17338-4CM0A', partType=TUBE}, operation=LASER, machine=LASER, cycleTime=12}
+2018-11-30 08:21:15 [http-nio-8080-exec-2] INFO  osbornroad - JobController - User: Maksim - save job: Job{id=5, part=null, operation=LASER, machine=HPC, cycleTime=12}
+2018-11-30 08:21:15 [http-nio-8080-exec-10] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=2, name='17338-4CM0A', partType=TUBE}
+2018-11-30 08:21:24 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - show user page
+2018-11-30 08:21:26 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-11-30 08:21:37 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-30T07:46:01.722, roles=[ROLE_USER, ROLE_ADMIN]}
+2018-11-30 08:21:40 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-30T07:46:01.722, roles=[ROLE_USER]}
+2018-11-30 08:22:28 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - save user: User{id='2', name='Pavel1', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-30T07:46, roles=[ROLE_USER]}
+2018-11-30 08:22:28 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-11-30 08:22:45 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel1', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-30T07:46, roles=[ROLE_USER]}
+2018-11-30 08:23:07 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - save user: User{id='2', name='Pavel12', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-30T07:46, roles=[ROLE_USER]}
+2018-11-30 08:23:08 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-11-30 08:23:16 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel12', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-30T07:46, roles=[ROLE_USER]}
+2018-11-30 08:24:10 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - save user: User{id='2', name='Pavel123', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-30T07:46, roles=[ROLE_USER]}
+2018-11-30 08:24:11 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-11-30 08:24:20 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel123', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-30T07:46, roles=[ROLE_USER]}
+2018-11-30 08:33:06 [http-nio-8080-exec-7] INFO  osbornroad - MainPageController - User: Maksim - show main page
+2018-11-30 08:33:10 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 08:33:11 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 08:33:22 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 08:33:37 [http-nio-8080-exec-2] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 08:33:37 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=3, name='46283-4CM0A1', partType=ABS_CLUSTER}
+2018-11-30 08:33:37 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 08:33:38 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A1', partType=ABS_CLUSTER}
+2018-11-30 08:33:48 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 08:33:49 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 08:33:53 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A1', partType=ABS_CLUSTER}
+2018-11-30 08:33:56 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=3, name='46283-4CM0A1', partType=ABS_CLUSTER}
+2018-11-30 08:33:56 [http-nio-8080-exec-8] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 08:33:56 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 08:33:57 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A1', partType=ABS_CLUSTER}
+2018-11-30 08:34:14 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 08:34:17 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=11, name='17506-4CM0A', partType=BRACKET}
+2018-11-30 08:36:44 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=11, name='17506-4CM0A1', partType=NUT}
+2018-11-30 08:38:49 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 08:38:49 [http-nio-8080-exec-9] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 08:38:50 [http-nio-8080-exec-1] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=11, name='17506-4CM0A1', partType=NUT}
+2018-11-30 08:39:13 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 08:39:13 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 08:39:17 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=10, name='46252-4CM0A', partType=CLUSTER}
+2018-11-30 08:39:27 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=10, name='1111111', partType=CLUSTER}
+2018-11-30 08:39:27 [http-nio-8080-exec-1] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 08:39:27 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 08:39:27 [http-nio-8080-exec-5] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=10, name='1111111', partType=CLUSTER}
+2018-11-30 08:39:30 [http-nio-8080-exec-1] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 08:39:30 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=10, name='1111111', partType=CLUSTER}
+2018-11-30 08:39:41 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 08:39:45 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=4, name='46282-4CM0A', partType=TUBE}
+2018-11-30 08:40:03 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=4, name='46282-4CM0A', partType=TUBE}
+2018-11-30 08:40:03 [http-nio-8080-exec-5] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 08:40:03 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 08:40:03 [http-nio-8080-exec-1] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=4, name='46282-4CM0A', partType=TUBE}
+2018-11-30 08:41:17 [http-nio-8080-exec-2] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 08:41:17 [http-nio-8080-exec-2] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=4, name='46282-4CM0A', partType=TUBE}
+2018-11-30 08:47:26 [http-nio-8080-exec-7] INFO  osbornroad - MainPageController - User: Maksim - show main page
+2018-11-30 08:50:11 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 08:50:14 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 08:50:16 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=2, name='17338-4CM0A', partType=TUBE}
+2018-11-30 08:50:18 [http-nio-8080-exec-10] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 08:50:18 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=2, name='17338-4CM0A', partType=TUBE}
+2018-11-30 08:50:18 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 08:50:19 [http-nio-8080-exec-6] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=2, name='17338-4CM0A', partType=TUBE}
+2018-11-30 08:52:02 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - show user page
+2018-11-30 08:52:04 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-11-30 08:52:10 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
+2018-11-30 08:52:23 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 08:52:23 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 08:52:28 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 08:52:43 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=2, name='17338-4CM0A', partType=TUBE}
+2018-11-30 08:52:50 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=2, name='17338-4CM0A', partType=TUBE}
+2018-11-30 08:52:53 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 08:52:53 [http-nio-8080-exec-10] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 08:52:54 [http-nio-8080-exec-5] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=2, name='17338-4CM0A', partType=TUBE}
+2018-11-30 08:53:54 [http-nio-8080-exec-6] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=5, part=Part{id=2, name='17338-4CM0A', partType=TUBE}, operation=LASER, machine=LASER, cycleTime=12}
+2018-11-30 09:00:29 [http-nio-8080-exec-6] INFO  osbornroad - MainPageController - User: Maksim - show main page
+2018-11-30 09:00:34 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 09:00:35 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 09:00:41 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=4, name='46282-4CM0A', partType=TUBE}
+2018-11-30 09:00:43 [http-nio-8080-exec-10] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 09:00:43 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=4, name='46282-4CM0A', partType=TUBE}
+2018-11-30 09:00:43 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 09:00:45 [http-nio-8080-exec-8] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=4, name='46282-4CM0A', partType=TUBE}
+2018-11-30 09:00:57 [http-nio-8080-exec-5] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
+2018-11-30 09:01:33 [http-nio-8080-exec-1] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 09:01:33 [http-nio-8080-exec-1] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=4, name='46282-4CM0A', partType=TUBE}
+2018-11-30 09:02:05 [http-nio-8080-exec-2] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 09:02:05 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
+2018-11-30 09:02:38 [http-nio-8080-exec-6] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=4, name='46282-4CM0A', partType=TUBE}
+2018-11-30 09:02:40 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 09:02:40 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 09:02:52 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 09:03:01 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 09:03:03 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 09:03:03 [http-nio-8080-exec-1] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 09:03:04 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 09:03:12 [http-nio-8080-exec-8] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
+2018-11-30 09:04:11 [http-nio-8080-exec-9] INFO  osbornroad - JobController - User: Maksim - save job: Job{id=null, part=null, operation=HPC, machine=HPC, cycleTime=10}
+2018-11-30 09:04:16 [http-nio-8080-exec-6] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 09:04:26 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
+2018-11-30 09:04:36 [http-nio-8080-exec-8] INFO  osbornroad - JobController - User: Maksim - save job: Job{id=null, part=null, operation=ENDFORMING, machine=ENDFORMING_LONG, cycleTime=10}
+2018-11-30 09:04:36 [http-nio-8080-exec-2] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 09:04:57 [http-nio-8080-exec-10] INFO  osbornroad - JobController - User: Maksim - delete job: Job{id=6, part=Part{id=3, name='46283-4CM0A', partType=TUBE}, operation=HPC, machine=HPC, cycleTime=10}
+2018-11-30 09:04:57 [http-nio-8080-exec-3] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 09:04:59 [http-nio-8080-exec-5] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=7, part=Part{id=3, name='46283-4CM0A', partType=TUBE}, operation=ENDFORMING, machine=ENDFORMING_LONG, cycleTime=10}
+2018-11-30 09:05:09 [http-nio-8080-exec-1] INFO  osbornroad - JobController - User: Maksim - save job: Job{id=7, part=null, operation=BRUSHING, machine=ENDFORMING_SHORT, cycleTime=11}
+2018-11-30 09:05:09 [http-nio-8080-exec-9] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 09:05:13 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 09:05:14 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 09:05:16 [http-nio-8080-exec-6] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 09:05:16 [http-nio-8080-exec-2] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 09:05:20 [http-nio-8080-exec-8] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=7, part=Part{id=3, name='46283-4CM0A', partType=TUBE}, operation=BRUSHING, machine=ENDFORMING_SHORT, cycleTime=11}
+2018-11-30 09:05:26 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - save job: Job{id=7, part=null, operation=LASER, machine=LASER, cycleTime=11}
+2018-11-30 09:05:26 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 09:05:27 [http-nio-8080-exec-10] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
+2018-11-30 09:05:32 [http-nio-8080-exec-3] INFO  osbornroad - JobController - User: Maksim - save job: Job{id=null, part=null, operation=CHAMFERING, machine=CHAMFERING, cycleTime=null}
+2018-11-30 09:05:36 [http-nio-8080-exec-9] INFO  osbornroad - JobController - User: Maksim - save job: Job{id=null, part=null, operation=CHAMFERING, machine=CHAMFERING, cycleTime=10}
+2018-11-30 09:05:36 [http-nio-8080-exec-5] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 09:05:45 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - delete job: Job{id=7, part=Part{id=3, name='46283-4CM0A', partType=TUBE}, operation=LASER, machine=LASER, cycleTime=11}
+2018-11-30 09:05:45 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 09:05:46 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 09:05:47 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 09:05:50 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 09:06:00 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=null, name='222222222', partType=TUBE}
+2018-11-30 09:06:00 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 09:06:05 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=12, name='222222222', partType=TUBE}
+2018-11-30 09:06:07 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=12, name='222222222', partType=TUBE}
+2018-11-30 09:06:07 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 09:06:07 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 09:06:08 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=12, name='222222222', partType=TUBE}
+2018-11-30 09:06:10 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
+2018-11-30 09:06:17 [http-nio-8080-exec-3] INFO  osbornroad - JobController - User: Maksim - save job: Job{id=null, part=null, operation=HPC, machine=HPC, cycleTime=10}
+2018-11-30 09:06:17 [http-nio-8080-exec-2] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=12, name='222222222', partType=TUBE}
+2018-11-30 09:06:21 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 09:06:22 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 09:06:30 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - delete part: Part{id=12, name='222222222', partType=TUBE}
+2018-11-30 09:06:30 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 09:06:34 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - show user page
+2018-11-30 09:06:35 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-11-30 09:06:40 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
+2018-11-30 09:06:59 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='jdhfghksfj', email='kjhj@kj.hgh', enabled=true, registered=null, roles=[ROLE_ADMIN, ROLE_USER]}
+2018-11-30 09:06:59 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-11-30 09:07:06 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get user: User{id='3', name='jdhfghksfj', email='kjhj@kj.hgh', enabled=true, registered=2018-11-30T09:06:59.245, roles=[ROLE_USER, ROLE_ADMIN]}
+2018-11-30 09:07:15 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - save user: User{id='3', name='Maksim', email='kjhj@kj.hgh', enabled=true, registered=2018-11-30T09:06, roles=[ROLE_ADMIN, ROLE_USER]}
+2018-11-30 09:07:15 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-11-30 09:07:29 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
+2018-11-30 09:07:41 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Maksim', email='djmhfxnvcn@gnghbjnm.gfgbn', enabled=true, registered=null, roles=[]}
+2018-11-30 09:07:47 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='mnkb,jmnb', email='djmhfxnvcn@gnghbjnm.gfgbn', enabled=true, registered=null, roles=[]}
+2018-11-30 09:07:47 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-11-30 09:07:51 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get user: User{id='4', name='mnkb,jmnb', email='djmhfxnvcn@gnghbjnm.gfgbn', enabled=true, registered=2018-11-30T09:07:47.025, roles=[]}
+2018-11-30 09:07:57 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - save user: User{id='4', name='Maksim', email='djmhfxnvcn@gnghbjnm.gfgbn', enabled=true, registered=2018-11-30T09:07, roles=[]}
+2018-11-30 09:07:57 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-11-30 09:10:07 [http-nio-8080-exec-6] INFO  osbornroad - MainPageController - User: Maksim - show main page
+2018-11-30 09:10:13 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - show user page
+2018-11-30 09:10:13 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-11-30 09:10:32 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
+2018-11-30 09:10:46 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='ddjhmfjhvn', email='hghbmnm@gfghjhj.ghh', enabled=true, registered=null, roles=[ROLE_ADMIN]}
+2018-11-30 09:10:46 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-11-30 09:10:50 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get user: User{id='3', name='ddjhmfjhvn', email='hghbmnm@gfghjhj.ghh', enabled=true, registered=2018-11-30T09:10:46.314, roles=[ROLE_ADMIN]}
+2018-11-30 09:10:58 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - save user: User{id='3', name='Maksim', email='hghbmnm@gfghjhj.ghh', enabled=true, registered=2018-11-30T09:10, roles=[ROLE_ADMIN]}
+2018-11-30 09:11:03 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - save user: User{id='3', name='uiyugjyhgg', email='hghbmnm@gfghjhj.ghh', enabled=true, registered=2018-11-30T09:10, roles=[ROLE_ADMIN]}
+2018-11-30 09:11:03 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-11-30 09:11:08 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - delete user: User{id='3', name='uiyugjyhgg', email='hghbmnm@gfghjhj.ghh', enabled=true, registered=2018-11-30T09:10, roles=[ROLE_ADMIN]}
+2018-11-30 09:11:08 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-11-30 09:11:13 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-30T09:09:56.443, roles=[ROLE_ADMIN, ROLE_USER]}
+2018-11-30 11:36:09 [http-nio-8080-exec-6] INFO  osbornroad - MainPageController - User: Maksim - show main page
+2018-11-30 11:36:21 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - show user page
+2018-11-30 11:36:22 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-11-30 11:36:45 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - show user page
+2018-11-30 11:36:46 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-11-30 11:41:31 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - show user page
+2018-11-30 11:41:32 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-11-30 11:41:44 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
+2018-11-30 11:42:05 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Maksim', email='fgbfv@fgfghgh.ytjh', enabled=true, registered=null, roles=[ROLE_USER]}
+2018-11-30 11:42:13 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Pavel', email='fgbfv@fgfghgh.ytjh', enabled=true, registered=null, roles=[ROLE_USER]}
+2018-11-30 11:42:24 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Artem', email='fgbfv@fgfghgh.ytjh', enabled=true, registered=null, roles=[ROLE_USER]}
+2018-11-30 11:42:24 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-11-30 11:42:28 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get user: User{id='3', name='Artem', email='fgbfv@fgfghgh.ytjh', enabled=true, registered=2018-11-30T11:42:24.484, roles=[ROLE_USER]}
+2018-11-30 11:42:32 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - save user: User{id='3', name='Artemghjg', email='fgbfv@fgfghgh.ytjh', enabled=true, registered=2018-11-30T11:42, roles=[ROLE_USER]}
+2018-11-30 11:42:32 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-11-30 11:42:37 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - delete user: User{id='3', name='Artemghjg', email='fgbfv@fgfghgh.ytjh', enabled=true, registered=2018-11-30T11:42, roles=[ROLE_USER]}
+2018-11-30 11:42:37 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-11-30 11:42:45 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 11:42:47 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 11:44:36 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 11:45:05 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=null, name='11111-srgsr', partType=NUT}
+2018-11-30 11:45:05 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 11:45:12 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - delete part: Part{id=12, name='11111-srgsr', partType=NUT}
+2018-11-30 11:45:12 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 11:45:16 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - delete part: Part{id=2, name='17338-4CM0A', partType=TUBE}
+2018-11-30 11:45:16 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 11:45:21 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 11:45:26 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 11:45:34 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 11:46:05 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 11:46:05 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 11:46:05 [http-nio-8080-exec-9] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 11:46:07 [http-nio-8080-exec-5] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 11:46:11 [http-nio-8080-exec-9] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
+2018-11-30 11:46:27 [http-nio-8080-exec-6] INFO  osbornroad - JobController - User: Maksim - save job: Job{id=null, part=null, operation=HPC, machine=HPC, cycleTime=10}
+2018-11-30 11:46:27 [http-nio-8080-exec-8] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 11:46:32 [http-nio-8080-exec-3] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
+2018-11-30 11:46:53 [http-nio-8080-exec-9] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 11:46:53 [http-nio-8080-exec-1] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 11:47:10 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
+2018-11-30 11:47:59 [http-nio-8080-exec-2] INFO  osbornroad - MainPageController - User: Maksim - show main page
+2018-11-30 11:48:02 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 11:48:03 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 11:48:07 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 11:48:09 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 11:48:09 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 11:48:09 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 11:48:10 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 11:48:23 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
+2018-11-30 11:48:59 [http-nio-8080-exec-1] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 11:48:59 [http-nio-8080-exec-10] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 11:49:01 [http-nio-8080-exec-5] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
+2018-11-30 11:49:22 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 11:49:23 [http-nio-8080-exec-6] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 11:49:25 [http-nio-8080-exec-1] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
+2018-11-30 11:50:44 [http-nio-8080-exec-8] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
+2018-11-30 11:52:01 [http-nio-8080-exec-5] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 11:52:02 [http-nio-8080-exec-2] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 11:52:24 [http-nio-8080-exec-6] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
+2018-11-30 11:53:03 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - save job: Job{id=null, part=null, operation=CHAMFERING, machine=CHAMFERING, cycleTime=10}
+2018-11-30 11:53:05 [http-nio-8080-exec-9] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 11:55:13 [http-nio-8080-exec-2] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
+2018-11-30 11:58:18 [http-nio-8080-exec-6] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 11:58:19 [http-nio-8080-exec-10] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 11:58:26 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
+2018-11-30 11:58:59 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 11:59:00 [http-nio-8080-exec-3] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
+2018-11-30 11:59:01 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 11:59:04 [http-nio-8080-exec-2] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 11:59:05 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=1, name='17339-4CM0A', partType=TUBE}
+2018-11-30 11:59:14 [http-nio-8080-exec-1] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
+2018-11-30 12:04:34 [http-nio-8080-exec-5] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 12:04:35 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - save job: Job{id=null, part=null, operation=ENDFORMING, machine=ENDFORMING_LONG, cycleTime=null}
+2018-11-30 12:04:37 [http-nio-8080-exec-5] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=1, name='17339-4CM0A', partType=TUBE}
+2018-11-30 12:04:42 [http-nio-8080-exec-9] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
+2018-11-30 12:05:04 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - save job: Job{id=null, part=null, operation=ENDFORMING, machine=SUMI_OVEN, cycleTime=11}
+2018-11-30 12:05:04 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=1, name='17339-4CM0A', partType=TUBE}
+2018-11-30 12:22:45 [http-nio-8080-exec-5] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-11-30 12:22:54 [http-nio-8080-exec-6] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=1, name='17339-4CM0A', partType=TUBE}
+2018-11-30 12:23:42 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 12:23:43 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 12:23:44 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 12:24:18 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 12:24:18 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 12:24:20 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 12:24:37 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 12:24:39 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 12:43:13 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 12:43:15 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 12:43:30 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 12:43:50 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 12:47:42 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 12:47:51 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 12:47:52 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 12:48:12 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 12:48:14 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 12:48:58 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=null, name='', partType=null}
+2018-11-30 12:56:28 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 12:56:35 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 12:56:36 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 12:57:10 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 12:57:10 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 12:57:13 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 12:57:22 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 12:57:23 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 12:57:25 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 12:57:37 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 12:57:37 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 12:57:47 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 13:01:41 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 13:01:54 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 13:01:56 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 13:03:00 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 13:03:02 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 13:03:04 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 13:03:29 [http-nio-8080-exec-10] INFO  osbornroad - MainPageController - User: Maksim - show main page
+2018-11-30 13:03:33 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - show user page
+2018-11-30 13:03:33 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-11-30 13:03:37 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 13:03:37 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 13:03:38 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 13:08:30 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 13:08:33 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 13:08:55 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 13:08:57 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 13:09:15 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 13:09:29 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 13:09:30 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 13:09:31 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 13:09:36 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 13:09:37 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 13:09:40 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 13:09:51 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 13:09:52 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 13:10:04 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 13:11:51 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 13:11:56 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 13:12:05 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 13:12:07 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 13:53:06 [http-nio-8080-exec-8] INFO  osbornroad - MainPageController - User: Maksim - show main page
+2018-11-30 13:53:09 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 13:53:10 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 13:53:11 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 13:54:10 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 13:54:13 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 13:54:26 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 13:54:29 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 13:55:27 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 13:55:40 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 13:55:41 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 13:55:44 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 13:56:04 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 13:57:01 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 13:57:06 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 13:57:07 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 13:57:12 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 13:57:20 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 13:57:20 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 13:57:30 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 15:19:58 [http-nio-8080-exec-4] INFO  osbornroad - MainPageController - User: Maksim - show main page
+2018-11-30 15:20:07 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 15:20:08 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 15:20:13 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=1, name='17339-4CM0A', partType=TUBE}
+2018-11-30 15:20:17 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 15:23:51 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 15:23:53 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 15:24:02 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 15:25:42 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 15:25:43 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 15:25:44 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 15:28:06 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 15:28:07 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 15:28:09 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 15:30:49 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 15:30:52 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 15:30:57 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 15:30:59 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 15:32:49 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 15:32:52 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 15:33:09 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 15:33:11 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 15:33:20 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=null, name='ghfcgbv', partType=TUBE}
+2018-11-30 15:33:21 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 15:33:26 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 15:33:56 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 15:33:58 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 15:34:06 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=null, name='hjghnbvv', partType=CLIP}
+2018-11-30 15:34:06 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 15:34:23 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 15:35:20 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 15:35:27 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 15:35:37 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=null, name='hjgvhngbv', partType=CLIP}
+2018-11-30 15:35:37 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 15:41:18 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 15:41:19 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 15:41:20 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 15:43:59 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 15:44:01 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 15:44:10 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 15:45:16 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 15:45:17 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 15:45:19 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 15:45:41 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 15:45:41 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 15:45:43 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 15:46:27 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=null, name='cgbvvfv', partType=CLIP}
+2018-11-30 15:46:27 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 15:46:31 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 15:46:43 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 15:47:25 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-11-30 15:47:31 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-11-30 15:47:31 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-11-30 15:47:35 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}

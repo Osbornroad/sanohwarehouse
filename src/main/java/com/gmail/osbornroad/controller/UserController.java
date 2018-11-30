@@ -56,7 +56,7 @@ public class UserController {
         }
         LOGGER.info("{} - User: {} - {}{}", getClass().getSimpleName(), getAutorizedUserName(), "get user: ", user.toString());
         if (getAutorizedUserName().equals(user.getName()))
-            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+            return new ResponseEntity<>(HttpStatus.UNPROCESSABLE_ENTITY);
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
 
@@ -86,12 +86,15 @@ public class UserController {
 
     @DeleteMapping(value = "/ajax/{id}")
     @ResponseBody
-    public void deleteUser(@PathVariable Integer id) {
+    public ResponseEntity<String> deleteUser(@PathVariable Integer id) {
         User user = userService.findUserById(id);
         if(user != null) {
+            if (getAutorizedUserName().equals(user.getName()))
+                return new ResponseEntity<>(HttpStatus.UNPROCESSABLE_ENTITY);
             LOGGER.info("{} - User: {} - {}{}", getClass().getSimpleName(), getAutorizedUserName(), "delete user: ", user.toString());
             userService.deleteUser(user);
         }
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
