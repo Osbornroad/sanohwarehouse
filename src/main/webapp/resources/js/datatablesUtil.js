@@ -9,16 +9,11 @@ function formatDate(date) {
 
 function makeEditable() {
     form = $('#detailsForm');
-
-    /*            $(document).ajaxError(function (event, jqXHR, options, jsExc) {
-                    failNoty(event, jqXHR, options, jsExc);
-                });
-*/
-                var token = $("meta[name='_csrf']").attr("content");
-                var header = $("meta[name='_csrf_header']").attr("content");
-                $(document).ajaxSend(function(e, xhr, options) {
-                    xhr.setRequestHeader(header, token);
-                });
+    var token = $("meta[name='_csrf']").attr("content");
+    var header = $("meta[name='_csrf_header']").attr("content");
+    $(document).ajaxSend(function(e, xhr, options) {
+        xhr.setRequestHeader(header, token);
+        });
 }
 
 function renderEditBtn(data, type, row) {
@@ -39,12 +34,16 @@ function setInitCheckbox() {
 }
 
 function openModalEdit(id) {
+    clearForm();
     document.getElementById("modalTitle").innerHTML = id === "create" ? "New " + reference : "Edit " + reference;
     $.get(ajaxUrl + id, function (data) {
+        setEnabled(!(data.partType === "TUBE"));
         $.each(data, function (key, value) {
             form.find("input[name='" + key + "']").val(
                 key === "registered" ? formatDate(value) : value
             );
+            if (key === "partType" && value === "TUBE")
+                isTube = true;
             if (key === "enabled")
                 document.getElementById("checkboxEnabled").checked = value;
             form.find("select[name='" + key + "']").val(
@@ -53,6 +52,9 @@ function openModalEdit(id) {
                     switch(key) {
                         case "operation":
                             currentValue = value.fullName;
+                            break;
+                        case "partCode":
+                            currentValue = value.name;
                             break;
                         default:
                             currentValue = value;
@@ -64,14 +66,9 @@ function openModalEdit(id) {
     })
         .done(function () {
             if (id === "create") {
-                var elements = document.getElementsByClassName("to-empty");
-                for (var ii=0; ii < elements.length; ii++) {
-                    elements[ii].value = "";
-                }
+                clearForm();
                 $('#enabled').val('true');
                 $('#buttonLinkToOperation').hide();
-                /*var buttonLinkToOperation = document.getElementById("buttonLinkToOperation");
-                buttonLinkToOperation.display = "none";*/
             } else {
                 $('#buttonLinkToOperation').show();
             }
@@ -80,24 +77,22 @@ function openModalEdit(id) {
         })
         .fail(function() {
             bootbox.alert("You could not edit yourself")
-            // $('#editRow').modal('hide');
-            // return;
         });
-
-
-
-    /*            $('#modalTitle').html(i18n[editTitleKey]);
-                $.get(ajaxUrl + id, function (data) {
-                    $.each(data, function (key, value) {
-                        form.find("input[name='" + key + "']").val(
-                            key === "dateTime" ? formatDate(value) : value
-                        );
-                    });
-                    $('#editRow').modal();
-                });*/
 }
 
-function validationFunction() {
+function setEnabled(isNotTube) {
+    $('#length').prop('disabled', isNotTube);
+    $('#partCode').prop('disabled', isNotTube);
+}
+
+function clearForm() {
+    var elements = document.getElementsByClassName("to-empty");
+    for (var ii=0; ii < elements.length; ii++) {
+        elements[ii].value = "";
+    }
+}
+
+/*function validationFunction() {
     var allFilled = true;
     var allInputs = $( ".not-empty" );
 
@@ -117,19 +112,17 @@ $(document).ready(function() {
             return false;
         }
     });
-});
+});*/
 
 $(document).ready(function() {
     $(window).keydown(function(event){
         if(event.keyCode == 13) {
+            // $('#submit').focus();
             var focused = document.activeElement;
             if ($(focused).hasClass("enter-pressed")) {
-
             } else {
                 event.preventDefault();
-                return true;
             }
-            return false;
         }
     });
 });

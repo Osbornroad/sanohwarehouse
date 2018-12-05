@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
+<%--<%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>--%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html lang="en">
 <head>
@@ -47,6 +47,17 @@
                     {"data" : "name"},
                     {"data" : "partType"},
                     {
+                        "data" : "length",
+                        "defaultContent" : ""
+                    },
+                    {
+                        "data" : "partCode",
+                        "defaultContent" : "",
+                        "render" : function (partCode, type, row) {
+                            return formatPartCode(partCode);
+                        }
+                    },
+                    {
                         "data" : "jobSet",
                         "render" : function (opsFlow, type, row) {
                             // if (type == 'display') {
@@ -68,12 +79,24 @@
                 "initComplete": makeEditable
             });
 
+            function formatPartCode(partCode) {
+                if (typeof partCode !== "undefined" && typeof partCode !== "null")
+                    return partCode.code;
+                return "";
+            }
+
             function renderEditBtn(data, type, row) {
                 if (type == 'display') {
                     return '<a href="#" onclick="openModalEdit(' + row.id + ', \'' + "edit" + '\');">' +
                         '<span class="glyphicon glyphicon-pencil" style="color: blue" aria-hidden="true"></span></a>';
                 }
             }
+
+            $('#partType').on('change', function (e) {
+                // var optionSelected = $("option:selected", this);
+                var valueSelected = this.value;
+                setEnabled(valueSelected !== "TUBE");
+            });
 
             // Add event listener for opening and closing details
             $('#partTable tbody').on('click', 'td.details-control', function () {
@@ -113,17 +136,6 @@
             return childTable;
         }
 
-/*        $(document).ready(function() {
-                var operationList = document.getElementById("operationList");
-                var allOperations = ${allOperationList};
-                if (allOperations) {
-                    var i;
-                    for (i = 0; i < allOperations.length; i++) {
-                        operationList.options.add(new Option(allOperations[i].toString()));
-                    }
-                }
-        });*/
-
         function formatOpsFlow(opsFlow) {
             var flowForDisplay = " ";
             var previousOperation = "FakeOperation";
@@ -142,6 +154,9 @@
             var modalId = document.getElementById("id").value;
             window.open("/jobs/" + modalId, "_self");
         }
+
+
+        
     </script>
 
 
@@ -167,6 +182,8 @@
                     <th width="10px"></th>
                     <th width="100px">Name</th>
                     <th width="80px">Type</th>
+                    <th width="80px">Length</th>
+                    <th width="80px">Code</th>
                     <th>Operations</th>
                     <th width="40px"></th>
                     <th width="10px"></th>
@@ -177,7 +194,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="editRow" on>
+<div class="modal fade" id="editRow">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -187,10 +204,8 @@
             <div class="modal-body">
                 <form:form class="form-horizontal" id="detailsForm">
                     <input type="hidden" id="id" name="id" class="to-empty">
-
                     <div class="form-group">
                         <label for="name" class="control-label col-xs-3">Name</label>
-
                         <div class="col-xs-9">
                             <input class="form-control to-empty not-empty" id="name" name="name"
                                    placeholder="Input name of part" autofocus>
@@ -198,24 +213,32 @@
                     </div>
                     <div class="form-group">
                         <label for="partType" class="control-label col-xs-3">Type</label>
-
                         <div class="col-xs-9">
                             <select class="form-control to-empty not-empty" id="partType" name="partType">
                                 <c:forEach var="item" items="${partTypeList}">
                                     <option value="${item}">${item}</option>
                                 </c:forEach>
                             </select>
-                        <%--<input type="text" class="form-control to-empty" id="partType" name="partType"
-                                   placeholder="Choose type of part">--%>
                         </div>
                     </div>
                     <div class="form-group">
-                        <%--<label for="operationList" class="control-label col-xs-3">Operations</label>
-
+                        <label for="length" class="control-label col-xs-3">Length</label>
                         <div class="col-xs-9">
-                            <select multiple size="15" class="form-control to-empty" id="operationList" name="operationList">
+                            <input class="form-control to-empty" id="length" name="length"
+                                   placeholder="Input length of tube">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="partCode" class="control-label col-xs-3">Code</label>
+                        <div class="col-xs-9">
+                            <select class="form-control to-empty not-empty" id="partCode" name="partCode">
+                                <c:forEach var="item" items="${partCodeList}">
+                                    <option value="${item}">${item.code}</option>
+                                </c:forEach>
                             </select>
-                        </div>--%>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <div class="col-xs-9" >
                             <a role="button"  id="buttonLinkToOperation" class="btn btn-outline-primary mt-3 mb-3" href="#" onclick=generateLinkToOperation()>Operations</a>
                         </div>

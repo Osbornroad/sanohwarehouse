@@ -2,6 +2,7 @@ package com.gmail.osbornroad.controller;
 
 import com.gmail.osbornroad.model.jpa.Operation;
 import com.gmail.osbornroad.model.jpa.Part;
+import com.gmail.osbornroad.model.jpa.PartCode;
 import com.gmail.osbornroad.model.jpa.PartType;
 import com.gmail.osbornroad.service.PartService;
 import com.gmail.osbornroad.util.ValidationUtil;
@@ -84,6 +85,7 @@ public class PartController {
         LOGGER.info("{} - User: {} - {}", getClass().getSimpleName(), getAutorizedUserName(), "show parts page");
         model.addAttribute("allPartList", partService.findAllParts());
         model.addAttribute("partTypeList", PartType.getPartTypeList());
+        model.addAttribute("partCodeList", PartCode.getPartCodeList());
 //        model.addAttribute("allOperationList", Operation.getOperationsArray());
         if (hasRequestedAuthirity(ROLE_ADMIN.getAuthority())) {
             return "parts";

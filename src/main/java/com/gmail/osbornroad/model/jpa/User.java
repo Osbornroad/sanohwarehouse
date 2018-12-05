@@ -32,7 +32,7 @@ public class User extends NamedEntity {
         this.name = name;
         this.email = email;
         this.password = password;
-//        this.enabled = enabled;
+        this.enabled = enabled;
         this.registered = registered;
         this.roles = roles;
     }
@@ -42,7 +42,7 @@ public class User extends NamedEntity {
         this.name = name;
         this.email = email;
         this.password = password;
-//        this.enabled = enabled;
+        this.enabled = enabled;
         this.registered = registered;
         this.roles = roles;
     }

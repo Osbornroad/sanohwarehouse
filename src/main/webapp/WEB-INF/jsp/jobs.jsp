@@ -148,7 +148,7 @@
 
                     <div class="form-group">
                         <div class="col-xs-offset-3 col-xs-9">
-                            <button class="btn btn-primary toBeEmpty float-right" type="button" onclick="save()">
+                            <button class="btn btn-primary toBeEmpty float-right enter-pressed" type="button" onclick="save()">
                                 <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                             </button>
                         </div>

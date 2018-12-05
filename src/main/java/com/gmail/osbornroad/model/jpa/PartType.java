@@ -14,9 +14,8 @@ public enum PartType {
     public static Comparator<PartType> partTypeComparator = Comparator.comparing(obj -> obj.ordinal());
 
     public static List<PartType> getPartTypeList() {
-        List<PartType> partTypeList = new ArrayList<>();
-        partTypeList.addAll(Arrays.asList(PartType.values()));
-        Collections.sort(partTypeList, partTypeComparator);
+        List<PartType> partTypeList = new ArrayList<>(Arrays.asList(PartType.values()));
+        partTypeList.sort(partTypeComparator);
         return partTypeList;
     }
 }

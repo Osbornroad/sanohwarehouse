@@ -1,408 +1,199 @@
-2018-11-30 07:46:19 [http-nio-8080-exec-1] INFO  osbornroad - MainPageController - User: Maksim - show main page
-2018-11-30 07:46:28 [http-nio-8080-exec-10] INFO  osbornroad - MainPageController - User: Maksim - show main page
-2018-11-30 07:46:30 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 07:46:31 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 07:46:42 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 07:47:24 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 07:47:25 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 07:47:27 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 07:51:24 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 07:51:25 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 07:51:27 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 07:53:20 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 07:53:21 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 07:53:24 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 07:54:15 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 07:54:16 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 07:54:17 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 07:54:19 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 07:55:42 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 07:55:43 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 07:55:46 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 08:09:48 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 08:09:49 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 08:09:53 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 08:09:58 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=3, name='46283-4CM0A', partType=CLIP}
-2018-11-30 08:09:58 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 08:19:03 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=4, name='46282-4CM0A', partType=TUBE}
-2018-11-30 08:19:40 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=4, name='46282-4CM0A', partType=CLUSTER}
-2018-11-30 08:19:40 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 08:20:02 [http-nio-8080-exec-8] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 08:20:04 [http-nio-8080-exec-10] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=2, name='17338-4CM0A', partType=TUBE}
-2018-11-30 08:20:46 [http-nio-8080-exec-6] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=5, part=Part{id=2, name='17338-4CM0A', partType=TUBE}, operation=LASER, machine=LASER, cycleTime=12}
-2018-11-30 08:21:15 [http-nio-8080-exec-2] INFO  osbornroad - JobController - User: Maksim - save job: Job{id=5, part=null, operation=LASER, machine=HPC, cycleTime=12}
-2018-11-30 08:21:15 [http-nio-8080-exec-10] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=2, name='17338-4CM0A', partType=TUBE}
-2018-11-30 08:21:24 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-30 08:21:26 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-30 08:21:37 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-30T07:46:01.722, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-30 08:21:40 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-30T07:46:01.722, roles=[ROLE_USER]}
-2018-11-30 08:22:28 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - save user: User{id='2', name='Pavel1', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-30T07:46, roles=[ROLE_USER]}
-2018-11-30 08:22:28 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-30 08:22:45 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel1', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-30T07:46, roles=[ROLE_USER]}
-2018-11-30 08:23:07 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - save user: User{id='2', name='Pavel12', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-30T07:46, roles=[ROLE_USER]}
-2018-11-30 08:23:08 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-30 08:23:16 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel12', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-30T07:46, roles=[ROLE_USER]}
-2018-11-30 08:24:10 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - save user: User{id='2', name='Pavel123', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-30T07:46, roles=[ROLE_USER]}
-2018-11-30 08:24:11 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-30 08:24:20 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel123', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-11-30T07:46, roles=[ROLE_USER]}
-2018-11-30 08:33:06 [http-nio-8080-exec-7] INFO  osbornroad - MainPageController - User: Maksim - show main page
-2018-11-30 08:33:10 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 08:33:11 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 08:33:22 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 08:33:37 [http-nio-8080-exec-2] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 08:33:37 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=3, name='46283-4CM0A1', partType=ABS_CLUSTER}
-2018-11-30 08:33:37 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 08:33:38 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A1', partType=ABS_CLUSTER}
-2018-11-30 08:33:48 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 08:33:49 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 08:33:53 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A1', partType=ABS_CLUSTER}
-2018-11-30 08:33:56 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=3, name='46283-4CM0A1', partType=ABS_CLUSTER}
-2018-11-30 08:33:56 [http-nio-8080-exec-8] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 08:33:56 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 08:33:57 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A1', partType=ABS_CLUSTER}
-2018-11-30 08:34:14 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 08:34:17 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=11, name='17506-4CM0A', partType=BRACKET}
-2018-11-30 08:36:44 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=11, name='17506-4CM0A1', partType=NUT}
-2018-11-30 08:38:49 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 08:38:49 [http-nio-8080-exec-9] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 08:38:50 [http-nio-8080-exec-1] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=11, name='17506-4CM0A1', partType=NUT}
-2018-11-30 08:39:13 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 08:39:13 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 08:39:17 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=10, name='46252-4CM0A', partType=CLUSTER}
-2018-11-30 08:39:27 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=10, name='1111111', partType=CLUSTER}
-2018-11-30 08:39:27 [http-nio-8080-exec-1] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 08:39:27 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 08:39:27 [http-nio-8080-exec-5] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=10, name='1111111', partType=CLUSTER}
-2018-11-30 08:39:30 [http-nio-8080-exec-1] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 08:39:30 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=10, name='1111111', partType=CLUSTER}
-2018-11-30 08:39:41 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 08:39:45 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=4, name='46282-4CM0A', partType=TUBE}
-2018-11-30 08:40:03 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=4, name='46282-4CM0A', partType=TUBE}
-2018-11-30 08:40:03 [http-nio-8080-exec-5] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 08:40:03 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 08:40:03 [http-nio-8080-exec-1] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=4, name='46282-4CM0A', partType=TUBE}
-2018-11-30 08:41:17 [http-nio-8080-exec-2] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 08:41:17 [http-nio-8080-exec-2] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=4, name='46282-4CM0A', partType=TUBE}
-2018-11-30 08:47:26 [http-nio-8080-exec-7] INFO  osbornroad - MainPageController - User: Maksim - show main page
-2018-11-30 08:50:11 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 08:50:14 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 08:50:16 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=2, name='17338-4CM0A', partType=TUBE}
-2018-11-30 08:50:18 [http-nio-8080-exec-10] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 08:50:18 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=2, name='17338-4CM0A', partType=TUBE}
-2018-11-30 08:50:18 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 08:50:19 [http-nio-8080-exec-6] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=2, name='17338-4CM0A', partType=TUBE}
-2018-11-30 08:52:02 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-30 08:52:04 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-30 08:52:10 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-30 08:52:23 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 08:52:23 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 08:52:28 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 08:52:43 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=2, name='17338-4CM0A', partType=TUBE}
-2018-11-30 08:52:50 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=2, name='17338-4CM0A', partType=TUBE}
-2018-11-30 08:52:53 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 08:52:53 [http-nio-8080-exec-10] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 08:52:54 [http-nio-8080-exec-5] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=2, name='17338-4CM0A', partType=TUBE}
-2018-11-30 08:53:54 [http-nio-8080-exec-6] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=5, part=Part{id=2, name='17338-4CM0A', partType=TUBE}, operation=LASER, machine=LASER, cycleTime=12}
-2018-11-30 09:00:29 [http-nio-8080-exec-6] INFO  osbornroad - MainPageController - User: Maksim - show main page
-2018-11-30 09:00:34 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 09:00:35 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 09:00:41 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=4, name='46282-4CM0A', partType=TUBE}
-2018-11-30 09:00:43 [http-nio-8080-exec-10] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 09:00:43 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=4, name='46282-4CM0A', partType=TUBE}
-2018-11-30 09:00:43 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 09:00:45 [http-nio-8080-exec-8] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=4, name='46282-4CM0A', partType=TUBE}
-2018-11-30 09:00:57 [http-nio-8080-exec-5] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
-2018-11-30 09:01:33 [http-nio-8080-exec-1] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 09:01:33 [http-nio-8080-exec-1] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=4, name='46282-4CM0A', partType=TUBE}
-2018-11-30 09:02:05 [http-nio-8080-exec-2] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 09:02:05 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
-2018-11-30 09:02:38 [http-nio-8080-exec-6] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=4, name='46282-4CM0A', partType=TUBE}
-2018-11-30 09:02:40 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 09:02:40 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 09:02:52 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 09:03:01 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 09:03:03 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 09:03:03 [http-nio-8080-exec-1] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 09:03:04 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 09:03:12 [http-nio-8080-exec-8] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
-2018-11-30 09:04:11 [http-nio-8080-exec-9] INFO  osbornroad - JobController - User: Maksim - save job: Job{id=null, part=null, operation=HPC, machine=HPC, cycleTime=10}
-2018-11-30 09:04:16 [http-nio-8080-exec-6] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 09:04:26 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
-2018-11-30 09:04:36 [http-nio-8080-exec-8] INFO  osbornroad - JobController - User: Maksim - save job: Job{id=null, part=null, operation=ENDFORMING, machine=ENDFORMING_LONG, cycleTime=10}
-2018-11-30 09:04:36 [http-nio-8080-exec-2] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 09:04:57 [http-nio-8080-exec-10] INFO  osbornroad - JobController - User: Maksim - delete job: Job{id=6, part=Part{id=3, name='46283-4CM0A', partType=TUBE}, operation=HPC, machine=HPC, cycleTime=10}
-2018-11-30 09:04:57 [http-nio-8080-exec-3] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 09:04:59 [http-nio-8080-exec-5] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=7, part=Part{id=3, name='46283-4CM0A', partType=TUBE}, operation=ENDFORMING, machine=ENDFORMING_LONG, cycleTime=10}
-2018-11-30 09:05:09 [http-nio-8080-exec-1] INFO  osbornroad - JobController - User: Maksim - save job: Job{id=7, part=null, operation=BRUSHING, machine=ENDFORMING_SHORT, cycleTime=11}
-2018-11-30 09:05:09 [http-nio-8080-exec-9] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 09:05:13 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 09:05:14 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 09:05:16 [http-nio-8080-exec-6] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 09:05:16 [http-nio-8080-exec-2] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 09:05:20 [http-nio-8080-exec-8] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=7, part=Part{id=3, name='46283-4CM0A', partType=TUBE}, operation=BRUSHING, machine=ENDFORMING_SHORT, cycleTime=11}
-2018-11-30 09:05:26 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - save job: Job{id=7, part=null, operation=LASER, machine=LASER, cycleTime=11}
-2018-11-30 09:05:26 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 09:05:27 [http-nio-8080-exec-10] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
-2018-11-30 09:05:32 [http-nio-8080-exec-3] INFO  osbornroad - JobController - User: Maksim - save job: Job{id=null, part=null, operation=CHAMFERING, machine=CHAMFERING, cycleTime=null}
-2018-11-30 09:05:36 [http-nio-8080-exec-9] INFO  osbornroad - JobController - User: Maksim - save job: Job{id=null, part=null, operation=CHAMFERING, machine=CHAMFERING, cycleTime=10}
-2018-11-30 09:05:36 [http-nio-8080-exec-5] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 09:05:45 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - delete job: Job{id=7, part=Part{id=3, name='46283-4CM0A', partType=TUBE}, operation=LASER, machine=LASER, cycleTime=11}
-2018-11-30 09:05:45 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 09:05:46 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 09:05:47 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 09:05:50 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 09:06:00 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=null, name='222222222', partType=TUBE}
-2018-11-30 09:06:00 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 09:06:05 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=12, name='222222222', partType=TUBE}
-2018-11-30 09:06:07 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=12, name='222222222', partType=TUBE}
-2018-11-30 09:06:07 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 09:06:07 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 09:06:08 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=12, name='222222222', partType=TUBE}
-2018-11-30 09:06:10 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
-2018-11-30 09:06:17 [http-nio-8080-exec-3] INFO  osbornroad - JobController - User: Maksim - save job: Job{id=null, part=null, operation=HPC, machine=HPC, cycleTime=10}
-2018-11-30 09:06:17 [http-nio-8080-exec-2] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=12, name='222222222', partType=TUBE}
-2018-11-30 09:06:21 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 09:06:22 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 09:06:30 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - delete part: Part{id=12, name='222222222', partType=TUBE}
-2018-11-30 09:06:30 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 09:06:34 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-30 09:06:35 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-30 09:06:40 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-30 09:06:59 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='jdhfghksfj', email='kjhj@kj.hgh', enabled=true, registered=null, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-30 09:06:59 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-30 09:07:06 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get user: User{id='3', name='jdhfghksfj', email='kjhj@kj.hgh', enabled=true, registered=2018-11-30T09:06:59.245, roles=[ROLE_USER, ROLE_ADMIN]}
-2018-11-30 09:07:15 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - save user: User{id='3', name='Maksim', email='kjhj@kj.hgh', enabled=true, registered=2018-11-30T09:06, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-30 09:07:15 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-30 09:07:29 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-30 09:07:41 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Maksim', email='djmhfxnvcn@gnghbjnm.gfgbn', enabled=true, registered=null, roles=[]}
-2018-11-30 09:07:47 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='mnkb,jmnb', email='djmhfxnvcn@gnghbjnm.gfgbn', enabled=true, registered=null, roles=[]}
-2018-11-30 09:07:47 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-30 09:07:51 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - get user: User{id='4', name='mnkb,jmnb', email='djmhfxnvcn@gnghbjnm.gfgbn', enabled=true, registered=2018-11-30T09:07:47.025, roles=[]}
-2018-11-30 09:07:57 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - save user: User{id='4', name='Maksim', email='djmhfxnvcn@gnghbjnm.gfgbn', enabled=true, registered=2018-11-30T09:07, roles=[]}
-2018-11-30 09:07:57 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-30 09:10:07 [http-nio-8080-exec-6] INFO  osbornroad - MainPageController - User: Maksim - show main page
-2018-11-30 09:10:13 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-30 09:10:13 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-30 09:10:32 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-30 09:10:46 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='ddjhmfjhvn', email='hghbmnm@gfghjhj.ghh', enabled=true, registered=null, roles=[ROLE_ADMIN]}
-2018-11-30 09:10:46 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-30 09:10:50 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - get user: User{id='3', name='ddjhmfjhvn', email='hghbmnm@gfghjhj.ghh', enabled=true, registered=2018-11-30T09:10:46.314, roles=[ROLE_ADMIN]}
-2018-11-30 09:10:58 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - save user: User{id='3', name='Maksim', email='hghbmnm@gfghjhj.ghh', enabled=true, registered=2018-11-30T09:10, roles=[ROLE_ADMIN]}
-2018-11-30 09:11:03 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - save user: User{id='3', name='uiyugjyhgg', email='hghbmnm@gfghjhj.ghh', enabled=true, registered=2018-11-30T09:10, roles=[ROLE_ADMIN]}
-2018-11-30 09:11:03 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-30 09:11:08 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - delete user: User{id='3', name='uiyugjyhgg', email='hghbmnm@gfghjhj.ghh', enabled=true, registered=2018-11-30T09:10, roles=[ROLE_ADMIN]}
-2018-11-30 09:11:08 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-30 09:11:13 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-11-30T09:09:56.443, roles=[ROLE_ADMIN, ROLE_USER]}
-2018-11-30 11:36:09 [http-nio-8080-exec-6] INFO  osbornroad - MainPageController - User: Maksim - show main page
-2018-11-30 11:36:21 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-30 11:36:22 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-30 11:36:45 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-30 11:36:46 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-30 11:41:31 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-30 11:41:32 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-30 11:41:44 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get user: User{id='null', name='null', email='null', enabled=true, registered=null, roles=[]}
-2018-11-30 11:42:05 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Maksim', email='fgbfv@fgfghgh.ytjh', enabled=true, registered=null, roles=[ROLE_USER]}
-2018-11-30 11:42:13 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Pavel', email='fgbfv@fgfghgh.ytjh', enabled=true, registered=null, roles=[ROLE_USER]}
-2018-11-30 11:42:24 [http-nio-8080-exec-9] INFO  osbornroad - UserController - User: Maksim - save user: User{id='null', name='Artem', email='fgbfv@fgfghgh.ytjh', enabled=true, registered=null, roles=[ROLE_USER]}
-2018-11-30 11:42:24 [http-nio-8080-exec-7] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-30 11:42:28 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get user: User{id='3', name='Artem', email='fgbfv@fgfghgh.ytjh', enabled=true, registered=2018-11-30T11:42:24.484, roles=[ROLE_USER]}
-2018-11-30 11:42:32 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - save user: User{id='3', name='Artemghjg', email='fgbfv@fgfghgh.ytjh', enabled=true, registered=2018-11-30T11:42, roles=[ROLE_USER]}
-2018-11-30 11:42:32 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-30 11:42:37 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - delete user: User{id='3', name='Artemghjg', email='fgbfv@fgfghgh.ytjh', enabled=true, registered=2018-11-30T11:42, roles=[ROLE_USER]}
-2018-11-30 11:42:37 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-30 11:42:45 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 11:42:47 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 11:44:36 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 11:45:05 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=null, name='11111-srgsr', partType=NUT}
-2018-11-30 11:45:05 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 11:45:12 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - delete part: Part{id=12, name='11111-srgsr', partType=NUT}
-2018-11-30 11:45:12 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 11:45:16 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - delete part: Part{id=2, name='17338-4CM0A', partType=TUBE}
-2018-11-30 11:45:16 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 11:45:21 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 11:45:26 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 11:45:34 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 11:46:05 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 11:46:05 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 11:46:05 [http-nio-8080-exec-9] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 11:46:07 [http-nio-8080-exec-5] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 11:46:11 [http-nio-8080-exec-9] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
-2018-11-30 11:46:27 [http-nio-8080-exec-6] INFO  osbornroad - JobController - User: Maksim - save job: Job{id=null, part=null, operation=HPC, machine=HPC, cycleTime=10}
-2018-11-30 11:46:27 [http-nio-8080-exec-8] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 11:46:32 [http-nio-8080-exec-3] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
-2018-11-30 11:46:53 [http-nio-8080-exec-9] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 11:46:53 [http-nio-8080-exec-1] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 11:47:10 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
-2018-11-30 11:47:59 [http-nio-8080-exec-2] INFO  osbornroad - MainPageController - User: Maksim - show main page
-2018-11-30 11:48:02 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 11:48:03 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 11:48:07 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 11:48:09 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 11:48:09 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 11:48:09 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 11:48:10 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 11:48:23 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
-2018-11-30 11:48:59 [http-nio-8080-exec-1] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 11:48:59 [http-nio-8080-exec-10] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 11:49:01 [http-nio-8080-exec-5] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
-2018-11-30 11:49:22 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 11:49:23 [http-nio-8080-exec-6] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 11:49:25 [http-nio-8080-exec-1] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
-2018-11-30 11:50:44 [http-nio-8080-exec-8] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
-2018-11-30 11:52:01 [http-nio-8080-exec-5] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 11:52:02 [http-nio-8080-exec-2] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 11:52:24 [http-nio-8080-exec-6] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
-2018-11-30 11:53:03 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - save job: Job{id=null, part=null, operation=CHAMFERING, machine=CHAMFERING, cycleTime=10}
-2018-11-30 11:53:05 [http-nio-8080-exec-9] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 11:55:13 [http-nio-8080-exec-2] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
-2018-11-30 11:58:18 [http-nio-8080-exec-6] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 11:58:19 [http-nio-8080-exec-10] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 11:58:26 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
-2018-11-30 11:58:59 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 11:59:00 [http-nio-8080-exec-3] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=3, name='46283-4CM0A', partType=TUBE}
-2018-11-30 11:59:01 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 11:59:04 [http-nio-8080-exec-2] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 11:59:05 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=1, name='17339-4CM0A', partType=TUBE}
-2018-11-30 11:59:14 [http-nio-8080-exec-1] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
-2018-11-30 12:04:34 [http-nio-8080-exec-5] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 12:04:35 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - save job: Job{id=null, part=null, operation=ENDFORMING, machine=ENDFORMING_LONG, cycleTime=null}
-2018-11-30 12:04:37 [http-nio-8080-exec-5] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=1, name='17339-4CM0A', partType=TUBE}
-2018-11-30 12:04:42 [http-nio-8080-exec-9] INFO  osbornroad - JobController - User: Maksim - get job: Job{id=null, part=null, operation=null, machine=null, cycleTime=null}
-2018-11-30 12:05:04 [http-nio-8080-exec-4] INFO  osbornroad - JobController - User: Maksim - save job: Job{id=null, part=null, operation=ENDFORMING, machine=SUMI_OVEN, cycleTime=11}
-2018-11-30 12:05:04 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=1, name='17339-4CM0A', partType=TUBE}
-2018-11-30 12:22:45 [http-nio-8080-exec-5] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2018-11-30 12:22:54 [http-nio-8080-exec-6] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=1, name='17339-4CM0A', partType=TUBE}
-2018-11-30 12:23:42 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 12:23:43 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 12:23:44 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 12:24:18 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 12:24:18 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 12:24:20 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 12:24:37 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 12:24:39 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 12:43:13 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 12:43:15 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 12:43:30 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 12:43:50 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 12:47:42 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 12:47:51 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 12:47:52 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 12:48:12 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 12:48:14 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 12:48:58 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=null, name='', partType=null}
-2018-11-30 12:56:28 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 12:56:35 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 12:56:36 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 12:57:10 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 12:57:10 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 12:57:13 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 12:57:22 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 12:57:23 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 12:57:25 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 12:57:37 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 12:57:37 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 12:57:47 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 13:01:41 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 13:01:54 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 13:01:56 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 13:03:00 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 13:03:02 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 13:03:04 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 13:03:29 [http-nio-8080-exec-10] INFO  osbornroad - MainPageController - User: Maksim - show main page
-2018-11-30 13:03:33 [http-nio-8080-exec-3] INFO  osbornroad - UserController - User: Maksim - show user page
-2018-11-30 13:03:33 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
-2018-11-30 13:03:37 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 13:03:37 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 13:03:38 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 13:08:30 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 13:08:33 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 13:08:55 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 13:08:57 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 13:09:15 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 13:09:29 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 13:09:30 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 13:09:31 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 13:09:36 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 13:09:37 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 13:09:40 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 13:09:51 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 13:09:52 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 13:10:04 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 13:11:51 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 13:11:56 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 13:12:05 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 13:12:07 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 13:53:06 [http-nio-8080-exec-8] INFO  osbornroad - MainPageController - User: Maksim - show main page
-2018-11-30 13:53:09 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 13:53:10 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 13:53:11 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 13:54:10 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 13:54:13 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 13:54:26 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 13:54:29 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 13:55:27 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 13:55:40 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 13:55:41 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 13:55:44 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 13:56:04 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 13:57:01 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 13:57:06 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 13:57:07 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 13:57:12 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 13:57:20 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 13:57:20 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 13:57:30 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 15:19:58 [http-nio-8080-exec-4] INFO  osbornroad - MainPageController - User: Maksim - show main page
-2018-11-30 15:20:07 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 15:20:08 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 15:20:13 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=1, name='17339-4CM0A', partType=TUBE}
-2018-11-30 15:20:17 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 15:23:51 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 15:23:53 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 15:24:02 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 15:25:42 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 15:25:43 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 15:25:44 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 15:28:06 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 15:28:07 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 15:28:09 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 15:30:49 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 15:30:52 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 15:30:57 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 15:30:59 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 15:32:49 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 15:32:52 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 15:33:09 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 15:33:11 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 15:33:20 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=null, name='ghfcgbv', partType=TUBE}
-2018-11-30 15:33:21 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 15:33:26 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 15:33:56 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 15:33:58 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 15:34:06 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=null, name='hjghnbvv', partType=CLIP}
-2018-11-30 15:34:06 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 15:34:23 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 15:35:20 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 15:35:27 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 15:35:37 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=null, name='hjgvhngbv', partType=CLIP}
-2018-11-30 15:35:37 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 15:41:18 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 15:41:19 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 15:41:20 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 15:43:59 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 15:44:01 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 15:44:10 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 15:45:16 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 15:45:17 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 15:45:19 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 15:45:41 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 15:45:41 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 15:45:43 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 15:46:27 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=null, name='cgbvvfv', partType=CLIP}
-2018-11-30 15:46:27 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 15:46:31 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 15:46:43 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 15:47:25 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
-2018-11-30 15:47:31 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - show parts page
-2018-11-30 15:47:31 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get all parts
-2018-11-30 15:47:35 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=null, name='null', partType=null}
+2018-12-05 10:40:14 [http-nio-8080-exec-9] INFO  osbornroad - MainPageController - User: Maksim - show main page
+2018-12-05 10:40:20 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 10:40:21 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 10:40:24 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=1, name='17339-4CM0A', partType=TUBE}
+2018-12-05 10:49:15 [http-nio-8080-exec-10] INFO  osbornroad - MainPageController - User: Maksim - show main page
+2018-12-05 10:49:53 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 10:49:54 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 10:49:57 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=1, name='17339-4CM0A', partType=TUBE}
+2018-12-05 10:50:18 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 10:50:20 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 10:56:02 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 10:56:03 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 10:57:18 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 11:02:18 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 11:02:19 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 11:02:20 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 11:02:22 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=4, name='46282-4CM0A', partType=TUBE}
+2018-12-05 11:03:00 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=4, name='46282-4CM0A', partType=TUBE}
+2018-12-05 11:03:00 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 11:03:02 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=4, name='46282-4CM0A', partType=TUBE}
+2018-12-05 11:03:11 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=4, name='46282-4CM0A', partType=TUBE}
+2018-12-05 11:03:11 [http-nio-8080-exec-8] INFO  osbornroad - JobController - User: Maksim - show jobs page
+2018-12-05 11:03:11 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 11:03:13 [http-nio-8080-exec-1] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=4, name='46282-4CM0A', partType=TUBE}
+2018-12-05 11:08:29 [http-nio-8080-exec-7] INFO  osbornroad - MainPageController - User: Maksim - show main page
+2018-12-05 11:08:42 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 11:08:43 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 11:08:46 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=8, name='46285-4CM0A', partType=CLIP}
+2018-12-05 11:09:01 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=8, name='46285-4CM0A', partType=CLIP}
+2018-12-05 11:09:01 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 11:14:30 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=8, name='46285-4CM0A', partType=CLIP}
+2018-12-05 11:14:32 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=8, name='46285-4CM0A', partType=CLIP}
+2018-12-05 11:14:32 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 11:14:34 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=10, name='46252-4CM0A', partType=CLUSTER}
+2018-12-05 11:14:44 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 11:14:45 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 11:14:47 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=8, name='46285-4CM0A', partType=CLIP}
+2018-12-05 11:19:05 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 11:19:08 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 11:19:30 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=8, name='46285-4CM0A', partType=CLIP}
+2018-12-05 11:20:43 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 11:20:45 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 11:21:35 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 11:21:38 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 11:31:43 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 11:31:53 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 11:33:10 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 11:33:10 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 11:43:38 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 11:43:41 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 11:43:59 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 11:44:00 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 11:44:57 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 11:47:59 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 11:48:01 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 11:48:54 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 11:48:55 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 11:51:19 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 11:51:20 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 11:54:13 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 11:54:19 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 12:36:36 [http-nio-8080-exec-8] INFO  osbornroad - MainPageController - User: Maksim - show main page
+2018-12-05 12:36:42 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 12:36:43 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 12:39:08 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 12:39:13 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 12:39:30 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 12:39:31 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 12:40:00 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 12:40:01 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 12:40:11 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - show user page
+2018-12-05 12:40:21 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-12-05 12:40:24 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 12:40:24 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 12:40:41 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 12:40:41 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 12:42:04 [http-nio-8080-exec-9] INFO  osbornroad - MainPageController - User: Maksim - show main page
+2018-12-05 12:42:07 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 12:42:08 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 12:42:23 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 12:42:24 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 12:44:07 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 12:44:47 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 12:46:42 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 12:46:48 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 12:51:22 [http-nio-8080-exec-7] INFO  osbornroad - MainPageController - User: Maksim - show main page
+2018-12-05 12:51:27 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 12:51:28 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 12:51:31 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=1, name='17339-4CM0A', partType=TUBE}
+2018-12-05 12:51:42 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=1, name='17339-4CM0A', partType=TUBE}
+2018-12-05 12:51:42 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 12:51:49 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=1, name='17339-4CM0A', partType=TUBE}
+2018-12-05 12:52:12 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 12:52:12 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 12:54:42 [http-nio-8080-exec-10] INFO  osbornroad - MainPageController - User: Maksim - show main page
+2018-12-05 12:54:48 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 12:54:49 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 12:54:55 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 12:54:56 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 12:55:02 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=1, name='17339-4CM0A', partType=TUBE}
+2018-12-05 12:55:12 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=1, name='17339-4CM0A', partType=TUBE}
+2018-12-05 12:55:12 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 12:56:02 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 12:57:10 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 12:57:22 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 12:57:23 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 12:58:46 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 12:58:49 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 13:00:19 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 13:00:21 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 13:05:34 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 13:05:37 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 13:05:45 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=10, name='46252-4CM0A', partType=CLUSTER}
+2018-12-05 13:05:53 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=10, name='46252-4CM0A', partType=CLUSTER}
+2018-12-05 13:05:53 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 13:06:04 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=10, name='46252-4CM0A', partType=CLUSTER}
+2018-12-05 13:06:28 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=10, name='46252-4CM0A', partType=CLUSTER}
+2018-12-05 13:06:28 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 13:06:30 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=1, name='17339-4CM0A', partType=TUBE}
+2018-12-05 13:06:48 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=1, name='17339-4CM0A', partType=TUBE}
+2018-12-05 13:07:51 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=1, name='17339-4CM0A', partType=TUBE}
+2018-12-05 13:27:16 [http-nio-8080-exec-8] INFO  osbornroad - MainPageController - User: Maksim - show main page
+2018-12-05 13:27:22 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 13:27:23 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 13:27:27 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=11, name='17506-4CM0A', partType=BRACKET}
+2018-12-05 13:27:38 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=11, name='17506-4CM0A', partType=BRACKET}
+2018-12-05 13:27:38 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 13:27:41 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=11, name='17506-4CM0A', partType=BRACKET}
+2018-12-05 13:28:18 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=11, name='17506-4CM0A', partType=BRACKET}
+2018-12-05 13:31:27 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 13:31:29 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 13:31:33 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=11, name='17506-4CM0A', partType=BRACKET}
+2018-12-05 13:31:45 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=11, name='17506-4CM0A', partType=BRACKET}
+2018-12-05 13:31:45 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 13:31:48 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=10, name='46252-4CM0A', partType=CLUSTER}
+2018-12-05 13:31:57 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=10, name='46252-4CM0A', partType=CLUSTER}
+2018-12-05 13:31:57 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 13:32:01 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=10, name='46252-4CM0A', partType=CLUSTER}
+2018-12-05 13:32:03 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=10, name='46252-4CM0A', partType=CLUSTER}
+2018-12-05 13:32:03 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 13:32:05 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=11, name='17506-4CM0A', partType=BRACKET}
+2018-12-05 13:32:08 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=11, name='17506-4CM0A', partType=BRACKET}
+2018-12-05 13:32:08 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 14:48:36 [http-nio-8080-exec-6] INFO  osbornroad - MainPageController - User: Maksim - show main page
+2018-12-05 14:50:40 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 14:50:41 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 14:50:48 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=1, name='17339-4CM0A', partType=TUBE}
+2018-12-05 14:52:59 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 14:53:01 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 14:53:20 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 14:53:20 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 14:53:24 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=1, name='17339-4CM0A', partType=TUBE}
+2018-12-05 14:53:47 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=11, name='17506-4CM0A', partType=BRACKET}
+2018-12-05 14:56:12 [http-nio-8080-exec-2] INFO  osbornroad - UserController - User: Maksim - show user page
+2018-12-05 14:56:13 [http-nio-8080-exec-8] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-12-05 14:56:16 [http-nio-8080-exec-1] INFO  osbornroad - UserController - User: Maksim - get user: User{id='1', name='Maksim', email='maksim.tkachenko@sanoh-rus.com', enabled=true, registered=2018-12-05T13:27:02.939, roles=[ROLE_ADMIN, ROLE_USER]}
+2018-12-05 14:56:22 [http-nio-8080-exec-6] INFO  osbornroad - UserController - User: Maksim - get user: User{id='2', name='Pavel', email='pavel.yulin@sanoh-rus.com', enabled=true, registered=2018-12-05T13:27:02.939, roles=[ROLE_USER]}
+2018-12-05 15:03:34 [http-nio-8080-exec-4] INFO  osbornroad - UserController - User: Maksim - show user page
+2018-12-05 15:03:35 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-12-05 15:03:40 [http-nio-8080-exec-10] INFO  osbornroad - UserController - User: Maksim - show user page
+2018-12-05 15:03:40 [http-nio-8080-exec-5] INFO  osbornroad - UserController - User: Maksim - get all users
+2018-12-05 15:03:41 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 15:03:42 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 15:03:44 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=1, name='17339-4CM0A', partType=TUBE}
+2018-12-05 15:03:59 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=11, name='17506-4CM0A', partType=BRACKET}
+2018-12-05 15:06:29 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 15:06:32 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 15:06:34 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=10, name='46252-4CM0A', partType=CLUSTER}
+2018-12-05 15:06:42 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=5, name='46240-4CM0A', partType=TUBE}
+2018-12-05 15:18:06 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=1, name='17339-4CM0A', partType=TUBE}
+2018-12-05 15:18:26 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 15:18:27 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 15:18:34 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=1, name='17339-4CM0A', partType=TUBE}
+2018-12-05 15:19:01 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=1, name='17339-4CM0A', partType=ABS_CLUSTER}
+2018-12-05 15:19:01 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 15:19:03 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=4, name='46282-4CM0A', partType=TUBE}
+2018-12-05 15:19:15 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=4, name='46282-4CM0A', partType=NUT}
+2018-12-05 15:19:15 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 15:20:32 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 15:20:34 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 15:20:39 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=5, name='46240-4CM0A', partType=TUBE}
+2018-12-05 15:22:59 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 15:23:00 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 15:23:19 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=7, name='46284-4CM0A', partType=TUBE}
+2018-12-05 15:25:25 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - show parts page
+2018-12-05 15:25:27 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 15:25:29 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=5, name='46240-4CM0A', partType=TUBE}
+2018-12-05 15:25:40 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=5, name='46240-4CM0A', partType=TUBE}
+2018-12-05 15:25:40 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 15:25:43 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=11, name='17506-4CM0A', partType=BRACKET}
+2018-12-05 15:26:02 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=11, name='17506-4CM0A', partType=BRACKET}
+2018-12-05 15:26:02 [http-nio-8080-exec-8] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 15:27:27 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=2, name='17338-4CM0A', partType=TUBE}
+2018-12-05 15:27:38 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=2, name='17338-4CM0A', partType=TUBE}
+2018-12-05 15:27:38 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 15:28:09 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=2, name='17338-4CM0A', partType=TUBE}
+2018-12-05 15:28:17 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=2, name='17338-4CM0A', partType=TUBE}
+2018-12-05 15:28:17 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get all parts
+2018-12-05 15:28:30 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=2, name='17338-4CM0A', partType=TUBE}

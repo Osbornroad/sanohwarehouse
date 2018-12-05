@@ -83,8 +83,6 @@
             } else {
                 // $('#checkboxEnabled').prop('checked', true);
                 // $('#alertDisable').show();
-
-
                 enabled.value = "false";
             }
         }
@@ -114,9 +112,6 @@
                 label.style.color("Green");
             }
         }*/
-
-
-
     </script>
 
     <style>
@@ -134,7 +129,6 @@
 
 <jsp:include page="fragments/navbar.jsp"/>
 
-
 <div class="container float-left m-3">
     <div class="row mt-4 mb-4">
         <div class="col">
@@ -151,7 +145,6 @@
                 <tr>
                     <th>Name</th>
                     <th>E-mail</th>
-                    <%--<th>Password</th>--%>
                     <th>Enabled</th>
                     <th>Registered</th>
                     <th>Roles</th>
@@ -200,8 +193,6 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <%--<label for="enabled" class="control-label col-xs-3">Enabled</label>--%>
-                        <%--<div class="row">--%>
                             <div class="col-xs-4">
                                 <div class="checkbox" onclick="clickCheckbox()">
                                     <label id="labelForEnabled"><input type="checkbox" id="checkboxEnabled"<%-- name="checkbox"--%>> Enabled</label>
@@ -210,30 +201,9 @@
                             <div class="col-xs-6" id="alertDisable">
                                 *** You could not disable yourself! ***
                             </div>
-                        <%--</div>--%>
-                        <%--<div class="col-xs-9">
-                            <select class="form-control" id="enabled" name="enabled">
-                                <option>true</option>
-                                <option>false</option>
-                            </select>
-                        </div>--%>
                     </div>
-          <%--          <div class="form-group">
-                        <div class="col-xs-9" id="alertDisable">
-                            *** You could not disable yourself! ***
-                        </div>
-                    </div>--%>
                     <input type="hidden" id="enabled" name="enabled" class="to-empty">
-
                     <input type="hidden" id="registered" name="registered" class="to-empty">
-                    <%--<div class="form-group">
-                        <label for="enabled" class="control-label col-xs-3">Enabled</label>
-
-                        <div class="col-xs-9">
-                            <input type="text" class="form-control" id="enabled" name="enabled"
-                                   placeholder="Input enabled or not">
-                        </div>
-                    </div>--%>
                     <div class="form-group">
                         <label for="roles" class="control-label col-xs-3">Roles</label>
 
@@ -244,18 +214,9 @@
                             </select>
                         </div>
                     </div>
-                   <%-- <div class="form-group">
-                        <label for="roles" class="control-label col-xs-3">Roles</label>
-
-                        <div class="col-xs-9">
-                            <input type="text" class="form-control" id="roles" name="roles"
-                                   placeholder="Input roles">
-                        </div>
-                    </div>--%>
-
                     <div class="form-group">
                         <div class="col-xs-offset-3 col-xs-9">
-                            <button class="btn btn-primary" type="button" onclick="save()">
+                            <button class="btn btn-primary enter-pressed" type="button" onclick="save()">
                                 <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                             </button>
                         </div>

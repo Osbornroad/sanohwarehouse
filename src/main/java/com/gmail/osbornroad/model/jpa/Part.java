@@ -2,6 +2,8 @@ package com.gmail.osbornroad.model.jpa;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.BatchSize;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -19,7 +21,14 @@ public class Part extends NamedEntity {
 
     private PartType partType;
 //    private List<Operation> operationList = new ArrayList<>();
-    protected Set<Job> jobSet = new HashSet<>();
+
+    private Integer length;
+
+    private PartCode partCode;
+
+    private Set<Job> jobSet = new HashSet<>();
+
+    private Set<Integer> childPartSet = new HashSet<>();
 
     public Part() {
     }
@@ -29,30 +38,37 @@ public class Part extends NamedEntity {
         this.partType = partType;
     }
 
-/*    public Part(String name, PartType partType, List<Operation> operationList) {
-        super(name);
-        this.partType = partType;
-        this.operationList = operationList;
-    }*/
-
-    public Part(Integer id, String name, PartType partType/*, List<Operation> operationList*/) {
+    public Part(Integer id, String name, PartType partType) {
         super(id, name);
         this.partType = partType;
-//        this.operationList = operationList;
     }
 
-    public Part(String name, PartType partType, /*List<Operation> operationList, */Set<Job> jobSet) {
+    public Part(String name, PartType partType, Set<Job> jobSet) {
         super(name);
         this.partType = partType;
-//        this.operationList = operationList;
         this.jobSet = jobSet;
     }
 
-    public Part(Integer id, String name, PartType partType, /*List<Operation> operationList, */Set<Job> jobSet) {
+    public Part(Integer id, String name, PartType partType, Set<Job> jobSet) {
         super(id, name);
         this.partType = partType;
-//        this.operationList = operationList;
         this.jobSet = jobSet;
+    }
+
+    public Part(String name, PartType partType, Integer length, PartCode partCode, Set<Integer> childPartSet) {
+        super(name);
+        this.partType = partType;
+        this.length = length;
+        this.partCode = partCode;
+        this.childPartSet = childPartSet;
+    }
+
+    public Part(Integer id, String name, PartType partType, Integer length, PartCode partCode, Set<Integer> childPartSet) {
+        super(id, name);
+        this.partType = partType;
+        this.length = length;
+        this.partCode = partCode;
+        this.childPartSet = childPartSet;
     }
 
     @Column(name="part_type")
@@ -92,6 +108,36 @@ public class Part extends NamedEntity {
         this.jobSet = jobSet;
     }
 
+    @Column(name="length")
+    public Integer getLength() {
+        return length;
+    }
+
+    public void setLength(Integer length) {
+        this.length = length;
+    }
+
+    @Column(name="part_code")
+    public PartCode getPartCode() {
+        return partCode;
+    }
+
+    public void setPartCode(PartCode partCode) {
+        this.partCode = partCode;
+    }
+
+    @CollectionTable(name = "part_parts", joinColumns = @JoinColumn(name = "self_part_id"))
+    @Column(name = "child_part_id")
+    @ElementCollection(fetch = FetchType.EAGER)
+    @BatchSize(size = 200)
+    public Set<Integer> getChildPartSet() {
+        return childPartSet;
+    }
+
+    public void setChildPartSet(Set<Integer> childPartSet) {
+        this.childPartSet = childPartSet;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -118,7 +164,6 @@ public class Part extends NamedEntity {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", partType=" + partType +
-//                ", operationList=" + operationList +
                 '}';
     }
 }

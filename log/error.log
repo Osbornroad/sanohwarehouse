@@ -1,41 +1,7 @@
-2018-11-30 07:45:33 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2018-11-30 08:32:35 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2018-11-30 08:40:05 [http-nio-8080-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Failed to bind request element: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "create"
-2018-11-30 08:40:45 [http-nio-8080-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Failed to bind request element: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "create"
-2018-11-30 08:41:04 [http-nio-8080-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Failed to bind request element: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "create"
-2018-11-30 08:42:15 [http-nio-8080-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Failed to bind request element: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "create"
-2018-11-30 08:43:06 [http-nio-8080-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Failed to bind request element: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "create"
-2018-11-30 08:44:50 [http-nio-8080-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Failed to bind request element: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "create"
-2018-11-30 08:46:58 [RMI TCP Connection(5)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2018-11-30 08:50:33 [http-nio-8080-exec-8] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Failed to bind request element: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "create"
-2018-11-30 08:51:41 [http-nio-8080-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Failed to bind request element: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "create"
-2018-11-30 08:59:59 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2018-11-30 09:01:20 [http-nio-8080-exec-3] WARN  o.s.web.servlet.PageNotFound - Request method 'POST' not supported
-2018-11-30 09:05:32 [http-nio-8080-exec-3] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
-2018-11-30 09:05:32 [http-nio-8080-exec-3] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ОШИБКА: нулевое значение в столбце "cycle_time" нарушает ограничение NOT NULL
-  Подробности: Ошибочная строка содержит (8, 3, 2, 2, null).
-2018-11-30 09:09:38 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2018-11-30 09:18:36 [RMI TCP Connection(2)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2018-11-30 09:21:37 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2018-11-30 11:46:45 [http-nio-8080-exec-5] WARN  o.s.web.servlet.PageNotFound - Request method 'POST' not supported
-2018-11-30 11:47:25 [http-nio-8080-exec-3] WARN  o.s.web.servlet.PageNotFound - Request method 'POST' not supported
-2018-11-30 11:48:35 [http-nio-8080-exec-10] WARN  o.s.web.servlet.PageNotFound - Request method 'POST' not supported
-2018-11-30 11:49:12 [http-nio-8080-exec-6] WARN  o.s.web.servlet.PageNotFound - Request method 'POST' not supported
-2018-11-30 11:51:03 [http-nio-8080-exec-2] WARN  o.s.web.servlet.PageNotFound - Request method 'POST' not supported
-2018-11-30 11:55:27 [http-nio-8080-exec-10] WARN  o.s.web.servlet.PageNotFound - Request method 'POST' not supported
-2018-11-30 11:58:35 [http-nio-8080-exec-5] WARN  o.s.web.servlet.PageNotFound - Request method 'POST' not supported
-2018-11-30 12:04:36 [http-nio-8080-exec-4] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
-2018-11-30 12:04:36 [http-nio-8080-exec-4] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ОШИБКА: нулевое значение в столбце "cycle_time" нарушает ограничение NOT NULL
-  Подробности: Ошибочная строка содержит (8, 1, 5, 4, null).
-2018-11-30 12:24:21 [http-nio-8080-exec-6] WARN  o.s.web.servlet.PageNotFound - Request method 'POST' not supported
-2018-11-30 12:24:57 [http-nio-8080-exec-8] WARN  o.s.web.servlet.PageNotFound - Request method 'POST' not supported
-2018-11-30 12:43:18 [http-nio-8080-exec-8] WARN  o.s.web.servlet.PageNotFound - Request method 'POST' not supported
-2018-11-30 12:48:58 [http-nio-8080-exec-3] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
-2018-11-30 12:48:58 [http-nio-8080-exec-3] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ОШИБКА: нулевое значение в столбце "part_type" нарушает ограничение NOT NULL
-  Подробности: Ошибочная строка содержит (13, , null).
-2018-11-30 13:12:08 [http-nio-8080-exec-1] WARN  o.s.web.servlet.PageNotFound - Request method 'POST' not supported
-2018-11-30 15:32:27 [http-nio-8080-exec-3] WARN  o.s.web.servlet.PageNotFound - Request method 'POST' not supported
-2018-11-30 15:33:04 [http-nio-8080-exec-7] WARN  o.s.web.servlet.PageNotFound - Request method 'POST' not supported
-2018-11-30 15:33:50 [http-nio-8080-exec-5] WARN  o.s.web.servlet.PageNotFound - Request method 'POST' not supported
-2018-11-30 15:34:55 [http-nio-8080-exec-2] WARN  o.s.web.servlet.PageNotFound - Request method 'POST' not supported
-2018-11-30 15:46:38 [http-nio-8080-exec-9] WARN  o.s.web.servlet.PageNotFound - Request method 'POST' not supported
+2018-12-05 10:39:34 [RMI TCP Connection(2)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2018-12-05 10:48:45 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2018-12-05 11:07:56 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2018-12-05 12:42:05 [http-nio-8080-exec-1] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'mvc-dispatcher'
+2018-12-05 12:50:49 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2018-12-05 12:54:06 [RMI TCP Connection(2)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2018-12-05 13:26:46 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
