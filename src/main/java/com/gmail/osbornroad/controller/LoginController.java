@@ -1,15 +1,14 @@
 package com.gmail.osbornroad.controller;
 
+import com.gmail.osbornroad.service.DataBaseUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.View;
 
@@ -17,6 +16,9 @@ import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class LoginController {
+
+    @Autowired
+    DataBaseUtil dataBaseUtil;
 
     @PostMapping(value = "/admin/logout")
     public ModelAndView logoutRedirect(HttpServletRequest request) {
@@ -26,9 +28,15 @@ public class LoginController {
         return model;
     }
 
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    private boolean isPopulated = false;
+
+    @GetMapping(value = "/login")
     public ModelAndView login(@RequestParam(value = "error", required = false) String error,
                               @RequestParam(value = "logout", required = false) String logout) {
+        if (!isPopulated) {
+            dataBaseUtil.testSpringJPA();
+            isPopulated = true;
+        }
 
         ModelAndView model = new ModelAndView();
         if (error != null) {
@@ -45,7 +53,7 @@ public class LoginController {
     }
 
     //for 403 access denied page
-    @RequestMapping(value = "/403", method = RequestMethod.GET)
+    @GetMapping(value = "/403")
     public ModelAndView accessDenied() {
 
         ModelAndView model = new ModelAndView();

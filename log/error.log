@@ -1,7 +1,5 @@
-2018-12-05 10:39:34 [RMI TCP Connection(2)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2018-12-05 10:48:45 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2018-12-05 11:07:56 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2018-12-05 12:42:05 [http-nio-8080-exec-1] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'mvc-dispatcher'
-2018-12-05 12:50:49 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2018-12-05 12:54:06 [RMI TCP Connection(2)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2018-12-05 13:26:46 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2018-12-06 09:10:15 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2018-12-06 09:16:07 [RMI TCP Connection(2)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2018-12-06 09:18:54 [RMI TCP Connection(2)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2018-12-06 15:36:19 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2018-12-06 15:39:50 [RMI TCP Connection(2)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE

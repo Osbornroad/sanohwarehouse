@@ -54,6 +54,7 @@ CREATE TABLE part_parts
 (
   self_part_id            INTEGER NOT NULL,
   child_part_id           INTEGER,
+  quantity                INTEGER,
   CONSTRAINT part_parts_idx UNIQUE (self_part_id, child_part_id),
   FOREIGN KEY (self_part_id) REFERENCES parts (id) ON DELETE CASCADE
 );

@@ -34,11 +34,7 @@ public class Scheduler {
     private static final List<Shipping> currentShippingList = new CopyOnWriteArrayList<>();
     private static final List<FinishPart> CURRENT_FINISH_PART_LIST = new CopyOnWriteArrayList<>();
     private static final Logger LOGGER = LoggerFactory.getLogger(Scheduler.class);
-    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
-    private static final String PATH_TO_OPERATION_FAKE_DATA =
-            "C:\\Users\\User\\IdeaProjects\\sanohwarehouse\\src\\main\\resources\\fakedata\\operationsFakeData.txt";
-    private static final String PATH_TO_PART_FAKE_DATA =
-            "C:\\Users\\User\\IdeaProjects\\sanohwarehouse\\src\\main\\resources\\fakedata\\partsFakeData.txt";
+
 
     @Autowired
     PartService partService;
@@ -52,80 +48,13 @@ public class Scheduler {
     @Autowired
     PasswordEncoder passwordEncoder;
 
-    @PostConstruct
-    public void testSpringJPA() {
-//        populateOperationTable();
-        populatePartsTable();
-        populateUserTable();
-        populateJobTable();
-//        testPartTable();
-//        testOperatonTable();
-//        testPartOperationJoinTable();
-    }
 
-    public void populateUserTable() {
-        Set<Role> adminRoles = new HashSet<>();
-        LocalDateTime adminRegistered = LocalDateTime.now();
-        Set<Role> notAdminRoles = new HashSet<>();
-        LocalDateTime noAdminRegistered = LocalDateTime.now();
 
-        adminRoles.add(Role.ROLE_ADMIN);
-        adminRoles.add(Role.ROLE_USER);
-        notAdminRoles.add(Role.ROLE_USER);
 
-        String maksimPassword = passwordEncoder.encode("111111");
-        String pavelPassword = passwordEncoder.encode("222222");
 
-        User admin = new User("Maksim", "maksim.tkachenko@sanoh-rus.com", maksimPassword, true, adminRegistered, adminRoles);
-        User noAdmin = new User("Pavel", "pavel.yulin@sanoh-rus.com", pavelPassword, true, noAdminRegistered, notAdminRoles);
 
-        userService.saveUser(admin);
-        userService.saveUser(noAdmin);
-    }
 
-/*    public void populateOperationTable() {
-        try (BufferedReader br = new BufferedReader(new FileReader(PATH_TO_OPERATION_FAKE_DATA))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                String [] splitted = line.split(";");
-                operationService.saveOperation(new Operation(splitted[0], Integer.parseInt(splitted[1])));
-            }
-        } catch (IOException e) {
-        }
-    }*/
 
-    public void populatePartsTable() {
-        List<Operation> operationList = new ArrayList<>();
-        operationList.add(Operation.HPC);
-        operationList.add(Operation.LASER);
-        try (BufferedReader br = new BufferedReader(new FileReader(PATH_TO_PART_FAKE_DATA))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                String [] splitted = line.split(";");
-                partService.savePart(new Part(splitted[0], PartType.valueOf(splitted[1])/*, operationList*/));
-            }
-        } catch (IOException e) {
-        }
-    }
-
-    @Autowired
-    JobService jobService;
-
-    public void populateJobTable() {
-        Part part1 = partService.findPartById(1);
-        Part part2 = partService.findPartById(2);
-        Job job11 = new Job(part1, Operation.HPC, Machine.HPC, 10);
-        Job job12 = new Job(part1, Operation.BRUSHING, Machine.BRUSHING, 8);
-        Job job21 = new Job(part2, Operation.ENDFORMING, Machine.ENDFORMING_LONG, 20);
-        Job job22 = new Job(part2, Operation.ENDFORMING, Machine.ENDFORMING_SHORT, 21);
-        Job job23 = new Job(part2, Operation.LASER, Machine.LASER, 12);
-
-        jobService.saveJob(job11);
-        jobService.saveJob(job12);
-        jobService.saveJob(job21);
-        jobService.saveJob(job22);
-        jobService.saveJob(job23);
-    }
 
     int counterShipping = 0;
 

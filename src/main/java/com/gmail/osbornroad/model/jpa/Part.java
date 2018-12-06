@@ -5,10 +5,7 @@ import org.hibernate.annotations.BatchSize;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import javax.persistence.*;
 
 
@@ -28,7 +25,7 @@ public class Part extends NamedEntity {
 
     private Set<Job> jobSet = new HashSet<>();
 
-    private Set<Integer> childPartSet = new HashSet<>();
+    private Map<Integer, Integer> childPartMap = new HashMap<>();
 
     public Part() {
     }
@@ -55,20 +52,20 @@ public class Part extends NamedEntity {
         this.jobSet = jobSet;
     }
 
-    public Part(String name, PartType partType, Integer length, PartCode partCode, Set<Integer> childPartSet) {
+    public Part(String name, PartType partType, Integer length, PartCode partCode, Map<Integer, Integer> childPartMap) {
         super(name);
         this.partType = partType;
         this.length = length;
         this.partCode = partCode;
-        this.childPartSet = childPartSet;
+        this.childPartMap = childPartMap;
     }
 
-    public Part(Integer id, String name, PartType partType, Integer length, PartCode partCode, Set<Integer> childPartSet) {
+    public Part(Integer id, String name, PartType partType, Integer length, PartCode partCode, Map<Integer, Integer> childPartMap) {
         super(id, name);
         this.partType = partType;
         this.length = length;
         this.partCode = partCode;
-        this.childPartSet = childPartSet;
+        this.childPartMap = childPartMap;
     }
 
     @Column(name="part_type")
@@ -127,15 +124,16 @@ public class Part extends NamedEntity {
     }
 
     @CollectionTable(name = "part_parts", joinColumns = @JoinColumn(name = "self_part_id"))
-    @Column(name = "child_part_id")
+    @MapKeyColumn(name = "child_part_id")
+    @Column(name = "quantity")
     @ElementCollection(fetch = FetchType.EAGER)
     @BatchSize(size = 200)
-    public Set<Integer> getChildPartSet() {
-        return childPartSet;
+    public Map<Integer, Integer> getChildPartMap() {
+        return childPartMap;
     }
 
-    public void setChildPartSet(Set<Integer> childPartSet) {
-        this.childPartSet = childPartSet;
+    public void setChildPartMap(Map<Integer, Integer> childPartMap) {
+        this.childPartMap = childPartMap;
     }
 
     @Override
