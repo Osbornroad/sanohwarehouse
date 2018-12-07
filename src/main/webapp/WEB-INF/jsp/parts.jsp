@@ -155,7 +155,11 @@
             window.open("/jobs/" + modalId, "_self");
         }
 
-
+        function generateLinkToChildParts() {
+            save();
+            var modalId = document.getElementById("id").value;
+            window.open("/childParts/" + modalId, "_self");
+        }
         
     </script>
 
@@ -238,9 +242,12 @@
                             </select>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-row">
                         <div class="col-xs-9" >
                             <a role="button"  id="buttonLinkToOperation" class="btn btn-outline-primary mt-3 mb-3" href="#" onclick=generateLinkToOperation()>Operations</a>
+                        </div>
+                        <div class="col-xs-9" >
+                            <a role="button"  id="buttonLinkToChilds" class="btn btn-outline-primary mt-3 mb-3" href="#" onclick=generateLinkToChildParts()>Child Parts</a>
                         </div>
                     </div>
                     <div class="form-group">
