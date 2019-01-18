@@ -37,6 +37,9 @@ public class DataBaseUtil {
     @Autowired
     JobService jobService;
 
+    @Autowired
+    ChildPartService childPartService;
+
     public void testSpringJPA() {
         populatePartsTable();
         populateUserTable();
@@ -72,10 +75,10 @@ public class DataBaseUtil {
             while ((line = br.readLine()) != null) {
                 String [] splitted = line.split(";");
                 Part part = new Part(splitted[0], PartType.valueOf(splitted[1])/*, operationList*/);
-                Map<Integer, Integer> mapChildPart = new HashMap<>();
+/*                Map<Integer, Integer> mapChildPart = new HashMap<>();
                 mapChildPart.put(2, 1);
                 mapChildPart.put(3, 2);
-                part.setChildPartMap(mapChildPart);
+                part.setChildPartMap(mapChildPart);*/
                 partService.savePart(part);
             }
         } catch (IOException e) {
@@ -96,5 +99,20 @@ public class DataBaseUtil {
         jobService.saveJob(job21);
         jobService.saveJob(job22);
         jobService.saveJob(job23);
+
+        //populate child parts
+
+        ChildPart childPart11 = new ChildPart(part1, 3, 1);
+        ChildPart childPart12 = new ChildPart(part1, 4, 2);
+        ChildPart childPart21 = new ChildPart(part2, 3, 2);
+        ChildPart childPart22 = new ChildPart(part2, 5, 1);
+        ChildPart childPart23 = new ChildPart(part2, 8, 5);
+
+        childPartService.saveChildPart(childPart11);
+        childPartService.saveChildPart(childPart12);
+        childPartService.saveChildPart(childPart21);
+        childPartService.saveChildPart(childPart22);
+        childPartService.saveChildPart(childPart23);
     }
+
 }

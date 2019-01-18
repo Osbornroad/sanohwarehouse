@@ -70,6 +70,16 @@ CREATE TABLE job
   FOREIGN KEY (part_id) REFERENCES parts (id) ON DELETE CASCADE
 );
 
+DROP TABLE IF EXISTS child_parts CASCADE;
+CREATE TABLE child_parts
+(
+  id                  SERIAL PRIMARY KEY,
+  part_id             INTEGER NOT NULL,
+  child_part_id       INTEGER NOT NULL,
+  quantity            INTEGER NOT NULL,
+  FOREIGN KEY (part_id) REFERENCES parts (id) ON DELETE CASCADE
+);
+
 DROP TABLE IF EXISTS part_operations CASCADE;
 CREATE TABLE part_operations
 (

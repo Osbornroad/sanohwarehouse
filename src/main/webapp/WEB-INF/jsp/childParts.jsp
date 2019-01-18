@@ -8,9 +8,37 @@
 <head>
     <jsp:include page="fragments/headerTags.jsp"/>
     <script>
-        <%--var partId = ${partId};--%>
-        var ajaxUrl = "ajax/" + partId + "/";
+        var partId = ${partId};
+        var ajaxUrl = partId + "/ajax";
         reference = "childParts";
+
+        $(document).ready(function() {
+           table = $('#childPartsTable').DataTable({
+               ajax : {
+                   url : ajaxUrl,
+                   dataSrc : ""
+               },
+               ordering : false,
+               columns : [
+                   {
+                       "data" : "childPartName"
+                   },
+                   {
+                       "data" : "quantity"
+                   },
+                   {
+                       "render": renderEditBtn,
+                       "defaultContent": "",
+                       "orderable": false
+                   },
+                   {
+                       "render": renderDeleteBtn,
+                       "defaultContent": "",
+                       "orderable": false
+                   }
+               ],
+           })
+        });
 
     </script>
 
@@ -28,6 +56,31 @@
             <div class="col">
                 <a class="btn btn-outline-info float-right" onclick="openModalEdit('create')"><span class="glyphicon glyphicon-plus"></span></a>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-hover table-striped display table-sm small" id="childPartsTable">
+                    <thead>
+                    <tr>
+                        <th>Part name</th>
+                        <th>Quantity</th>
+                        <th width="40px"></th>
+                        <th width="10px"></th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <div class="row mt-5 pl-3">
+            <a role="button" class="btn btn-outline-primary" href="/parts">
+                Back to Part list
+            </a>
+            <a role="button" class="btn btn-outline-primary" href="/childParts/1">
+                Test
+            </a>
+            <a role="button" class="btn btn-outline-primary" href="/childParts/ajax/1">
+                Test Ajax
+            </a>
         </div>
     </div>
 </body>

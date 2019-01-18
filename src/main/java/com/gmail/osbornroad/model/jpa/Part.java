@@ -25,7 +25,9 @@ public class Part extends NamedEntity {
 
     private Set<Job> jobSet = new HashSet<>();
 
-    private Map<Integer, Integer> childPartMap = new HashMap<>();
+    private Set<ChildPart> childPartSet = new HashSet<>();
+
+//    private Map<Integer, Integer> childPartMap = new HashMap<>();
 
     public Part() {
     }
@@ -52,20 +54,38 @@ public class Part extends NamedEntity {
         this.jobSet = jobSet;
     }
 
-    public Part(String name, PartType partType, Integer length, PartCode partCode, Map<Integer, Integer> childPartMap) {
+    public Part(String name, PartType partType, Integer length, PartCode partCode/*, Map<Integer, Integer> childPartMap*/) {
         super(name);
         this.partType = partType;
         this.length = length;
         this.partCode = partCode;
-        this.childPartMap = childPartMap;
+//        this.childPartMap = childPartMap;
     }
 
-    public Part(Integer id, String name, PartType partType, Integer length, PartCode partCode, Map<Integer, Integer> childPartMap) {
+    public Part(Integer id, String name, PartType partType, Integer length, PartCode partCode/*, Map<Integer, Integer> childPartMap*/) {
         super(id, name);
         this.partType = partType;
         this.length = length;
         this.partCode = partCode;
-        this.childPartMap = childPartMap;
+//        this.childPartMap = childPartMap;
+    }
+
+    public Part(String name, PartType partType, Integer length, PartCode partCode, Set<Job> jobSet, Set<ChildPart> childPartSet) {
+        super(name);
+        this.partType = partType;
+        this.length = length;
+        this.partCode = partCode;
+        this.jobSet = jobSet;
+        this.childPartSet = childPartSet;
+    }
+
+    public Part(Integer id, String name, PartType partType, Integer length, PartCode partCode, Set<Job> jobSet, Set<ChildPart> childPartSet) {
+        super(id, name);
+        this.partType = partType;
+        this.length = length;
+        this.partCode = partCode;
+        this.jobSet = jobSet;
+        this.childPartSet = childPartSet;
     }
 
     @Column(name="part_type")
@@ -105,6 +125,15 @@ public class Part extends NamedEntity {
         this.jobSet = jobSet;
     }
 
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "part")
+    public Set<ChildPart> getChildPartSet() {
+        return childPartSet;
+    }
+
+    public void setChildPartSet(Set<ChildPart> childPartSet) {
+        this.childPartSet = childPartSet;
+    }
+
     @Column(name="length")
     public Integer getLength() {
         return length;
@@ -123,7 +152,7 @@ public class Part extends NamedEntity {
         this.partCode = partCode;
     }
 
-    @CollectionTable(name = "part_parts", joinColumns = @JoinColumn(name = "self_part_id"))
+/*    @CollectionTable(name = "part_parts", joinColumns = @JoinColumn(name = "self_part_id"))
     @MapKeyColumn(name = "child_part_id")
     @Column(name = "quantity")
     @ElementCollection(fetch = FetchType.EAGER)
@@ -134,7 +163,7 @@ public class Part extends NamedEntity {
 
     public void setChildPartMap(Map<Integer, Integer> childPartMap) {
         this.childPartMap = childPartMap;
-    }
+    }*/
 
     @Override
     public boolean equals(Object o) {
