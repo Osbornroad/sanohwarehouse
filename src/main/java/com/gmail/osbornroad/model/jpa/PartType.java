@@ -9,7 +9,9 @@ public enum PartType {
     BRACKET,
     NUT,
     CLUSTER,
-    ABS_CLUSTER;
+    ABS_CLUSTER,
+    SINGLE_BRAKE,
+    VACUUM;
 
     public static Comparator<PartType> partTypeComparator = Comparator.comparing(obj -> obj.ordinal());
 

@@ -33,7 +33,9 @@
                         Reference
                     </a>
                     <div class="dropdown-menu">
-                        <%--<a class="dropdown-item" href="<c:url value="/operations"/>">Operations</a>--%>
+                        <a class="dropdown-item" href="<c:url value="/finishParts"/>">Finish Parts</a>
+                        <a class="dropdown-item" href="<c:url value="/variants"/>">Variants</a>
+                    <%--<a class="dropdown-item" href="<c:url value="/operations"/>">Operations</a>--%>
                         <a class="dropdown-item" href="<c:url value="/parts"/>">Parts</a>
                         <%--<a class="dropdown-item" href="<c:url value="/jobs"/>">Jobs</a>--%>
                         <a class="dropdown-item" href="<c:url value="/admin/users"/>">Users</a>

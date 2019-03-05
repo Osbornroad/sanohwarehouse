@@ -59,16 +59,6 @@ CREATE TABLE part_parts
   FOREIGN KEY (self_part_id) REFERENCES parts (id) ON DELETE CASCADE
 );
 
-DROP TABLE IF EXISTS job CASCADE;
-CREATE TABLE job
-(
-  id                  SERIAL PRIMARY KEY,
-  part_id             INTEGER NOT NULL,
-  operation           VARCHAR NOT NULL,
-  machine             VARCHAR NOT NULL,
-  cycle_time          INTEGER NOT NULL,
-  FOREIGN KEY (part_id) REFERENCES parts (id) ON DELETE CASCADE
-);
 
 DROP TABLE IF EXISTS child_parts CASCADE;
 CREATE TABLE child_parts
@@ -117,6 +107,56 @@ CREATE TABLE person_operation_detail
   CONSTRAINT fk_person_operation_detail_2 FOREIGN KEY (person_id) REFERENCES persons (id) ON DELETE CASCADE
 );
 
+
+DROP TABLE IF EXISTS variants CASCADE;
+CREATE TABLE variants
+(
+  id                 SERIAL PRIMARY KEY,
+  name               VARCHAR NOT NULL,
+  project            VARCHAR NOT NULL
+);
+
+DROP TABLE IF EXISTS finish_parts CASCADE;
+CREATE TABLE finish_parts
+(
+  id                 SERIAL PRIMARY KEY,
+  name               VARCHAR NOT NULL,
+  part_type          VARCHAR NOT NULL
+);
+
+DROP TABLE IF EXISTS variants_finish_parts CASCADE;
+CREATE TABLE variants_finish_parts
+(
+  variants_id      INTEGER NOT NULL,
+  finish_parts_id  INTEGER NOT NULL,
+  PRIMARY KEY (variants_id, finish_parts_id),
+  CONSTRAINT fk_variants_finish_parts_1 FOREIGN KEY (variants_id) REFERENCES variants (id),
+  CONSTRAINT fk_variants_finish_parts_2 FOREIGN KEY (finish_parts_id) REFERENCES finish_parts (id)
+);
+
+DROP TABLE IF EXISTS incomings CASCADE;
+CREATE TABLE incomings
+(
+  id                  SERIAL PRIMARY KEY,
+  finish_part_id      INTEGER NOT NULL,
+  quantity            INTEGER NOT NULL,
+  incoming_date_time  TIMESTAMP DEFAULT now() NOT NULL,
+  user_id             INTEGER NOT NULL,
+  comments            VARCHAR,
+  FOREIGN KEY (finish_part_id) REFERENCES finish_parts (id) ON DELETE CASCADE,
+  FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
+);
+
+DROP TABLE IF EXISTS job CASCADE;
+CREATE TABLE job
+(
+  id                  SERIAL PRIMARY KEY,
+  part_id             INTEGER NOT NULL,
+  operation           VARCHAR NOT NULL,
+  machine             VARCHAR NOT NULL,
+  cycle_time          INTEGER NOT NULL,
+  FOREIGN KEY (part_id) REFERENCES parts (id) ON DELETE CASCADE
+);
 
 
 

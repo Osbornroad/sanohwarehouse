@@ -1,6 +1,5 @@
 package com.gmail.osbornroad.controller;
 
-import com.gmail.osbornroad.model.jpa.Operation;
 import com.gmail.osbornroad.model.jpa.Part;
 import com.gmail.osbornroad.model.jpa.PartCode;
 import com.gmail.osbornroad.model.jpa.PartType;
@@ -18,7 +17,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.ArrayList;
 import java.util.List;
 
 import static com.gmail.osbornroad.model.jpa.Role.ROLE_ADMIN;

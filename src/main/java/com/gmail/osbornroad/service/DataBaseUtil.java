@@ -40,10 +40,79 @@ public class DataBaseUtil {
     @Autowired
     ChildPartService childPartService;
 
+    @Autowired
+    VariantService variantService;
+
+    @Autowired
+    FinishPartService finishPartService;
+
+    @Autowired
+    IncomingService incomingService;
+
     public void testSpringJPA() {
         populatePartsTable();
         populateUserTable();
         populateJobTable();
+        populateFinishPartTable();
+        populateVariantTable();
+        populateIncomingTable();
+    }
+
+    private FinishPart finishPart1;
+    private FinishPart finishPart2;
+    private FinishPart finishPart3;
+    private FinishPart finishPart4;
+
+    private User admin;
+    private User noAdmin;
+
+    private void populateFinishPartTable() {
+
+        finishPart1 = new FinishPart("17501-4CM0A", PartType.CLUSTER);
+        finishPart2 = new FinishPart("17501-EM90A", PartType.CLUSTER);
+        finishPart3 = new FinishPart("17501-4CM1A", PartType.CLUSTER);
+        finishPart4 = new FinishPart("46220-4CM0A", PartType.ABS_CLUSTER);
+
+        finishPartService.saveFinishPart(finishPart1);
+        finishPartService.saveFinishPart(finishPart2);
+        finishPartService.saveFinishPart(finishPart3);
+        finishPartService.saveFinishPart(finishPart4);
+    }
+
+
+    private void populateVariantTable() {
+
+        Set<FinishPart> finishPartSetC = new HashSet<>();
+        finishPartSetC.add(finishPart1);
+        finishPartSetC.add(finishPart4);
+        Variant variantC = new Variant("C", Project.P32R, finishPartSetC);
+
+        Set<FinishPart> finishPartSetF = new HashSet<>();
+        finishPartSetF.add(finishPart2);
+        finishPartSetF.add(finishPart4);
+        Variant variantF = new Variant("F", Project.P32S, finishPartSetF);
+
+        Set<FinishPart> finishPartSetD = new HashSet<>();
+        finishPartSetD.add(finishPart3);
+        finishPartSetD.add(finishPart4);
+        Variant variantD = new Variant("D", Project.P32R, finishPartSetD);
+
+        variantService.saveVariant(variantC);
+        variantService.saveVariant(variantF);
+        variantService.saveVariant(variantD);
+    }
+
+    private void populateIncomingTable() {
+
+        Incoming incoming1 = new Incoming(finishPart1, 100, LocalDateTime.now(), admin);
+        Incoming incoming2 = new Incoming(finishPart1, 235, LocalDateTime.now(), admin);
+        Incoming incoming3 = new Incoming(finishPart2, 200, LocalDateTime.now(), noAdmin);
+        Incoming incoming4 = new Incoming(finishPart3, 100, LocalDateTime.now(), admin);
+
+        incomingService.saveIncoming(incoming1);
+        incomingService.saveIncoming(incoming2);
+        incomingService.saveIncoming(incoming3);
+        incomingService.saveIncoming(incoming4);
     }
 
     public void populateUserTable() {
@@ -59,8 +128,8 @@ public class DataBaseUtil {
         String maksimPassword = passwordEncoder.encode("111111");
         String pavelPassword = passwordEncoder.encode("222222");
 
-        User admin = new User("Maksim", "maksim.tkachenko@sanoh-rus.com", maksimPassword, true, adminRegistered, adminRoles);
-        User noAdmin = new User("Pavel", "pavel.yulin@sanoh-rus.com", pavelPassword, true, noAdminRegistered, notAdminRoles);
+        admin = new User("Maksim", "maksim.tkachenko@sanoh-rus.com", maksimPassword, true, adminRegistered, adminRoles, new HashSet<>());
+        noAdmin = new User("Pavel", "pavel.yulin@sanoh-rus.com", pavelPassword, true, noAdminRegistered, notAdminRoles, new HashSet<>());
 
         userService.saveUser(admin);
         userService.saveUser(noAdmin);

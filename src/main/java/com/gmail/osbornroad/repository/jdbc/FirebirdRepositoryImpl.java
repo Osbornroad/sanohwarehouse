@@ -1,6 +1,6 @@
 package com.gmail.osbornroad.repository.jdbc;
 
-import com.gmail.osbornroad.model.jdbc.FinishPart;
+import com.gmail.osbornroad.model.jpa.FinishPart;
 import com.gmail.osbornroad.repository.FirebirdRepository;
 import com.gmail.osbornroad.repository.jdbc.jdbctemplate.FireBirdJdbcTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -80,7 +80,7 @@ public class FirebirdRepositoryImpl implements FirebirdRepository {
                 }
         );    }*/
 
-    @Override
+    /*@Override
     public List<FinishPart> getUnsavedShippingList(int maxSavedId) {
         return fireBirdJdbcTemplate.query(
                 "select \n" +
@@ -99,11 +99,11 @@ public class FirebirdRepositoryImpl implements FirebirdRepository {
                     );
                     return finishPart;
                 }
-        );    }
+        );    }*/
 
 
 
-    public List<FinishPart> getUnsavedRecievingList(int maxSavedId) {
+    /*public List<FinishPart> getUnsavedRecievingList(int maxSavedId) {
         int counter = 0;
         return fireBirdJdbcTemplate.query(
                 "select \n" +
@@ -122,6 +122,6 @@ public class FirebirdRepositoryImpl implements FirebirdRepository {
                     return finishPart;
                 }
         );
-    }
+    }*/
 
 }

@@ -1,8 +1,7 @@
 package com.gmail.osbornroad.service;
 
-import com.gmail.osbornroad.model.jdbc.FinishPart;
+import com.gmail.osbornroad.model.jpa.FinishPart;
 import com.gmail.osbornroad.model.jdbc.Shipping;
-import com.gmail.osbornroad.model.jpa.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,12 +9,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -66,7 +59,7 @@ public class Scheduler {
         long start = System.currentTimeMillis();
 
 
-        List<FinishPart> unsavedShippingList = firebirdService.getUnsavedShippingList(lastSavedShippingId);
+//        List<FinishPart> unsavedShippingList = firebirdService.getUnsavedShippingList(lastSavedShippingId);
 
         long finish = System.currentTimeMillis();
         long dif = finish - start;
@@ -80,7 +73,7 @@ public class Scheduler {
         int lastSavedRecievingId = 0;
         long start = System.currentTimeMillis();
 
-        List<FinishPart> unsavedFinishPartList = firebirdService.getUnsavedRecievingList(lastSavedRecievingId);
+//        List<FinishPart> unsavedFinishPartList = firebirdService.getUnsavedRecievingList(lastSavedRecievingId);
         long finish = System.currentTimeMillis();
         long dif = finish - start;
         LOGGER.info("difRecieving = " + dif);
@@ -90,7 +83,7 @@ public class Scheduler {
 //    @Scheduled(fixedDelay = 5000)
     public void getRemainingFinishParts() {
 
-        long start = System.currentTimeMillis();
+/*        long start = System.currentTimeMillis();
 
         int lastSavedShippingId = 0;
         List<FinishPart> shippingList = firebirdService.getUnsavedShippingList(lastSavedShippingId);
@@ -112,7 +105,7 @@ public class Scheduler {
 
         long finish = System.currentTimeMillis();
         long dif = finish - start;
-        LOGGER.info("Time for getting remaining FG = " + dif);
+        LOGGER.info("Time for getting remaining FG = " + dif);*/
     }
 
 }

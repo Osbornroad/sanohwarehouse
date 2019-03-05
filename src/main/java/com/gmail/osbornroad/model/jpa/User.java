@@ -24,20 +24,22 @@ public class User extends NamedEntity {
     private boolean enabled = true;
     private LocalDateTime registered;
     private Set<Role> roles = new HashSet<>();
+;    private Set<Incoming> incomingSet = new HashSet<>();
 
     public User() {
     }
 
-    public User(String name, String email, String password, boolean enabled, LocalDateTime registered, Set<Role> roles) {
+    public User(String name, String email, String password, boolean enabled, LocalDateTime registered, Set<Role> roles, Set<Incoming> incomingSet) {
         this.name = name;
         this.email = email;
         this.password = password;
         this.enabled = enabled;
         this.registered = registered;
         this.roles = roles;
+        this.incomingSet = incomingSet;
     }
 
-    public User(Integer id, String name, String email, String password, boolean enabled, LocalDateTime registered, Set<Role> roles) {
+    public User(Integer id, String name, String email, String password, boolean enabled, LocalDateTime registered, Set<Role> roles, Set<Incoming> incomingSet) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -45,6 +47,7 @@ public class User extends NamedEntity {
         this.enabled = enabled;
         this.registered = registered;
         this.roles = roles;
+        this.incomingSet = incomingSet;
     }
 
    /* @Column(name = "user_name")
@@ -108,6 +111,15 @@ public class User extends NamedEntity {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+    public Set<Incoming> getIncomingSet() {
+        return incomingSet;
+    }
+
+    public void setIncomingSet(Set<Incoming> incomingSet) {
+        this.incomingSet = incomingSet;
     }
 
     @Override

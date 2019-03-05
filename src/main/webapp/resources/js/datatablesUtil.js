@@ -56,6 +56,16 @@ function openModalEdit(id) {
                         case "partCode":
                             currentValue = value.name;
                             break;
+                        case "finishPartSet":
+                            var finishPartArray = [];
+                            var finishPart;
+                            $.each(value, function (i, v) {
+                                finishPart = "FinishPart{partType=" + v.partType + ", name=\'" + v.name + "\', id=" + v.id + "}";
+                                finishPartArray.push(finishPart);
+                            })
+                            // currentValue = ["FinishPart{partType=CLUSTER, name='17501-4CM1A', id=3}", "FinishPart{partType=CLUSTER, name='17501-4CM0A', id=1}"];
+                            currentValue = finishPartArray;
+                            break;
                         default:
                             currentValue = value;
                     }

@@ -1,41 +1,78 @@
-2019-01-18 13:20:35 [http-nio-8080-exec-4] INFO  osbornroad - MainPageController - User: Maksim - show main page
-2019-01-18 13:20:42 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - show parts page
-2019-01-18 13:20:44 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get all parts
-2019-01-18 13:20:53 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=1, name='17339-4CM0A', partType=TUBE}
-2019-01-18 13:20:59 [http-nio-8080-exec-5] INFO  osbornroad - ChildPartsController - User: Maksim - show child parts page
-2019-01-18 13:20:59 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=1, name='17339-4CM0A', partType=TUBE}
-2019-01-18 13:20:59 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get all parts
-2019-01-18 13:21:01 [http-nio-8080-exec-5] INFO  osbornroad - ChildPartsController - User: Maksim - get all child parts for part
-2019-01-18 13:25:44 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - show parts page
-2019-01-18 13:25:45 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get all parts
-2019-01-18 13:25:47 [http-nio-8080-exec-6] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=1, name='17339-4CM0A', partType=TUBE}
-2019-01-18 13:25:49 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=1, name='17339-4CM0A', partType=TUBE}
-2019-01-18 13:25:49 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - show jobs page
-2019-01-18 13:25:49 [http-nio-8080-exec-9] INFO  osbornroad - PartController - User: Maksim - get all parts
-2019-01-18 13:25:50 [http-nio-8080-exec-7] INFO  osbornroad - JobController - User: Maksim - get all jobs for part Part{id=1, name='17339-4CM0A', partType=TUBE}
-2019-01-18 14:14:29 [http-nio-8080-exec-9] INFO  osbornroad - MainPageController - User: Maksim - show main page
-2019-01-18 14:14:37 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - show parts page
-2019-01-18 14:14:38 [http-nio-8080-exec-2] INFO  osbornroad - PartController - User: Maksim - get all parts
-2019-01-18 14:14:41 [http-nio-8080-exec-7] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=1, name='17339-4CM0A', partType=TUBE}
-2019-01-18 14:14:42 [http-nio-8080-exec-2] INFO  osbornroad - ChildPartsController - User: Maksim - show child parts page
-2019-01-18 14:14:42 [http-nio-8080-exec-5] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=1, name='17339-4CM0A', partType=TUBE}
-2019-01-18 14:14:42 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get all parts
-2019-01-18 14:14:43 [http-nio-8080-exec-5] INFO  osbornroad - ChildPartsController - User: Maksim - get all child parts for part
-2019-01-18 14:14:57 [http-nio-8080-exec-8] INFO  osbornroad - ChildPartsController - User: Maksim - show child parts page
-2019-01-18 14:14:58 [http-nio-8080-exec-8] INFO  osbornroad - ChildPartsController - User: Maksim - get all child parts for part
-2019-01-18 14:16:09 [http-nio-8080-exec-7] INFO  osbornroad - ChildPartsController - User: Maksim - show child parts page
-2019-01-18 14:16:11 [http-nio-8080-exec-5] INFO  osbornroad - ChildPartsController - User: Maksim - get all child parts for part
-2019-01-18 14:16:52 [http-nio-8080-exec-3] INFO  osbornroad - ChildPartsController - User: Maksim - show child parts page
-2019-01-18 14:16:54 [http-nio-8080-exec-3] INFO  osbornroad - ChildPartsController - User: Maksim - get all child parts for part
-2019-01-18 14:18:42 [http-nio-8080-exec-10] INFO  osbornroad - ChildPartsController - User: Maksim - show child parts page
-2019-01-18 14:19:06 [http-nio-8080-exec-5] INFO  osbornroad - ChildPartsController - User: Maksim - get all child parts for part
-2019-01-18 14:20:59 [http-nio-8080-exec-10] INFO  osbornroad - ChildPartsController - User: Maksim - show child parts page
-2019-01-18 14:21:20 [http-nio-8080-exec-9] INFO  osbornroad - ChildPartsController - User: Maksim - get all child parts for part
-2019-01-18 14:27:28 [http-nio-8080-exec-9] INFO  osbornroad - MainPageController - User: Maksim - show main page
-2019-01-18 14:27:40 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - show parts page
-2019-01-18 14:27:41 [http-nio-8080-exec-10] INFO  osbornroad - PartController - User: Maksim - get all parts
-2019-01-18 14:27:44 [http-nio-8080-exec-4] INFO  osbornroad - PartController - User: Maksim - get part: Part{id=1, name='17339-4CM0A', partType=TUBE}
-2019-01-18 14:27:46 [http-nio-8080-exec-2] INFO  osbornroad - ChildPartsController - User: Maksim - show child parts page
-2019-01-18 14:27:46 [http-nio-8080-exec-1] INFO  osbornroad - PartController - User: Maksim - save part: Part{id=1, name='17339-4CM0A', partType=TUBE}
-2019-01-18 14:27:46 [http-nio-8080-exec-3] INFO  osbornroad - PartController - User: Maksim - get all parts
-2019-01-18 14:27:47 [http-nio-8080-exec-3] INFO  osbornroad - ChildPartsController - User: Maksim - get all child parts for part
+2019-03-05 10:42:15 [http-nio-8080-exec-1] INFO  osbornroad - MainPageController - User: Maksim - show main page
+2019-03-05 10:42:21 [http-nio-8080-exec-7] INFO  osbornroad - VariantController - User: Maksim - show variant page
+2019-03-05 10:42:29 [http-nio-8080-exec-9] INFO  osbornroad - VariantController - User: Maksim - show variant page
+2019-03-05 10:42:35 [http-nio-8080-exec-8] INFO  osbornroad - FinishPartController - User: Maksim - show finish parts page
+2019-03-05 10:42:38 [http-nio-8080-exec-8] INFO  osbornroad - VariantController - User: Maksim - show variant page
+2019-03-05 10:42:58 [http-nio-8080-exec-3] INFO  osbornroad - VariantController - User: Maksim - show variant page
+2019-03-05 10:43:25 [http-nio-8080-exec-5] INFO  osbornroad - VariantController - User: Maksim - show variant page
+2019-03-05 10:43:26 [http-nio-8080-exec-2] INFO  osbornroad - VariantController - User: Maksim - get all finish parts
+2019-03-05 10:43:37 [http-nio-8080-exec-5] INFO  osbornroad - VariantController - User: Maksim - get variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=CLUSTER, name='17501-4CM0A', id=1}, FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}], name='C', id=1}
+2019-03-05 10:45:18 [http-nio-8080-exec-2] INFO  osbornroad - VariantController - User: Maksim - show variant page
+2019-03-05 10:45:20 [http-nio-8080-exec-7] INFO  osbornroad - VariantController - User: Maksim - get all finish parts
+2019-03-05 10:45:22 [http-nio-8080-exec-8] INFO  osbornroad - VariantController - User: Maksim - get variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}, FinishPart{partType=CLUSTER, name='17501-4CM0A', id=1}], name='C', id=1}
+2019-03-05 10:46:06 [http-nio-8080-exec-3] INFO  osbornroad - VariantController - User: Maksim - get variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=CLUSTER, name='17501-4CM0A', id=1}, FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}], name='C', id=1}
+2019-03-05 10:46:37 [http-nio-8080-exec-10] INFO  osbornroad - VariantController - User: Maksim - show variant page
+2019-03-05 10:46:37 [http-nio-8080-exec-10] INFO  osbornroad - VariantController - User: Maksim - get all finish parts
+2019-03-05 10:47:21 [http-nio-8080-exec-6] INFO  osbornroad - VariantController - User: Maksim - get variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}, FinishPart{partType=CLUSTER, name='17501-4CM0A', id=1}], name='C', id=1}
+2019-03-05 10:49:05 [http-nio-8080-exec-5] INFO  osbornroad - VariantController - User: Maksim - show variant page
+2019-03-05 10:49:08 [http-nio-8080-exec-7] INFO  osbornroad - VariantController - User: Maksim - get all finish parts
+2019-03-05 10:49:09 [http-nio-8080-exec-3] INFO  osbornroad - VariantController - User: Maksim - get variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}, FinishPart{partType=CLUSTER, name='17501-4CM0A', id=1}], name='C', id=1}
+2019-03-05 10:50:23 [http-nio-8080-exec-1] INFO  osbornroad - VariantController - User: Maksim - get variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}, FinishPart{partType=CLUSTER, name='17501-4CM0A', id=1}], name='C', id=1}
+2019-03-05 10:52:27 [http-nio-8080-exec-4] INFO  osbornroad - VariantController - User: Maksim - get variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}, FinishPart{partType=CLUSTER, name='17501-4CM0A', id=1}], name='C', id=1}
+2019-03-05 10:52:51 [http-nio-8080-exec-2] INFO  osbornroad - VariantController - User: Maksim - get variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=CLUSTER, name='17501-4CM0A', id=1}, FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}], name='C', id=1}
+2019-03-05 10:52:54 [http-nio-8080-exec-10] INFO  osbornroad - VariantController - User: Maksim - get variant: Variant{project=P32S, finishPartSet=[FinishPart{partType=CLUSTER, name='17501-EM90A', id=2}, FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}], name='F', id=2}
+2019-03-05 10:53:31 [http-nio-8080-exec-8] INFO  osbornroad - VariantController - User: Maksim - get variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}, FinishPart{partType=CLUSTER, name='17501-4CM0A', id=1}], name='C', id=1}
+2019-03-05 10:55:00 [http-nio-8080-exec-9] INFO  osbornroad - VariantController - User: Maksim - show variant page
+2019-03-05 10:55:01 [http-nio-8080-exec-7] INFO  osbornroad - VariantController - User: Maksim - get all finish parts
+2019-03-05 10:55:03 [http-nio-8080-exec-4] INFO  osbornroad - VariantController - User: Maksim - get variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=CLUSTER, name='17501-4CM0A', id=1}, FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}], name='C', id=1}
+2019-03-05 10:55:34 [http-nio-8080-exec-5] INFO  osbornroad - VariantController - User: Maksim - save variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=CLUSTER, name='17501-4CM0A', id=1}, FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}], name='C', id=1}
+2019-03-05 10:55:34 [http-nio-8080-exec-1] INFO  osbornroad - VariantController - User: Maksim - save variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=CLUSTER, name='17501-4CM0A', id=1}, FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}], name='C', id=1}
+2019-03-05 10:55:34 [http-nio-8080-exec-7] INFO  osbornroad - VariantController - User: Maksim - save variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=CLUSTER, name='17501-4CM0A', id=1}, FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}], name='C', id=1}
+2019-03-05 10:55:38 [http-nio-8080-exec-4] INFO  osbornroad - VariantController - User: Maksim - save variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=CLUSTER, name='17501-4CM0A', id=1}, FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}], name='C', id=1}
+2019-03-05 10:55:38 [http-nio-8080-exec-6] INFO  osbornroad - VariantController - User: Maksim - save variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=CLUSTER, name='17501-4CM0A', id=1}, FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}], name='C', id=1}
+2019-03-05 10:55:38 [http-nio-8080-exec-10] INFO  osbornroad - VariantController - User: Maksim - save variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=CLUSTER, name='17501-4CM0A', id=1}, FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}], name='C', id=1}
+2019-03-05 10:55:39 [http-nio-8080-exec-2] INFO  osbornroad - VariantController - User: Maksim - get all finish parts
+2019-03-05 10:55:39 [http-nio-8080-exec-8] INFO  osbornroad - VariantController - User: Maksim - get all finish parts
+2019-03-05 10:55:42 [http-nio-8080-exec-1] INFO  osbornroad - VariantController - User: Maksim - get variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=CLUSTER, name='17501-4CM0A', id=1}, FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}], name='C', id=1}
+2019-03-05 10:55:44 [http-nio-8080-exec-5] INFO  osbornroad - VariantController - User: Maksim - save variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=CLUSTER, name='17501-4CM0A', id=1}, FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}], name='C', id=1}
+2019-03-05 10:55:45 [http-nio-8080-exec-7] INFO  osbornroad - VariantController - User: Maksim - get all finish parts
+2019-03-05 10:55:46 [http-nio-8080-exec-2] INFO  osbornroad - VariantController - User: Maksim - get variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}, FinishPart{partType=CLUSTER, name='17501-4CM0A', id=1}], name='C', id=1}
+2019-03-05 10:55:52 [http-nio-8080-exec-9] INFO  osbornroad - VariantController - User: Maksim - save variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=CLUSTER, name='17501-4CM0A', id=1}, FinishPart{partType=CLUSTER, name='17501-EM90A', id=2}], name='C', id=1}
+2019-03-05 10:55:52 [http-nio-8080-exec-4] INFO  osbornroad - VariantController - User: Maksim - get all finish parts
+2019-03-05 10:55:54 [http-nio-8080-exec-10] INFO  osbornroad - VariantController - User: Maksim - get variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=CLUSTER, name='17501-4CM0A', id=1}, FinishPart{partType=CLUSTER, name='17501-EM90A', id=2}], name='C', id=1}
+2019-03-05 10:56:05 [http-nio-8080-exec-3] INFO  osbornroad - VariantController - User: Maksim - save variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=CLUSTER, name='17501-4CM0A', id=1}, FinishPart{partType=CLUSTER, name='17501-EM90A', id=2}, FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}], name='C', id=1}
+2019-03-05 10:56:05 [http-nio-8080-exec-1] INFO  osbornroad - VariantController - User: Maksim - get all finish parts
+2019-03-05 10:56:07 [http-nio-8080-exec-5] INFO  osbornroad - VariantController - User: Maksim - get variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}, FinishPart{partType=CLUSTER, name='17501-EM90A', id=2}, FinishPart{partType=CLUSTER, name='17501-4CM0A', id=1}], name='C', id=1}
+2019-03-05 10:56:12 [http-nio-8080-exec-2] INFO  osbornroad - VariantController - User: Maksim - get variant: Variant{project=null, finishPartSet=[], name='null', id=null}
+2019-03-05 10:59:07 [http-nio-8080-exec-9] INFO  osbornroad - VariantController - User: Maksim - show variant page
+2019-03-05 10:59:08 [http-nio-8080-exec-9] INFO  osbornroad - VariantController - User: Maksim - get all finish parts
+2019-03-05 10:59:11 [http-nio-8080-exec-7] INFO  osbornroad - VariantController - User: Maksim - get variant: Variant{project=null, finishPartSet=[], name='null', id=null}
+2019-03-05 10:59:27 [http-nio-8080-exec-9] INFO  osbornroad - VariantController - User: Maksim - save variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=CLUSTER, name='17501-EM90A', id=2}, FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}], name='E', id=null}
+2019-03-05 10:59:27 [http-nio-8080-exec-5] INFO  osbornroad - VariantController - User: Maksim - get all finish parts
+2019-03-05 10:59:30 [http-nio-8080-exec-4] INFO  osbornroad - VariantController - User: Maksim - get variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=CLUSTER, name='17501-EM90A', id=2}, FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}], name='E', id=4}
+2019-03-05 10:59:33 [http-nio-8080-exec-3] INFO  osbornroad - VariantController - User: Maksim - save variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=CLUSTER, name='17501-EM90A', id=2}, FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}], name='E', id=4}
+2019-03-05 10:59:33 [http-nio-8080-exec-1] INFO  osbornroad - VariantController - User: Maksim - get all finish parts
+2019-03-05 10:59:41 [http-nio-8080-exec-10] INFO  osbornroad - VariantController - User: Maksim - delete variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=CLUSTER, name='17501-EM90A', id=2}, FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}], name='E', id=4}
+2019-03-05 10:59:41 [http-nio-8080-exec-7] INFO  osbornroad - VariantController - User: Maksim - get all finish parts
+2019-03-05 10:59:55 [http-nio-8080-exec-9] INFO  osbornroad - FinishPartController - User: Maksim - show finish parts page
+2019-03-05 10:59:55 [http-nio-8080-exec-8] INFO  osbornroad - FinishPartController - User: Maksim - get all finish parts
+2019-03-05 13:45:32 [http-nio-8080-exec-7] INFO  osbornroad - MainPageController - User: Maksim - show main page
+2019-03-05 13:45:38 [http-nio-8080-exec-9] INFO  osbornroad - FinishPartController - User: Maksim - show finish parts page
+2019-03-05 13:45:48 [http-nio-8080-exec-8] INFO  osbornroad - FinishPartController - User: Maksim - show finish parts page
+2019-03-05 13:45:49 [http-nio-8080-exec-3] INFO  osbornroad - FinishPartController - User: Maksim - get all finish parts
+2019-03-05 13:45:53 [http-nio-8080-exec-7] INFO  osbornroad - FinishPartController - User: Maksim - get finish part: FinishPart{partType=CLUSTER, name='17501-4CM0A', id=1}
+2019-03-05 13:45:57 [http-nio-8080-exec-4] INFO  osbornroad - FinishPartController - User: Maksim - save finish part: FinishPart{partType=CLUSTER, name='17501-4CM0B', id=1}
+2019-03-05 13:45:58 [http-nio-8080-exec-8] INFO  osbornroad - FinishPartController - User: Maksim - get all finish parts
+2019-03-05 13:46:03 [http-nio-8080-exec-1] INFO  osbornroad - VariantController - User: Maksim - show variant page
+2019-03-05 13:46:04 [http-nio-8080-exec-10] INFO  osbornroad - VariantController - User: Maksim - get all finish parts
+2019-03-05 13:46:06 [http-nio-8080-exec-7] INFO  osbornroad - VariantController - User: Maksim - get variant: Variant{project=P32R, finishPartSet=[FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}, FinishPart{partType=CLUSTER, name='17501-4CM0B', id=1}], name='C', id=1}
+2019-03-05 13:46:12 [http-nio-8080-exec-1] INFO  osbornroad - VariantController - User: Maksim - save variant: Variant{project=P32S, finishPartSet=[FinishPart{partType=CLUSTER, name='17501-EM90A', id=2}, FinishPart{partType=CLUSTER, name='17501-4CM1A', id=3}], name='C', id=1}
+2019-03-05 13:46:12 [http-nio-8080-exec-10] INFO  osbornroad - VariantController - User: Maksim - get all finish parts
+2019-03-05 13:46:26 [http-nio-8080-exec-2] INFO  osbornroad - VariantController - User: Maksim - get variant: Variant{project=P32S, finishPartSet=[FinishPart{partType=CLUSTER, name='17501-EM90A', id=2}, FinishPart{partType=CLUSTER, name='17501-4CM1A', id=3}], name='C', id=1}
+2019-03-05 13:46:34 [http-nio-8080-exec-9] INFO  osbornroad - VariantController - User: Maksim - save variant: Variant{project=P32S, finishPartSet=[FinishPart{partType=ABS_CLUSTER, name='46220-4CM0A', id=4}, FinishPart{partType=CLUSTER, name='17501-4CM0B', id=1}], name='C', id=1}
+2019-03-05 13:46:34 [http-nio-8080-exec-8] INFO  osbornroad - VariantController - User: Maksim - get all finish parts
+2019-03-05 14:08:59 [http-nio-8080-exec-3] INFO  osbornroad - MainPageController - User: Maksim - show main page
+2019-03-05 14:09:04 [http-nio-8080-exec-3] INFO  osbornroad - VariantController - User: Maksim - show variant page
+2019-03-05 14:09:05 [http-nio-8080-exec-3] INFO  osbornroad - VariantController - User: Maksim - get all finish parts
+2019-03-05 14:09:08 [http-nio-8080-exec-5] INFO  osbornroad - FinishPartController - User: Maksim - show finish parts page
+2019-03-05 14:09:09 [http-nio-8080-exec-5] INFO  osbornroad - FinishPartController - User: Maksim - get all finish parts

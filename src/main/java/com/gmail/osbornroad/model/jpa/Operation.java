@@ -7,6 +7,7 @@ import java.util.*;
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum Operation {
 
+    RECEIVING("RECEIVING", "REC"),
     HPC("HPC", "HPC"),
     LASER("LASER", "LSR"),
     CHAMFERING("CHAMFERING", "CMF"),
