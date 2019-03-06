@@ -53,9 +53,13 @@ public class UserService {
         if (user.getRegistered() == null) {
             user.setRegistered(LocalDateTime.now());
         }
+/*        List<User> userList = findAllUsers();
+        for(User savedUser : userList) {
+
+        }
         if(getAllUserNames().contains(user.getName())){
             throw new RegistrationException(user.getName());
-        }
+        }*/
 
 /*        Integer userId = user.getId();
         String rawPassword = user.getPassword();

@@ -24,22 +24,20 @@ public class User extends NamedEntity {
     private boolean enabled = true;
     private LocalDateTime registered;
     private Set<Role> roles = new HashSet<>();
-;    private Set<Incoming> incomingSet = new HashSet<>();
 
     public User() {
     }
 
-    public User(String name, String email, String password, boolean enabled, LocalDateTime registered, Set<Role> roles, Set<Incoming> incomingSet) {
+    public User(String name, String email, String password, boolean enabled, LocalDateTime registered, Set<Role> roles) {
         this.name = name;
         this.email = email;
         this.password = password;
         this.enabled = enabled;
         this.registered = registered;
         this.roles = roles;
-        this.incomingSet = incomingSet;
     }
 
-    public User(Integer id, String name, String email, String password, boolean enabled, LocalDateTime registered, Set<Role> roles, Set<Incoming> incomingSet) {
+    public User(Integer id, String name, String email, String password, boolean enabled, LocalDateTime registered, Set<Role> roles) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -47,17 +45,7 @@ public class User extends NamedEntity {
         this.enabled = enabled;
         this.registered = registered;
         this.roles = roles;
-        this.incomingSet = incomingSet;
     }
-
-   /* @Column(name = "user_name")
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }*/
 
     @Column(name = "email")
     @Email
@@ -113,22 +101,12 @@ public class User extends NamedEntity {
         this.roles = roles;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
-    public Set<Incoming> getIncomingSet() {
-        return incomingSet;
-    }
-
-    public void setIncomingSet(Set<Incoming> incomingSet) {
-        this.incomingSet = incomingSet;
-    }
-
     @Override
     public String toString() {
         return "User{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
-//                ", password='" + password + '\'' +
                 ", enabled=" + enabled +
                 ", registered=" + registered +
                 ", roles=" + roles +

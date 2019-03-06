@@ -4,7 +4,7 @@ var reference;
 var ajaxUrl;
 
 function formatDate(date) {
-    return date.replace('T', ' ').substr(0, 16);
+    return date.replace('T', ' ').substr(0, 19);
 }
 
 function makeEditable() {
@@ -79,8 +79,13 @@ function openModalEdit(id) {
                 clearForm();
                 $('#enabled').val('true');
                 $('#buttonLinkToOperation').hide();
+
             } else {
                 $('#buttonLinkToOperation').show();
+/*                $('#createdDateTime').val(
+                    formatDate($('#incomingDateTime').val())
+                    // this.value()
+                );*/
             }
 
             $('#editRow').modal('show');
@@ -88,6 +93,8 @@ function openModalEdit(id) {
         .fail(function() {
             bootbox.alert("You could not edit yourself")
         });
+
+
 }
 
 function setEnabled(isNotTube) {

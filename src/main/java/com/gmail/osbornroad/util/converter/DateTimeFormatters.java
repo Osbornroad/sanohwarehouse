@@ -19,7 +19,7 @@ import static com.gmail.osbornroad.util.DateTimeUtil.parseLocalDateTime;
  */
 public class DateTimeFormatters {
 
-   /* public static class LocalDateTimeFormatter implements Formatter<LocalDateTime> {
+    public static class LocalDateTimeFormatter implements Formatter<LocalDateTime> {
 
         @Override
         public LocalDateTime parse(String s, Locale locale) throws ParseException {
@@ -30,7 +30,7 @@ public class DateTimeFormatters {
         public String print(LocalDateTime localDateTime, Locale locale) {
             return localDateTime.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
         }
-    }*/
+    }
 
     public static class LocalDateFormatter implements Formatter<LocalDate> {
 

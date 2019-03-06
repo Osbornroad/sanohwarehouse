@@ -1,10 +1,9 @@
 package com.gmail.osbornroad.controller;
 
 import com.gmail.osbornroad.model.jpa.FinishPart;
-import com.gmail.osbornroad.model.jpa.Project;
-import com.gmail.osbornroad.model.jpa.Variant;
+import com.gmail.osbornroad.model.jpa.Incoming;
 import com.gmail.osbornroad.service.FinishPartService;
-import com.gmail.osbornroad.service.VariantService;
+import com.gmail.osbornroad.service.IncomingService;
 import com.gmail.osbornroad.util.ValidationUtil;
 import com.gmail.osbornroad.util.editor.FinishPartEditor;
 import org.slf4j.Logger;
@@ -20,7 +19,7 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.beans.PropertyEditorSupport;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import static com.gmail.osbornroad.model.jpa.Role.ROLE_ADMIN;
@@ -28,68 +27,68 @@ import static com.gmail.osbornroad.util.AuthorizedUser.getAutorizedUserName;
 import static com.gmail.osbornroad.util.AuthorizedUser.hasRequestedAuthirity;
 
 @Controller
-@RequestMapping("/variants")
-public class VariantController {
+@RequestMapping("/incomings")
+public class IncomingController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger("osbornroad");
 
     @Autowired
-    VariantService variantService;
+    IncomingService incomingService;
 
     @Autowired
     FinishPartService finishPartService;
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public String showVariantList(Model model) {
-        LOGGER.info("{} - User: {} - {}", getClass().getSimpleName(), getAutorizedUserName(), "show variant page");
-        model.addAttribute("projectList", Project.getProjectList());
-        model.addAttribute("finishPartList", finishPartService.findAllFinishParts());
+    public String showIncomingsList(Model model) {
+        LOGGER.info("{} - User: {} - {}", getClass().getSimpleName(), getAutorizedUserName(), "show incomings page");
+        model.addAttribute("allFinishParts", finishPartService.findAllFinishParts());
         if (hasRequestedAuthirity(ROLE_ADMIN.getAuthority())) {
-            return "variants";
+            return "incomings";
         }
         return "main";
     }
 
     @GetMapping(value = "/ajax", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public List<Variant> getAllVariants() {
-        LOGGER.info("{} - User: {} - {}", getClass().getSimpleName(), getAutorizedUserName(), "get all finish parts");
-        List<Variant> variantList = variantService.findAllVariants();
-        return variantList;
+    public List<Incoming> getAllIncomings() {
+        LOGGER.info("{} - User: {} - {}", getClass().getSimpleName(), getAutorizedUserName(), "get all incomings");
+        List<Incoming> incomingList = incomingService.findAllIncomings();
+        return incomingList;
     }
 
     @GetMapping(value = "/ajax/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public Variant getVariant(@PathVariable("id") String stringId) {
-        Variant variant;
+    public Incoming getIncoming(@PathVariable("id") String stringId) {
+        Incoming incoming;
         Integer id;
         try {
             id = Integer.parseInt(stringId);
-            variant = variantService.findVariantById(id);
+            incoming = incomingService.findIncomingById(id);
         } catch (NumberFormatException e) {
-            variant = new Variant();
+            incoming = new Incoming();
+            incoming.setIncomingDateTime(LocalDateTime.now());
         }
-        LOGGER.info("{} - User: {} - {}{}", getClass().getSimpleName(), getAutorizedUserName(), "get variant: ", variant.toString());
-        return variant;
+        LOGGER.info("{} - User: {} - {}{}", getClass().getSimpleName(), getAutorizedUserName(), "get incoming: ", incoming.toString());
+        return incoming;
     }
 
     @PostMapping(value = "/ajax")
-    public ResponseEntity<String> saveVariant(@Valid Variant variant, BindingResult bindingResult) {
+    public ResponseEntity<String> saveIncoming(@Valid Incoming incoming, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return ValidationUtil.getErrorResponse(bindingResult);
         }
-        LOGGER.info("{} - User: {} - {}{}", getClass().getSimpleName(), getAutorizedUserName(), "save variant: ", variant.toString());
-        variantService.saveVariant(variant);
+        LOGGER.info("{} - User: {} - {}{}", getClass().getSimpleName(), getAutorizedUserName(), "save incoming: ", incoming.toString());
+        incomingService.saveIncoming(incoming);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @DeleteMapping(value = "/ajax/{id}")
     @ResponseBody
-    public void deleteVariant(@PathVariable Integer id) {
-        Variant variant = variantService.findVariantById(id);
-        if (variant != null) {
-            LOGGER.info("{} - User: {} - {}{}", getClass().getSimpleName(), getAutorizedUserName(), "delete variant: ", variant.toString());
-            variantService.deleteVariant(variant);
+    public void deleteIncoming(@PathVariable Integer id) {
+        Incoming incoming = incomingService.findIncomingById(id);
+        if (incoming != null) {
+            LOGGER.info("{} - User: {} - {}{}", getClass().getSimpleName(), getAutorizedUserName(), "delete incoming: ", incoming.toString());
+            incomingService.deleteIncoming(incoming);
         }
     }
 

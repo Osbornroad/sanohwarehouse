@@ -104,10 +104,10 @@ public class DataBaseUtil {
 
     private void populateIncomingTable() {
 
-        Incoming incoming1 = new Incoming(finishPart1, 100, LocalDateTime.now(), admin);
-        Incoming incoming2 = new Incoming(finishPart1, 235, LocalDateTime.now(), admin);
-        Incoming incoming3 = new Incoming(finishPart2, 200, LocalDateTime.now(), noAdmin);
-        Incoming incoming4 = new Incoming(finishPart3, 100, LocalDateTime.now(), admin);
+        Incoming incoming1 = new Incoming(finishPart1, 100, LocalDateTime.now());
+        Incoming incoming2 = new Incoming(finishPart1, 235, LocalDateTime.now());
+        Incoming incoming3 = new Incoming(finishPart2, 200, LocalDateTime.now());
+        Incoming incoming4 = new Incoming(finishPart3, 100, LocalDateTime.now());
 
         incomingService.saveIncoming(incoming1);
         incomingService.saveIncoming(incoming2);
@@ -128,8 +128,8 @@ public class DataBaseUtil {
         String maksimPassword = passwordEncoder.encode("111111");
         String pavelPassword = passwordEncoder.encode("222222");
 
-        admin = new User("Maksim", "maksim.tkachenko@sanoh-rus.com", maksimPassword, true, adminRegistered, adminRoles, new HashSet<>());
-        noAdmin = new User("Pavel", "pavel.yulin@sanoh-rus.com", pavelPassword, true, noAdminRegistered, notAdminRoles, new HashSet<>());
+        admin = new User("Maksim", "maksim.tkachenko@sanoh-rus.com", maksimPassword, true, adminRegistered, adminRoles);
+        noAdmin = new User("Pavel", "pavel.yulin@sanoh-rus.com", pavelPassword, true, noAdminRegistered, notAdminRoles);
 
         userService.saveUser(admin);
         userService.saveUser(noAdmin);

@@ -23,43 +23,37 @@ public class Incoming extends BaseEntity {
 
     private LocalDateTime incomingDateTime;
 
-    private User user;
-
     private String comments;
 
     public Incoming() {
     }
 
-    public Incoming(FinishPart finishPart, Integer quantity, LocalDateTime incomingDateTime, User user, String comments) {
+    public Incoming(FinishPart finishPart, Integer quantity, LocalDateTime incomingDateTime, String comments) {
         this.finishPart = finishPart;
         this.quantity = quantity;
         this.incomingDateTime = incomingDateTime;
-        this.user = user;
         this.comments = comments;
     }
 
-    public Incoming(Integer id, FinishPart finishPart, Integer quantity, LocalDateTime incomingDateTime, User user, String comments) {
+    public Incoming(Integer id, FinishPart finishPart, Integer quantity, LocalDateTime incomingDateTime, String comments) {
         super(id);
         this.finishPart = finishPart;
         this.quantity = quantity;
         this.incomingDateTime = incomingDateTime;
-        this.user = user;
         this.comments = comments;
     }
 
-    public Incoming(FinishPart finishPart, Integer quantity, LocalDateTime incomingDateTime, User user) {
+    public Incoming(FinishPart finishPart, Integer quantity, LocalDateTime incomingDateTime) {
         this.finishPart = finishPart;
         this.quantity = quantity;
         this.incomingDateTime = incomingDateTime;
-        this.user = user;
     }
 
-    public Incoming(Integer id, FinishPart finishPart, Integer quantity, LocalDateTime incomingDateTime, User user) {
+    public Incoming(Integer id, FinishPart finishPart, Integer quantity, LocalDateTime incomingDateTime) {
         super(id);
         this.finishPart = finishPart;
         this.quantity = quantity;
         this.incomingDateTime = incomingDateTime;
-        this.user = user;
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
@@ -101,24 +95,12 @@ public class Incoming extends BaseEntity {
         this.incomingDateTime = incomingDateTime;
     }
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "user_id", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
     @Override
     public String toString() {
         return "Incoming{" +
                 "finishPart=" + finishPart +
                 ", quantity=" + quantity +
                 ", incomingDateTime=" + incomingDateTime +
-                ", user=" + user +
                 ", comments='" + comments + '\'' +
                 ", id=" + id +
                 '}';

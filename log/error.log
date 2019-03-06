@@ -1,20 +1,27 @@
-2019-03-05 10:38:07 [RMI TCP Connection(5)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2019-03-05 13:44:29 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2019-03-05 13:48:33 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2019-03-05 13:48:54 [http-nio-8080-exec-2] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
-2019-03-05 13:48:54 [http-nio-8080-exec-2] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ОШИБКА: нулевое значение в столбце "incoming_date_time" нарушает ограничение NOT NULL
-  Подробности: Ошибочная строка содержит (1, 1, 100, null, 1, null).
-2019-03-05 13:50:55 [RMI TCP Connection(2)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2019-03-05 13:52:58 [http-nio-8080-exec-1] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
-2019-03-05 13:52:58 [http-nio-8080-exec-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ОШИБКА: нулевое значение в столбце "incoming_date_time" нарушает ограничение NOT NULL
-  Подробности: Ошибочная строка содержит (1, 1, 100, null, 1, null).
-2019-03-05 13:57:00 [RMI TCP Connection(2)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2019-03-05 13:58:03 [http-nio-8080-exec-1] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
-2019-03-05 13:58:03 [http-nio-8080-exec-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ОШИБКА: нулевое значение в столбце "incoming_date_time" нарушает ограничение NOT NULL
-  Подробности: Ошибочная строка содержит (1, 1, 100, null, 1, null).
-2019-03-05 14:00:59 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2019-03-05 14:03:07 [http-nio-8080-exec-2] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
-2019-03-05 14:03:07 [http-nio-8080-exec-2] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ОШИБКА: нулевое значение в столбце "incoming_date_time" нарушает ограничение NOT NULL
-  Подробности: Ошибочная строка содержит (1, 1, 100, null, 1, null).
-2019-03-05 14:07:20 [RMI TCP Connection(2)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
-2019-03-05 14:13:20 [RMI TCP Connection(2)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2019-03-06 09:46:28 [RMI TCP Connection(2)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2019-03-06 13:03:25 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2019-03-06 13:44:24 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2019-03-06 14:15:37 [RMI TCP Connection(2)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2019-03-06 14:30:30 [RMI TCP Connection(2)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2019-03-06 14:31:25 [http-nio-8080-exec-2] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505
+2019-03-06 14:31:25 [http-nio-8080-exec-2] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "users_name_key"
+  Подробности: Ключ "(name)=(Maksim)" уже существует.
+2019-03-06 14:31:25 [http-nio-8080-exec-2] ERROR o.h.i.ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2019-03-06 14:35:34 [RMI TCP Connection(2)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2019-03-06 14:58:57 [RMI TCP Connection(2)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2019-03-06 15:16:22 [RMI TCP Connection(3)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2019-03-06 15:19:51 [RMI TCP Connection(2)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2019-03-06 15:33:18 [RMI TCP Connection(2)-127.0.0.1] WARN  o.s.s.core.SpringSecurityCoreVersion - **** You are advised to use Spring 5.0.8.RELEASE or later with this version. You are running: 5.0.2.RELEASE
+2019-03-06 15:34:56 [http-nio-8080-exec-4] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2019-03-06 15:34:56 [http-nio-8080-exec-4] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ОШИБКА: нулевое значение в столбце "incoming_date_time" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (5, 2, 333, null, ).
+2019-03-06 15:35:07 [http-nio-8080-exec-1] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2019-03-06 15:35:07 [http-nio-8080-exec-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ОШИБКА: нулевое значение в столбце "incoming_date_time" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (6, 2, 333, null, ).
+2019-03-06 15:35:22 [http-nio-8080-exec-10] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2019-03-06 15:35:22 [http-nio-8080-exec-10] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ОШИБКА: нулевое значение в столбце "incoming_date_time" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (7, 2, 111, null, ).
+2019-03-06 15:49:23 [http-nio-8080-exec-5] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2019-03-06 15:49:23 [http-nio-8080-exec-5] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ОШИБКА: нулевое значение в столбце "quantity" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (1, 1, null, 2019-03-06 15:33:39, ).
+2019-03-06 15:49:23 [http-nio-8080-exec-5] ERROR o.h.i.ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]

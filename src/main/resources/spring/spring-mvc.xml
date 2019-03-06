@@ -23,6 +23,7 @@
     <context:component-scan base-package="com.gmail.osbornroad.model"/>
     <context:component-scan base-package="com.gmail.osbornroad.controller"/>
     <context:component-scan base-package="com.gmail.osbornroad.repository"/>
+    <context:component-scan base-package="com.gmail.osbornroad.util"/>
 
     <mvc:annotation-driven>
         <mvc:message-converters>
@@ -39,7 +40,7 @@
             <set>
                 <bean class="com.gmail.osbornroad.util.converter.DateTimeFormatters.LocalTimeFormatter"/>
                 <bean class="com.gmail.osbornroad.util.converter.DateTimeFormatters.LocalDateFormatter"/>
-                <!--<bean class="com.gmail.osbornroad.util.converter.DateTimeFormatters.LocalDateTimeFormatter"/>-->
+                <bean class="com.gmail.osbornroad.util.converter.DateTimeFormatters.LocalDateTimeFormatter"/>
 
             </set>
         </property>

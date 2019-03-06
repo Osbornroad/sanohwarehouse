@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS users CASCADE;
 CREATE TABLE users
 (
   id                  SERIAL PRIMARY KEY,
-  name                VARCHAR NOT NULL,
+  name                VARCHAR NOT NULL UNIQUE,
   email               VARCHAR NOT NULL,
   password            VARCHAR(60) NOT NULL,
   enabled             BOOLEAN DEFAULT TRUE,
@@ -141,10 +141,8 @@ CREATE TABLE incomings
   finish_part_id      INTEGER NOT NULL,
   quantity            INTEGER NOT NULL,
   incoming_date_time  TIMESTAMP DEFAULT now() NOT NULL,
-  user_id             INTEGER NOT NULL,
   comments            VARCHAR,
-  FOREIGN KEY (finish_part_id) REFERENCES finish_parts (id) ON DELETE CASCADE,
-  FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
+  FOREIGN KEY (finish_part_id) REFERENCES finish_parts (id) ON DELETE CASCADE
 );
 
 DROP TABLE IF EXISTS job CASCADE;
